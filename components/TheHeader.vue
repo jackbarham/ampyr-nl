@@ -1,21 +1,19 @@
 <template>
-    <header class="header-simple bg-white">
-    <div class="border-b-2 border-gray-100">
-      <div class="mx-auto max-w-7xl p-4 md:p-6">
-        <div class="flex justify-between">
-          <div class="flex items-center">
-            <NuxtLink to="/" class="flex">
-              <h1>AMPYR</h1>
-            </NuxtLink>
-          </div>
-          <div class="flex items-center justify-end">
-            <NuxtLink 
-              v-for="(page, index) in pages" 
-              :key="index" 
-              :to="page.to" 
-              class="ml-8"
-            >{{ page.name }}</NuxtLink>
-          </div>
+  <header class="header-simple bg-[#181F49]">
+    <div class="mx-auto max-w-7xl p-4 md:p-6">
+      <div class="flex justify-between">
+        <div class="flex items-center">
+          <NuxtLink to="/" class="flex">
+            <h1 class="font-semibold text-xl text-white">AMPYR</h1>
+          </NuxtLink>
+        </div>
+        <div class="flex items-center justify-end">
+          <NuxtLink 
+            v-for="(page, index) in pages" 
+            :key="index" 
+            :to="page.to" 
+            class="ml-8 text-white"
+          >{{ page.name }}</NuxtLink>
         </div>
       </div>
     </div>
