@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *  {
+  box-sizing: border-box;
+  background: rgb(0 100 0 / 0.1) !important;
+} */
+
+@layer base {
+  body {
+    /* @apply text-gray-600; */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  a, 
+  button {
+    /* Global transition for all <a/> tags */
+    @apply transition duration-200 ease-linear;
+  }
+
+  button {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .transition-default {
+    @apply transition duration-200 ease-linear;
+  }
+
+  .c-navy {
+    color: #181F49;
+  }
+
+  .c-bg-navy {
+    background-color: #181F49;
+  }
+}
+
+@layer components {
+  .btn-sm-solid {
+    @apply rounded py-2 px-5 font-medium text-white bg-purple-600 hover:bg-purple-700 justify-center;
+  }
+}
+
+.nuxt-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+}

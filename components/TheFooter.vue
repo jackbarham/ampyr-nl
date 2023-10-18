@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-simple bg-[#181F49]">
+  <footer class="footer-simple c-bg-navy">
     <div class="mx-auto max-w-7xl py-12 px-6 text-white text-center">
       <h1 class="font-medium mb-1">AMPYR</h1>
       <p class="text-sm text-gray-500">Copyright &copy; {{ year }} - Footer stuff</p>
