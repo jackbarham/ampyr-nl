@@ -1,20 +1,19 @@
 <template>
-  <header class="header-simple c-bg-navy absolute top-0 w-full z-50">
-    <div class="mx-auto max-w-7xl p-4 md:p-6">
-      <div class="flex justify-between">
-        <div class="flex items-center">
-          <NuxtLink to="/" class="flex">
-            <h1 class="font-semibold text-xl text-white">AMPYR</h1>
-          </NuxtLink>
-        </div>
-        <div class="flex items-center justify-end">
-          <NuxtLink 
-            v-for="(page, index) in pages" 
-            :key="index" 
-            :to="page.to" 
-            class="ml-8 text-white"
-          >{{ page.name }}</NuxtLink>
-        </div>
+  <header class="header absolute top-0 w-full z-50">
+    <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-12">
+      <NuxtLink to="/" class="w-32 h-8 shrink-0">
+        <svgo-logo-colour />
+      </NuxtLink>
+      <div class="nav">
+        <NuxtLink 
+          v-for="(page, index) in pages" 
+          :key="index" 
+          :to="page.to" 
+          class="px-6 py-4 text-white tracking-wide"
+        >{{ page.name }}</NuxtLink>
+      </div>
+      <div class="w-32 text-right shrink-0">
+        <span class="text-white uppercase font-light tracking-widest">Regions</span>
       </div>
     </div>
   </header>
@@ -23,20 +22,28 @@
 <script setup>
   const pages = [
     {
+      to: '/partner',
+      name: 'Partner With Us'
+    },
+    {
+      to: '/energy-solutions',
+      name: 'Energy Solutions'
+    },
+    {
+      to: '/case-studies',
+      name: 'Case Studies'
+    },
+    {
       to: '/about',
-      name: 'About'
+      name: 'About Us'
     },
     {
-      to: '/expertise',
-      name: 'Expertise'
-    },
-    {
-      to: '/sustainability',
-      name: 'Sustainability'
+      to: '/insights',
+      name: 'Insights'
     },
     {
       to: '/careers',
-      name: 'Careers'
+      name: 'Join Us'
     },
     {
       to: '/contact',
