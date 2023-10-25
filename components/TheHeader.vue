@@ -10,11 +10,11 @@
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
-          class="group relative px-5 py-3 text-white tracking-wide hover:bg-opacity-10 hover:bg-white rounded"
+          class="group relative text-white tracking-wide hover:bg-opacity-10 hover:bg-white rounded"
         >
-          <NuxtLink v-if="page.to" :to="page.to">{{ page.parent }}</NuxtLink>
-          <span v-if="!page.to" class="cursor-pointer">{{ page.parent }}</span>
-          <ul class="nav-sub absolute left-0 mt-2 w-[200px] bg-white text-black hidden group-hover:block rounded">
+          <NuxtLink v-if="page.to" :to="page.to" class="block px-5 py-3">{{ page.parent }}</NuxtLink>
+          <span v-if="!page.to" class="block px-5 py-3 cursor-pointer">{{ page.parent }}</span>
+          <ul class="nav-sub absolute left-0 min-w-[200px] bg-white text-black hidden group-hover:block rounded">
             <li 
               v-for="(link, subIndex) in page.links" 
               :key="subIndex"
