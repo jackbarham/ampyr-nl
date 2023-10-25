@@ -1,6 +1,6 @@
 <template>
   <header class="header absolute top-0 w-full z-50">
-    <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-12">
+    <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8">
       
       <NuxtLink to="/" class="w-32 h-8 shrink-0">
         <svgo-logo-colour />
@@ -46,16 +46,16 @@
       parent: 'Partner With Us',
       links: [
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'Landowners',
+          to: '/landowners',
         },
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'Municipalities',
+          to: '/municipalities',
         },
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'Energy Cooperatives',
+          to: '/energy-cooperatives',
         },
       ]
     },
@@ -63,33 +63,33 @@
       parent: 'Energy Solutions',
       links: [
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'At A Glance',
+          to: '/at-a-Glance',
         },
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'Ground-based Solar Generation',
+          to: '/ground-based-solar-generation',
         },
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'International Reach',
+          to: '/international-reach',
         },
       ]
     },
     {
       parent: 'Portfolio',
-      to: '/partner',
+      to: '/portfolio',
     },
     {
       parent: 'About Us',
       links: [
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'AMPYR Solar Europe',
+          to: '/Aampyr-solar-europe',
         },
         {
-          page: 'Partner',
-          to: '/partner',
+          page: 'Leadership Team',
+          to: '/leadership-team',
         },
       ]
     },
