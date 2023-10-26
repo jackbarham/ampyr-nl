@@ -39,6 +39,14 @@
   .c-bg-navy {
     background-color: #181F49;
   }
+
+  .c-nederland {
+    color: #FFBFA6;
+  }
+
+  .c-bg-nederland {
+    background-color: #FFBFA6;
+  }
 }
 
 @layer components {

@@ -85,7 +85,7 @@
       links: [
         {
           page: 'AMPYR Solar Europe',
-          to: '/Aampyr-solar-europe',
+          to: '/ampyr-solar-europe',
         },
         {
           page: 'Leadership Team',
