@@ -28,7 +28,8 @@
 }
 
 @layer utilities {
-  .f-new-order {
+  .f-new-order,
+  .font-no {
     font-family: "new-order"
   }
 
@@ -44,12 +45,22 @@
     background-color: #181F49;
   }
 
-  .c-nederland {
+  .c-nederland,
+  .c-orange {
     color: #FFBFA6;
   }
 
-  .c-bg-nederland {
+  .c-bg-nederland,
+  .c-bg-orange {
     background-color: #FFBFA6;
+  }
+
+  .c-blue {
+    color: #71B7FE;
+  }
+
+  .c-purple {
+    color: #A89BF9;
   }
 }
 
