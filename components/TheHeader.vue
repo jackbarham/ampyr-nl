@@ -41,6 +41,10 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+// const isMenuOpen = ref(false);
+
   const pages = [
     {
       parent: 'Partner With Us',
