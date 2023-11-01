@@ -15,11 +15,11 @@
             </div>
             <div class="relative rounded-full w-48 h-48 m-auto flex items-center mb-6">
               <div class="relative z-10 text-center w-48">
-                <span class="block text-5xl font-no mb-1">{{ stat.mw }}</span>
-                <span class="uppercase text-xl block font-no mb-1">mw</span>
-                <span class="block uppercase text-sm tracking-widest">{{ stat.projects }} projects</span>
+                <span class="block text-5xl font-medium font-no mb-1">{{ stat.mw }}</span>
+                <span class="uppercase text-2xl block font-no mb-2">mw</span>
+                <span class="block uppercase text-sm font-light tracking-widest">{{ stat.projects }} projects</span>
               </div>
-              <img :src="stat.image" alt="Description" class="absolute w-48 h-48 object-cover rounded-full opacity-60">
+              <img :src="stat.image" alt="Description" class="absolute w-48 h-48 object-cover rounded-full opacity-50">
             </div>
             <div class="mb-4">
               <p class="font-no text-2xl mb-1" :class="stat.color">{{ stat.devopment }}<span class="text-lg uppercase font-light">mw</span></p>
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <svgo-test2 class="hidden lg:block pt-20" />
+      <svgo-test2 class="hidden lg:block pt-20 opacity-60" />
     </div>
   </div>
 </template>
