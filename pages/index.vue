@@ -2,4 +2,5 @@
   <Hero />
   <CardsLarge />
   <Statistics />
+  <Expanding />
 </template>
