@@ -13,7 +13,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    font-family: "new-order"
   }
   
   a, 
@@ -28,6 +28,10 @@
 }
 
 @layer utilities {
+  .f-new-order {
+    font-family: "new-order"
+  }
+
   .transition-default {
     @apply transition duration-200 ease-linear;
   }

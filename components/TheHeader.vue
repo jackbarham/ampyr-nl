@@ -1,5 +1,5 @@
 <template>
-  <header class="header absolute top-0 w-full z-50">
+  <header class="header absolute top-0 w-full z-50 f-new-order">
     <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8">
       
       <NuxtLink to="/" class="w-32 h-8 shrink-0">
