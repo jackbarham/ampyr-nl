@@ -1,6 +1,7 @@
 <template>
   <Hero />
   <CardsLarge />
+  <ImageTextMiddle />
   <Statistics />
-  <Expanding />
+  <ImageTextLeft />
 </template>
