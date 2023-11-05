@@ -67,24 +67,17 @@
     color: #A89BF9;
   }
 
-  .curved-top {
-    position: relative;
-    background-color: #333; /* Change the color to whatever you want */
-    padding: 20px;
-    color: white;
-    overflow: hidden; /* Ensures the pseudo-element does not flow outside the container */
-  }
-
-  .curved-top::before {
-    content: '';
-    position: absolute;
-    top: -48px; /* Height of the curve */
-    left: 0;
-    width: 100%;
-    height: 48px;
-    background-color: inherit; /* Same as the div's background */
-    border-radius: 50%/100px 100px 0 0; /* Horizontal radius / Vertical radii */
-  }
+ .curved-top {
+  position: relative;
+  width: 500px;
+  height: 80px;
+  bottom: -40px;
+  z-index: -1;
+  margin-top: -40px;
+  border-top-left-radius: 90%;
+  border-top-right-radius: 90%;
+  width: 100%;
+ }
 }
 
 @layer components {
