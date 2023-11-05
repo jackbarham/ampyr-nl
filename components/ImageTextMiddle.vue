@@ -4,7 +4,7 @@
       <div class="relative h-[512px] lg:h-[600px] w-full">
 
         <div class="absolute z-20 w-full h-full">
-          <div class="flex items-center h-full w-full max-w-4xl m-auto p-8">
+          <div class="flex items-center h-full w-full max-w-4xl m-auto p-6">
             <div class="text-center c-navy">
               <p class="mb-12 text-2xl lg:text-4xl lg:leading-snug">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               <Button />
