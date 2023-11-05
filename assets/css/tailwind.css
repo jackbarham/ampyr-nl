@@ -40,6 +40,14 @@
     background-color: #181F49;
   }
 
+  .fill-navy {
+    path: #181F49;
+  }
+
+  .fill-p-navy path {
+    path: #181F49;
+  }
+
   .c-bg-navy-dark {
     background-color: #15193C;
   }
@@ -59,8 +67,12 @@
     background-color: #FFBFA6;
   }
 
-  .c-fill-orange {
-    fill: #FFBFA6;
+  .fill-orange {
+    path: #FFBFA6;
+  }
+
+  .fill-p-orange path {
+    stroke: #FFBFA6;
   }
 
   .c-blue {

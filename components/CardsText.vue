@@ -11,7 +11,7 @@
             class="block mb-6 lg:mb-0 p-6 lg:p-8 c-bg-wheat rounded-lg lg:min-h-[360px]"
           >
             <div class="h-8 w-8 mb-4">
-              <svgo-globe />
+              <svgo-globe filled class="fill-p-navy" />
             </div>
             <h2 class="c-navy text-2xl tracking-wide mb-4">{{ card.heading }}</h2>
             <p class="c-navy font-light">{{ card.text }}</p>

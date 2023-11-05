@@ -6,11 +6,11 @@
         <svgo-logo-colour />
       </NuxtLink>
 
-      <div class="visible xl:hidden w-10 h-10">
+      <div class="visible lg:hidden w-10 h-10">
         <svgo-burger />
       </div>
 
-      <ul class="nav hidden xl:flex">
+      <ul class="nav hidden lg:flex">
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
@@ -30,7 +30,7 @@
         </li>
       </ul>
 
-      <div class="hidden xl:flex">
+      <div class="hidden lg:flex">
         <div class="w-32 text-right shrink-0">
           <span class="text-white uppercase font-light tracking-widest">Regions</span>
         </div>
