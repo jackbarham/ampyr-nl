@@ -3,6 +3,7 @@
   <CardsLarge />
   <ImageTextMiddle />
   <Statistics />
+  <CardsText />
   <ImageTextLeft />
   <CardsArticle />
 </template>
