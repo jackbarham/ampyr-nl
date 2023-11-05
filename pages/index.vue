@@ -4,6 +4,7 @@
   <ImageTextMiddle />
   <Statistics />
   <CardsText />
+  <Benefits />
   <ImageTextLeft />
   <CardsArticle />
 </template>

@@ -59,6 +59,10 @@
     background-color: #FFBFA6;
   }
 
+  .c-fill-orange {
+    fill: #FFBFA6;
+  }
+
   .c-blue {
     color: #71B7FE;
   }
@@ -67,21 +71,25 @@
     color: #A89BF9;
   }
 
+  .c-wheat {
+    color: #F5EFEC;
+  }
+
   .c-bg-wheat {
     background-color: #F5EFEC;
   }
 
- .curved-top {
-  position: relative;
-  width: 500px;
-  height: 80px;
-  bottom: -40px;
-  z-index: -1;
-  margin-top: -40px;
-  border-top-left-radius: 90%;
-  border-top-right-radius: 90%;
-  width: 100%;
- }
+  .curved-top {
+    position: relative;
+    width: 500px;
+    height: 80px;
+    bottom: -40px;
+    z-index: -1;
+    margin-top: -40px;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+    width: 100%;
+  }  
 }
 
 @layer components {

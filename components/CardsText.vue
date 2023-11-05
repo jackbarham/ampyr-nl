@@ -17,9 +17,9 @@
             <p class="c-navy font-light">{{ card.text }}</p>
           </div>
         </div>
-        
       </div>
     </div>
+
   </div>
 
 </template>
