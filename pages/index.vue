@@ -1,9 +1,10 @@
 <template>
   <Hero />
   <CardsLarge />
+  <CardsNumber />
   <ImageTextMiddle />
   <Statistics />
-  <CardsText />
+  <CardsIcon />
   <GridText />
   <ImageTextLeft />
   <CardsArticle />
