@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-simple c-bg-navy">
-    <div class="mx-auto max-w-7xl py-6 md:py-12 px-4 text-white text-center">
+    <div class="mx-auto max-w-7xl py-6 md:py-12  px-4 md:px-8 text-white text-center">
       
       <div class="lg:flex justify-between text-left mb-6 mg:mb-0">
         <NuxtLink to="/" class="block w-32 h-8 mb-6">

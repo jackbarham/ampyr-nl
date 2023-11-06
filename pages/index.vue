@@ -6,6 +6,7 @@
   <Statistics />
   <CardsIcon />
   <GridText />
+  <CardsLocation />
   <ImageTextLeft />
   <CardsArticle />
 </template>

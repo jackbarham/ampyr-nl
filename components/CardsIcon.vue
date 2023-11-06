@@ -1,8 +1,8 @@
 <template>
-  <div class="cards-text">
+  <div class="cards-icon">
 
-    <div class="bg-white py-8 lg:py-16">
-      <div class="max-w-xl lg:max-w-7xl m-auto px-4">
+    <div class="bg-white py-8 lg:py-24">
+      <div class="max-w-xl lg:max-w-7xl m-auto px-4 md:px-8">
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Our Commitment to Achieving Net Zero</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-6">
           <div 

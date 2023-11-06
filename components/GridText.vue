@@ -1,6 +1,6 @@
 <template>
   <div class="grid-text">
-    <div class="c-bg-navy py-8 lg:py-20">
+    <div class="c-bg-navy py-8 lg:py-24">
       <div class="max-w-md lg:max-w-5xl m-auto px-4">
         <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">The Benefits</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-28 text-center">
