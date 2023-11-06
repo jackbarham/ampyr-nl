@@ -26,7 +26,7 @@
             </a>
           </div>
           <div class="flex justify-center">
-            <Button />
+            <Button theme="light" link="#" text="Read more articles" />
           </div>
           
         </div>

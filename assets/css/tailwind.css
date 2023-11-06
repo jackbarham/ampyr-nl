@@ -13,7 +13,8 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "new-order"
+    font-family: "new-order";
+    @apply font-medium leading-relaxed;
   }
 
 
@@ -38,6 +39,10 @@
 
   .c-bg-navy {
     background-color: #181F49;
+  }
+
+  .border-navy {
+    border-color: #181F49;
   }
 
   .fill-navy {

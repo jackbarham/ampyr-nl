@@ -9,9 +9,9 @@
         >
           <img :src="card.image" alt="Description" class="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg">
           <div class="max-w-lg m-auto pt-6 lg:pt-0 lg:px-12 text-center lg:text-left">
-            <h2 class="text-white text-3xl mb-6">{{ card.heading }}</h2>
+            <h2 class="text-white font-normal text-3xl mb-6">{{ card.heading }}</h2>
             <p class="text-white mb-8">{{ card.text }}</p>
-            <Button />
+            <Button theme="light" link="#" text="Find out more" />
           </div>
         </div>
       </div>
