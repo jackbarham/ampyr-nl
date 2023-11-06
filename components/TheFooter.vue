@@ -8,8 +8,8 @@
         </NuxtLink>
         <div class="lg:flex">
           <div v-for="(page, index) in mainPages" :key="index" class="mb-6 lg:px-8 max-w-[208px]">
-            <h2 class="font-light c-nederland text-lg mb-4">{{ page.parent }}</h2>
-            <NuxtLink v-for="(link, index) in page.links" :key="index" :to="link.to" class="block text-sm font-light text-white mb-4">{{ link.name }}</NuxtLink>
+            <h2 class="c-orange font-normal tracking-wide text-lg mb-4">{{ page.parent }}</h2>
+            <NuxtLink v-for="(link, index) in page.links" :key="index" :to="link.to" class="block text-sm font-no tracking-wide text-white hover:c-orange transition mb-3">{{ link.name }}</NuxtLink>
           </div>
         </div>
         <div>
@@ -19,11 +19,11 @@
 
       <div class="flex items-center border-t border-white border-opacity-40 pt-4">
         <ul class="lg:flex md:justify-center mb-4 md:mb-0 w-full">
-          <li v-for="(page, index) in legalPages" :key="index" class="text-left mb-2 lg:mb-0 md:px-4">
-            <NuxtLink :to="page.to" class="inline-block text-xs font-light text-white text-opacity-50">{{ page.name }}</NuxtLink>
+          <li v-for="(page, index) in legalPages" :key="index" class="text-left mb-2 lg:mb-0 lg:px-4">
+            <NuxtLink :to="page.to" class="inline-block text-xs font-no tracking-wide text-white text-opacity-50  hover:text-opacity-90 transition">{{ page.name }}</NuxtLink>
           </li>
           <li>
-            <span class="text-xs text-white text-opacity-50 font-light md:px-4">&copy; {{ year }} AMPYR Global Energy Holdings Pte. Ltd.</span>
+            <span class="text-xs text-white text-opacity-50 font-light lg:px-4">&copy; {{ year }} AMPYR Global Energy Holdings Pte. Ltd.</span>
           </li>
         </ul>
       </div>
