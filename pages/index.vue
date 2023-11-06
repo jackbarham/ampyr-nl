@@ -3,6 +3,7 @@
   <CardsLarge />
   <CardsNumber />
   <ImageTextMiddle />
+  <Testimonial />
   <Statistics />
   <CardsIcon />
   <GridText />
