@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <svgo-test2 class="hidden lg:block pt-20 opacity-60" />
+      <svgo-test2 filled class="hidden lg:block pt-20 opacity-80" />
     </div>
   </div>
 </template>

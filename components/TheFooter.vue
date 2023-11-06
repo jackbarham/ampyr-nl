@@ -4,7 +4,7 @@
       
       <div class="lg:flex justify-between text-left mb-6 mg:mb-0">
         <NuxtLink to="/" class="block w-32 h-8 mb-6">
-          <svgo-logo-colour />
+          <svgo-logo-colour filled />
         </NuxtLink>
         <div class="lg:flex">
           <div v-for="(page, index) in mainPages" :key="index" class="mb-6 lg:px-8 max-w-[208px]">

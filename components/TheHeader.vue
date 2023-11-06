@@ -3,7 +3,7 @@
     <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8">
       
       <NuxtLink to="/" class="w-32 h-8 shrink-0">
-        <svgo-logo-colour />
+        <svgo-logo-colour filled />
       </NuxtLink>
 
       <div class="visible lg:hidden w-10 h-10">
