@@ -11,9 +11,9 @@
             class="block mb-6 lg:mb-0 p-6 lg:p-8 c-bg-wheat rounded-lg lg:min-h-[360px]"
           >
             <div class="h-8 w-8 mb-4">
-              <svgo-globe filled class="fill-p-navy" />
+              <component :is="card.icon" filled class="fill-p-navy" />
             </div>
-            <h2 class="c-navy text-2xl tracking-wide mb-4">{{ card.heading }}</h2>
+            <h2 class="c-navy text-2xl lg:text-3xl tracking-wide mb-4">{{ card.heading }}</h2>
             <p class="c-navy font-light">{{ card.text }}</p>
           </div>
         </div>
@@ -25,21 +25,25 @@
 </template>
 
 <script setup>
+  import IconWorld from '~/assets/icons/world.svg'
+  import IconSun from '~/assets/icons/sun.svg'
+  import IconPlant from '~/assets/icons/plant.svg'
+
   const cards = [
     {
       heading: 'Lorem Ipsum',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      icons: '',
+      icon: IconWorld,
     },
     {
       heading: 'Ac odio tempor orci',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      icons: '',
+      icon: IconSun,
     },
     {
       heading: 'Bibendum neque',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      icons: '',
+      icon: IconPlant,
     },
   ]
 </script>
