@@ -1,13 +1,13 @@
 <template>
   <div class="grid-text">
-    <div class="c-bg-navy py-12 lg:py-24">
+    <div class="c-bg-navy py-14 lg:py-24">
       <div class="max-w-md lg:max-w-5xl m-auto px-4">
         <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">The Benefits</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-28 text-center">
           <div 
             v-for="(item, index) in items" 
             :key="index" 
-            class="mb-12 lg:mb-0 px-4 lg:px-0"
+            class="mb-12 last:mb-0 lg:mb-0 px-4 lg:px-0"
           >
             <div class="h-10 w-10 mb-4 mx-auto">
               <component :is="item.icon" filled class="fill-p-orange" />

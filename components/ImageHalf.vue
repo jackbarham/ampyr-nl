@@ -11,7 +11,7 @@
             <path fill="none" d="M0,0 Q48,50 0,100 V100 H24 V0 Z" />
           </svg>
         </div>
-        <div class="max-w-xl mx-auto md:mx-0 py-12 px-8 lg:px-20 text-center md:text-left c-navy">
+        <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left c-navy">
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ content.heading }}</h2>
           <p class=" lg:text-xl mb-8">{{ content.text }}</p>
           <Button theme="dark" link="#" text="Read case study" />

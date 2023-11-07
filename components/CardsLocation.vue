@@ -1,13 +1,13 @@
 <template>
   <div class="cards-location">
-    <div class="c-bg-wheat py-12 lg:py-24">
+    <div class="c-bg-wheat py-14 lg:py-24">
       <div class="max-w-md lg:max-w-7xl m-auto px-4 md:px-8">
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-16 m-auto">Our locations</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-6">
           <div 
             v-for="(location, index) in locations" 
             :key="index" 
-            class="block mb-6 lg:mb-0 bg-white rounded-2xl overflow-hidden shadow-lg"
+            class="block mb-6 last:mb-0 lg:mb-0 bg-white rounded-2xl overflow-hidden shadow-lg"
           >
             <div class="relative">
               <img :src="location.image" alt="Description" class="w-full h-52 lg:h-60 object-cover">

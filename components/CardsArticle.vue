@@ -4,14 +4,14 @@
       <svg class="svg-curve-up-bottom fill-f-navy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 24" preserveAspectRatio="none">
         <path fill="none" d="M0,24 Q50,0 100,24 V24 H0 Z" />
       </svg>
-      <div class="c-bg-navy py-12 lg:pb-24 lg:pt-20">
+      <div class="c-bg-navy py-14 lg:pb-24 lg:pt-20">
         <div class="max-w-xl lg:max-w-7xl m-auto px-4 md:px-8">
           <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Latest from us...</h1>
           <div class="lg:grid lg:grid-cols-3 lg:gap-6 mb-12 lg:mb-20">
             <a 
               v-for="(card, index) in cards" 
               :key="index" 
-              class="block mb-6 lg:mb-0 bg-white hover:c-bg-navy-dark scale-1 lg:hover:scale-[103%] rounded-2xl overflow-hidden group transition-all"
+              class="block mb-6 last:mb-0 lg:mb-0 bg-white hover:c-bg-navy-dark scale-1 lg:hover:scale-[103%] rounded-2xl overflow-hidden group transition-all"
               :href="card.link"
             >
               <div class="relative">

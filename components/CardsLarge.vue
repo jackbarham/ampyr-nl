@@ -1,11 +1,11 @@
 <template>
   <div class="cards-large">
     <div class="bg-white">
-      <div class="max-w-7xl m-auto px-4 md:px-8 py-12 pb-8 lg:pt-24 lg:pb-10">
+      <div class="max-w-7xl m-auto px-4 md:px-8 py-14 lg:py-24">
         <div 
           v-for="(card, index) in cards" 
           :key="index" 
-          class="p-6 lg:p-12 c-bg-navy lg:grid lg:grid-cols-2 lg:gap-4 rounded-2xl mb-4 lg:mb-12 items-center"
+          class="p-6 lg:p-12 c-bg-navy items-center lg:grid lg:grid-cols-2 lg:gap-4 rounded-2xl mb-4 lg:mb-12 last:mb-0"
         >
           <img :src="card.image" alt="Description" class="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg">
           <div class="max-w-lg m-auto pt-6 lg:pt-0 lg:px-12 text-center lg:text-left">
