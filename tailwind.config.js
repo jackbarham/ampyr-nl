@@ -1,9 +1,8 @@
-// const colors = require('tailwindcss/colors')
-
-// module.exports = {
-//   theme: {
-//     colors: {
-//       'navy': '#181F49',
-//     },
-//   },
-// }
+module.exports = {
+  variants: {
+    extend: {
+      order: ['odd', 'even'],
+      marginBottom: ['last'],
+    }
+  },
+}

@@ -4,6 +4,7 @@
   <CardsNumber />
   <ImageHalf />
   <ImageTextMiddle />
+  <GridLong />
   <Testimonial />
   <Statistics />
   <CardsIcon />
