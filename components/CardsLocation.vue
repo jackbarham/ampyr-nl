@@ -1,6 +1,6 @@
 <template>
   <div class="cards-location">
-    <div class="c-bg-wheat py-8 lg:py-24">
+    <div class="c-bg-wheat py-12 lg:py-24">
       <div class="max-w-md lg:max-w-7xl m-auto px-4 md:px-8">
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-16 m-auto">Our locations</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-6">

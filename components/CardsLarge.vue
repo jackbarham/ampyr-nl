@@ -1,7 +1,7 @@
 <template>
   <div class="cards-large">
     <div class="bg-white">
-      <div class="max-w-7xl m-auto px-4 md:px-8 py-8 lg:px-8 pb-4 lg:pt-24 lg:pb-10">
+      <div class="max-w-7xl m-auto px-4 md:px-8 py-12 pb-8 lg:pt-24 lg:pb-10">
         <div 
           v-for="(card, index) in cards" 
           :key="index" 

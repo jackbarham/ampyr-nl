@@ -53,6 +53,10 @@
     path: #181F49;
   }
 
+  .fill-f-navy path {
+    fill: #181F49;
+  }
+
   .c-bg-navy-dark {
     background-color: #15193C;
   }
@@ -96,17 +100,13 @@
     background-color: #F5EFEC;
   }
 
-  .curved-top {
-    position: relative;
-    width: 500px;
-    height: 80px;
-    bottom: -40px;
-    z-index: -1;
-    margin-top: -40px;
-    border-top-left-radius: 90%;
-    border-top-right-radius: 90%;
-    width: 100%;
-  }  
+  .c-bg-grey {
+    background-color: #EDF2F4;
+  }
+
+  .fill-f-grey path {
+    fill: #EDF2F4;
+  }
 }
 
 @layer components {
@@ -118,4 +118,31 @@
 .nuxt-icon {
   height: 100% !important;
   width: 100%  !important;
+}
+
+
+.svg-curve-up-bottom {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: -48px;
+  z-index: 10;
+} 
+
+.svg-curve-down-bottom {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  bottom: 0;
+  z-index: 10;
+  left: 0;
+}
+
+.svg-curve-down-right {
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }

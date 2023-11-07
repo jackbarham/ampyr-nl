@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial">
-    <div class="relative overflow-hidden c-bg-wheat py-8 md:py-24">
+    <div class="relative overflow-hidden c-bg-wheat py-12 md:py-24">
       <div class="absolute w-[460px] h-[460px] -bottom-[160px] rotate-[130deg] md:rotate-0 right-20 md:top-0 md:right-0">
         <svgo-fan-quarter filled />
       </div>

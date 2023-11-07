@@ -2,6 +2,7 @@
   <Hero />
   <CardsLarge />
   <CardsNumber />
+  <ImageHalf />
   <ImageTextMiddle />
   <Testimonial />
   <Statistics />

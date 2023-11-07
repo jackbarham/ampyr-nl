@@ -1,6 +1,6 @@
 <template>
   <div class="statistics">
-    <div class="c-bg-navy py-8 lg:py-24">
+    <div class="c-bg-navy py-12 lg:py-24">
       <div class="max-w-6xl m-auto px-4 md:px-8">
         <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Pan-European Pipeline of Solar Energy Solutions</h1>
         <div class="lg:grid lg:grid-cols-3 lg:gap-4 text-center">

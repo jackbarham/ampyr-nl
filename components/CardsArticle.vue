@@ -1,9 +1,10 @@
 <template>
   <div class="cards-article">
     <div class="relative">
-      <div class="absolute h-4 lg:h-8 -top-4 lg:-top-8 left-0 w-full c-bg-navy z-50" style="clip-path: ellipse(50% 100% at 50% 100%);"></div>
-      <!-- <div class="curved-top c-bg-navy"></div> -->
-      <div class="c-bg-navy py-8 lg:pb-24 lg:pt-20">
+      <svg class="svg-curve-up-bottom fill-f-navy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 24" preserveAspectRatio="none">
+        <path fill="none" d="M0,24 Q50,0 100,24 V24 H0 Z" />
+      </svg>
+      <div class="c-bg-navy py-12 lg:pb-24 lg:pt-20">
         <div class="max-w-xl lg:max-w-7xl m-auto px-4 md:px-8">
           <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Latest from us...</h1>
           <div class="lg:grid lg:grid-cols-3 lg:gap-6 mb-12 lg:mb-20">
