@@ -8,6 +8,7 @@
   <CardsGrid />
   <Testimonial />
   <ImageFullCurve />
+  <GridFeed />
   <Statistics />
   <CardsIcon />
   <GridText />
