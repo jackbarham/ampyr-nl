@@ -12,7 +12,7 @@
             <div class="h-10 w-10 mb-4 mx-auto">
               <component :is="item.icon" filled class="fill-p-orange" />
             </div>
-            <h2 class="c-orange text-2xl lg:text-4xl tracking-wide mb-6">{{ item.heading }}</h2>
+            <h2 class="c-orange text-2xl lg:text-4xl font-normal tracking-wide mb-6">{{ item.heading }}</h2>
             <p class="c-wheat font-light">{{ item.text }}</p>
           </div>
         </div>

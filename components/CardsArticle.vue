@@ -19,7 +19,7 @@
                 <img :src="card.image" alt="Description" class="w-full h-52 lg:h-60 object-cover">
               </div>
               <div class="relative p-6 h-52 lg:h-60">
-                <h2 class="c-navy group-hover:text-white text-xl tracking-wide">{{ card.heading }}</h2>
+                <h2 class="c-navy group-hover:text-white text-xl">{{ card.heading }}</h2>
                 <div class="absolute bottom-6 left-6 w-10 h-10 border border-orange rounded-full p-0.5 bg-transparent group-hover:c-bg-orange">
                   <svgo-arrow-right filled class="fill-p-navy" />
                 </div>
