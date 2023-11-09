@@ -12,17 +12,17 @@
             <div class="relative h-96 md:h-[512px] w-full rounded-2xl overflow-hidden mb-4">
               <div 
                 class="toggle-bio absolute z-30 top-4 md:top-6 right-4 md:right-6 w-10 h-10 rounded-full p-2 c-bg-orange cursor-pointer hover:bg-white transition"
-                :class="{ '!bg-white': currentOpenBio === index }"
+                :class="{ '!bg-white': showBio === index }"
                 @click="toggleBio(index)"
               >
-                <svgo-plus filled class="fill-navy transition-all" :class="{ 'rotate-45': currentOpenBio === index }" />
+                <svgo-plus filled class="fill-navy transition-all" :class="{ 'rotate-45': showBio === index }" />
               </div>
               <div 
                 class="bio absolute w-full h-full bg-indigo-950/80"
-                v-show="currentOpenBio === index"
+                v-show="showBio === index"
               >
-                <p class="px-4 md:px-8 pt-16 md:pt-24 font-no text-lg md:text-xl">{{ person.bio }}</p>
-                <div class="absolute bottom-6 left-6">
+                <p class="px-6 md:px-8 pt-20 md:pt-24 font-no text-base md:text-xl">{{ person.bio }}</p>
+                <div class="absolute bottom-6 md:bottom-8 left-6 md:left-8">
                   <a :href="person.linkedin" class="flex items-center c-orange tracking-wide font-no text md:text-base">
                     <span>LinkedIn</span>
                     <span class="inline-block w-5 h-5 ml-1">
@@ -45,8 +45,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 const people = [
   {
     name: 'Tom van Dorp',
@@ -92,13 +90,9 @@ const people = [
   },
 ]
 
-const currentOpenBio = ref(null)
+const showBio = ref(null)
 
 const toggleBio = (index) => {
-  if (currentOpenBio.value === index) {
-    currentOpenBio.value = null
-  } else {
-    currentOpenBio.value = index
-  }
+  showBio.value = showBio.value === index ? null : index
 }
 </script>

@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-svgo',
+    'vue3-carousel-nuxt',
   ],
   app: {
     // pageTransition: { 

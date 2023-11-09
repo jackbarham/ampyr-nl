@@ -5,6 +5,7 @@
   <ImageHalf />
   <ImageTextMiddle />
   <GridLong />
+  <ImageLargeSlider />
   <CardsGrid />
   <Testimonial />
   <ImageFullCurve />
