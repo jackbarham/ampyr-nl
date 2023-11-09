@@ -12,6 +12,7 @@
   <Statistics />
   <CardsIcon />
   <GridText />
+  <GridPeople />
   <CardsLocation />
   <ImageTextLeft />
   <CardsArticle />
