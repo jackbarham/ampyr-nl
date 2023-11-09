@@ -2,7 +2,9 @@
   <div class="flex flex-col h-screen justify-between">
     <TheHeader />
     <main role="main" class="mb-auto">
-      <slot />
+      <div class="overflow-hidden">
+        <slot />
+      </div>
     </main>
     <TheFooter />
   </div>

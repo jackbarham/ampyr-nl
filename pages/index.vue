@@ -13,8 +13,9 @@
   <Statistics />
   <CardsIcon />
   <GridText />
-  <GridPeople />
+  <PeopleGrid />
   <CardsLocation />
+  <PeopleSlider />
   <ImageTextLeft />
   <CardsArticle />
 </template>

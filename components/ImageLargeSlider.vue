@@ -5,6 +5,7 @@
         
         <carousel ref="imageLargeSlider" :items-to-show="1" :wrap-around="true">
           <slide v-for="(slide, index) in slides" :key="index">
+            
             <div class="relative h-[512px] md:h-[640px] lg:h-[768px] w-full">
               <div class="absolute z-20 w-full h-full">
                 <div class="flex items-center h-full w-full max-w-6xl m-auto p-8">
@@ -18,6 +19,7 @@
               <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-[#F5EFEC] opacity-80"></div>
               <img :src="slide.image" alt="Hero" class="absolute h-full w-full object-cover opacity-50 md:opacity-100">
             </div>
+            
           </slide>
         </carousel>
 

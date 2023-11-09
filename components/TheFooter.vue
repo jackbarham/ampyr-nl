@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="flex items-center border-t border-white border-opacity-40 pt-4">
+      <div class="flex items-center border-t border-white border-opacity-20 pt-4">
         <ul class="lg:flex md:justify-center mb-4 md:mb-0 w-full">
           <li v-for="(page, index) in legalPages" :key="index" class="text-left mb-2 lg:mb-0 lg:px-4">
             <NuxtLink :to="page.to" class="inline-block text-xs font-no tracking-wide text-white text-opacity-50  hover:text-opacity-90 transition">{{ page.name }}</NuxtLink>
