@@ -103,7 +103,7 @@
       to: '/cookie-policy',
     },
     {
-      name: 'Terms and Conditions',
+      name: 'Terms & Conditions',
       to: '/terms-conditions',
     },
     {
