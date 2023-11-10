@@ -4,10 +4,10 @@
       <div class="max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Points of Contact</h1>
           
-        <carousel ref="imageLargeSlider" :breakpoints="breakpoints">
+        <carousel ref="imageLargeSlider" v-bind="settings" :breakpoints="breakpoints">
           <slide v-for="(person, index) in people" :key="index">
 
-            <div class="relative block group mr-4">
+            <div class="relative block group md:mr-6">
               <div class="relative h-96 md:h-[512px] w-full rounded-2xl overflow-hidden mb-4">
                 <div 
                   class="toggle-bio absolute z-30 top-4 md:top-6 right-4 md:right-6 w-10 h-10 rounded-full p-2 c-bg-orange cursor-pointer hover:bg-white transition"
@@ -117,13 +117,14 @@ function prevSlide() {
   imageLargeSlider.value.prev()
 }
 
+const settings = {
+  itemsToShow: 1.1,
+  snapAlign: 'center',
+}
+
 const breakpoints = {
-  0: {
-    itemsToShow: 1.1,
-    snapAlign: 'center',
-  },
   768: {
-    itemsToShow: 2.1,
+    itemsToShow: 1.7,
   },
   1024: {
     itemsToShow: 3.1,
@@ -132,11 +133,43 @@ const breakpoints = {
 </script>
 
 <style>
+.grid-people .carousel__slide {
+  padding: 0 4px;
+}
+
 .grid-people .carousel__viewport {
   overflow: visible;
 }
 
 .grid-people .carousel {
   text-align: left;
+}
+
+.grid-people .carousel__slide--sliding {
+  transition: all 0.3s ease-in;
+}
+
+.grid-people .carousel__slide {
+  opacity: 0.72;
+}
+
+
+.grid-people .carousel__slide--prev {
+  opacity: 0.72;
+}
+
+.grid-people .carousel__slide--next {
+  opacity: 0.72;
+}
+
+.grid-people .carousel__slide--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-people .carousel__slide {
+    padding: 0;
+  }
 }
 </style>

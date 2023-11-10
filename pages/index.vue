@@ -7,6 +7,7 @@
   <GridLong />
   <ImageLargeSlider />
   <CardsGrid />
+  <FeaturedSlider />
   <Testimonial />
   <ImageFullCurve />
   <GridFeed />

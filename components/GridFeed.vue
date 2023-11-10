@@ -47,8 +47,6 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-
 const projects = [
   {
     heading: 'Project name spanning over multiple lines',

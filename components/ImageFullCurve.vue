@@ -14,7 +14,7 @@
         <img src="https://static.jackbarham.com/ampyr/hero.jpg" alt="Hero" class="absolute h-full w-full object-cover">
       </div>
       <div class="c-bg-wheat">
-        <div class="lg:flex lg:justify-between lg:items-center max-w-xl lg:max-w-7xl m-auto pt-10 pb-14 lg:pt-20 lg:pb-24 px-6 md:px-8">
+        <div class="lg:flex lg:justify-between lg:items-center max-w-xl lg:max-w-7xl m-auto pt-10 pb-14 lg:pt-20 lg:pb-24 px-6 md:px-12">
           <div class="max-w-3xl">
             <p class="c-navy text-center lg:text-left text-lg lg:text-2xl lg:leading-normal font-no mb-8 lg:mb-0">Ampyr Solar Europe develops solar parks across Europe, from ideation to project realisation, handling all processes and environmental permits.</p>
           </div>
