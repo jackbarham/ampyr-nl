@@ -67,16 +67,16 @@
       parent: 'Energy Solutions',
       links: [
         {
-          page: 'At A Glance',
-          to: '/at-a-Glance',
+          page: 'At a Glance',
+          to: '/at-a-glance',
         },
         {
           page: 'Ground-based Solar Generation',
           to: '/ground-based-solar-generation',
         },
         {
-          page: 'International Reach',
-          to: '/international-reach',
+          page: 'Power Distribution',
+          to: '/power-distribution',
         },
       ]
     },
