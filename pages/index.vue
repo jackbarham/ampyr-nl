@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <HeroFull />
   <CardsLarge />
   <CardsNumber />
   <ImageHalf />

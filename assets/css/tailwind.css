@@ -168,3 +168,15 @@
   top: 0;
   z-index: 50;
 }
+
+.prose {
+  max-width: 100%;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+  font-weight: 500;
+}
