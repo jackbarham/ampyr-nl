@@ -3,7 +3,7 @@
     <div class="c-bg-grey">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="relative overflow-hidden">
-          <img :src="content.image" alt="Description" class="w-full h-[512px] md:h-[640px] lg:h-[768px] object-cover">
+          <img :src="content.image" alt="Description" class="w-full h-[384px] md:h-[640px] lg:h-[768px] object-cover">
           <svg class="svg-curve-down-bottom block md:hidden fill-f-grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 24" preserveAspectRatio="none">
             <path fill="none" d="M0,0 Q50,48 100,0 V24 H0 Z" />
           </svg>
