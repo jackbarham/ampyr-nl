@@ -133,9 +133,15 @@
   position: absolute;
   width: 100%;
   height: 48px;
-  top: -48px;
+  top: -47px;
   z-index: 50;
 } 
+
+@media only screen and (min-width: 768px) {
+  .svg-curve-up-bottom {
+    top: -48px;
+  }
+}
 
 .svg-curve-up-bottom-sit-bottom {
   position: absolute;
