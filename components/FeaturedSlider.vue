@@ -1,7 +1,7 @@
 <template>
   <div class="featured-slider">
-    <div class="bg-white py-14 lg:py-24">
-      <div class="max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
+    <div class="relative bg-white py-14 lg:py-24">
+      <div class="relative z-10 max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
 
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Featured Projects</h1>
           
@@ -32,6 +32,9 @@
           </div>
         </div>
 
+      </div>
+      <div class="absolute w-full h-full top-0 opacity-20">
+        <svgo-blades-full filled />
       </div>
     </div>
   </div>
