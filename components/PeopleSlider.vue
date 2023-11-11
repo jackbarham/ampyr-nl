@@ -1,7 +1,7 @@
 <template>
-  <div class="grid-people">
+  <div class="people-slider">
     <div class="bg-white py-14 lg:py-24">
-      <div class="max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
+      <div class="max-w-sm md:max-w-5xl m-auto px-4 md:px-8">
         <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Points of Contact</h1>
           
         <carousel ref="imageLargeSlider" v-bind="settings" :breakpoints="breakpoints">
@@ -127,48 +127,47 @@ const breakpoints = {
     itemsToShow: 1.7,
   },
   1024: {
-    itemsToShow: 3.1,
+    itemsToShow: 2.2,
   },
 }
 </script>
 
 <style>
-.grid-people .carousel__slide {
+.people-slider .carousel__slide {
   padding: 0 4px;
 }
 
-.grid-people .carousel__viewport {
+.people-slider .carousel__viewport {
   overflow: visible;
 }
-
-.grid-people .carousel {
+.people-slider .carousel {
   text-align: left;
 }
 
-.grid-people .carousel__slide--sliding {
+.people-slider .carousel__slide--sliding {
   transition: all 0.3s ease-in;
 }
 
-.grid-people .carousel__slide {
+.people-slider .carousel__slide {
   opacity: 0.72;
 }
 
 
-.grid-people .carousel__slide--prev {
+.people-slider .carousel__slide--prev {
   opacity: 0.72;
 }
 
-.grid-people .carousel__slide--next {
+.people-slider .carousel__slide--next {
   opacity: 0.72;
 }
 
-.grid-people .carousel__slide--active {
+.people-slider .carousel__slide--active {
   opacity: 1;
   transform: scale(1);
 }
 
 @media only screen and (min-width: 768px) {
-  .grid-people .carousel__slide {
+  .people-slider .carousel__slide {
     padding: 0;
   }
 }
