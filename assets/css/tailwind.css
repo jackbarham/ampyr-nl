@@ -12,9 +12,93 @@
     @apply font-medium leading-relaxed;
   }
 
-
   button {
     @apply w-full;
+  }
+
+  /* COLOURS */
+
+  .c-navy {
+    color: #181F49;
+  }
+
+  .c-bg-navy {
+    background-color: #181F49;
+  }
+
+  .border-navy {
+    border-color: #181F49;
+  }
+
+  .fill-navy {
+    path: #181F49;
+  }
+
+  .fill-navy {
+    fill: #181F49;
+  }
+
+  .fill-p-navy path {
+    path: #181F49;
+  }
+
+  .fill-f-navy path {
+    fill: #181F49;
+  }
+
+  .c-bg-navy-dark {
+    background-color: #15193C;
+  }
+
+  .c-nederland,
+  .c-orange {
+    color: #FFBFA6;
+  }
+
+  .border-nederland,
+  .border-orange {
+    border-color: #FFBFA6;
+  }
+
+  .c-bg-nederland,
+  .c-bg-orange {
+    background-color: #FFBFA6;
+  }
+
+  .fill-orange {
+    path: #FFBFA6;
+  }
+
+  .fill-p-orange path {
+    stroke: #FFBFA6;
+  }
+
+  .c-blue {
+    color: #71B7FE;
+  }
+
+  .c-purple {
+    color: #A89BF9;
+  }
+
+  .c-wheat {
+    color: #F5EFEC;
+  }
+
+  .fill-f-wheat path {
+    fill: #F5EFEC;
+  }
+
+  .c-bg-wheat {
+    background-color: #F5EFEC;
+  }
+
+  .c-bg-grey {
+    background-color: #EDF2F4;
+  }
+
+  .fill-f-grey path {
+    fill: #EDF2F4;
   }
 }
 
@@ -41,91 +125,6 @@
 .f-new-order,
 .font-no {
   font-family: "new-order"
-}
-
-/* COLOURS */
-
-.c-navy {
-  color: #181F49;
-}
-
-.c-bg-navy {
-  background-color: #181F49;
-}
-
-.border-navy {
-  border-color: #181F49;
-}
-
-.fill-navy {
-  path: #181F49;
-}
-
-.fill-navy {
-  fill: #181F49;
-}
-
-.fill-p-navy path {
-  path: #181F49;
-}
-
-.fill-f-navy path {
-  fill: #181F49;
-}
-
-.c-bg-navy-dark {
-  background-color: #15193C;
-}
-
-.c-nederland,
-.c-orange {
-  color: #FFBFA6;
-}
-
-.border-nederland,
-.border-orange {
-  border-color: #FFBFA6;
-}
-
-.c-bg-nederland,
-.c-bg-orange {
-  background-color: #FFBFA6;
-}
-
-.fill-orange {
-  path: #FFBFA6;
-}
-
-.fill-p-orange path {
-  stroke: #FFBFA6;
-}
-
-.c-blue {
-  color: #71B7FE;
-}
-
-.c-purple {
-  color: #A89BF9;
-}
-
-.c-wheat {
-  color: #F5EFEC;
-}
-
-.fill-f-wheat path {
-  fill: #F5EFEC;
-}
-
-.c-bg-wheat {
-  background-color: #F5EFEC;
-}
-
-.c-bg-grey {
-  background-color: #EDF2F4;
-}
-
-.fill-f-grey path {
-  fill: #EDF2F4;
 }
 
 /* SVG SHAPES */
