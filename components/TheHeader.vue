@@ -31,7 +31,7 @@
           </span>
           <ul 
             v-if="!page.to"
-            class="nav-sub lg:absolute z-10 left-0 min-w-[256px] c-bg-navy rounded-lg lg:group-hover:block list-disc marker:text-white/30 lg:list-none py-0 lg:py-3 pl-8 lg:pl-0 mb-2 lg:mb-0"
+            class="nav-sub lg:shadow-xl lg:absolute z-10 left-0 min-w-[256px] c-bg-navy rounded-lg lg:group-hover:block list-disc marker:text-white/30 lg:list-none py-0 lg:py-3 pl-8 lg:pl-0 mb-2 lg:mb-0"
             :class="`${page.isSubmenuOpen ? 'block' : 'hidden'}`"
           >
             <li 
