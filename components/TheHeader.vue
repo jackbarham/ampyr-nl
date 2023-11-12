@@ -11,7 +11,7 @@
       </div>
 
       <ul 
-        class="nav lg:flex fixed lg:relative top-0 right-0 lg:top-auto lg:right-auto pt-24 px-4 lg:px-0 lg:pt-0 w-full sm:w-96 lg:w-auto h-full lg:h-auto c-bg-navy lg:bg-transparent transform transition-transform"
+        class="nav lg:flex fixed overflow-x-scroll lg:overflow-x-visible lg:relative top-0 right-0 lg:top-auto lg:right-auto pt-24 lg:pt-0 pb-12 lg:pb-0 px-4 lg:px-0 w-full sm:w-96 lg:w-auto h-full lg:h-auto c-bg-navy lg:bg-transparent transform transition-transform"
         :class="`${menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`"
       >
         <li class="group block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg">
