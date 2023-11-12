@@ -2,22 +2,27 @@
   <header class="header absolute top-0 w-full z-50 f-new-order">
     <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8">
       
-      <NuxtLink to="/" class="w-32 h-8 shrink-0">
+      <NuxtLink to="/" class="logo relative z-10 w-32 h-8 shrink-0">
         <svgo-logo-colour filled />
       </NuxtLink>
 
-      <div class="visible lg:hidden w-10 h-10">
-        <svgo-burger />
+      <div @click="isMenuOpen = !isMenuOpen" class="menuToggle relative z-10 visible lg:hidden w-10 h-10 cursor-pointer">
+        <svgo-burger filled />
       </div>
 
-      <ul class="nav hidden lg:flex">
+      <ul :class="`nav lg:flex fixed lg:relative top-0 right-0 lg:top-auto lg:right-auto pt-24 px-4 lg:px-0 lg:pt-0 w-full sm:w-80 lg:w-auto h-full lg:h-auto c-bg-navy lg:bg-transparent transform transition-transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`">
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
-          class="group relative text-white tracking-wide hover:bg-opacity-10 hover:bg-white rounded"
+          class="group relative text-white tracking-wide hover:bg-opacity-10 hover:bg-white rounded text-lg"
         >
-          <NuxtLink v-if="page.to" :to="page.to" class="block px-5 py-3">{{ page.parent }}</NuxtLink>
-          <span v-if="!page.to" class="block px-5 py-3 cursor-pointer">{{ page.parent }}</span>
+          <NuxtLink v-if="page.to" :to="page.to" class="block px-4 xl:px-5 py-2">{{ page.parent }}</NuxtLink>
+          <span v-if="!page.to" class="flex items-center px-4 py-2 cursor-pointer">
+            <span class="mr-1">{{ page.parent }}</span>
+            <span class="block w-4 h-4">
+              <svgo-chevron-down filled />
+            </span>
+          </span>
           <ul class="nav-sub absolute left-0 min-w-[200px] bg-white text-black hidden group-hover:block rounded">
             <li 
               v-for="(link, subIndex) in page.links" 
@@ -30,8 +35,8 @@
         </li>
       </ul>
 
-      <div class="hidden lg:flex">
-        <div class="w-32 text-right shrink-0">
+      <div class="regions hidden lg:flex">
+        <div class="w-auto xl:w-32 text-right shrink-0">
           <span class="text-white uppercase font-light tracking-widest">Regions</span>
         </div>
       </div>
@@ -43,7 +48,7 @@
 <script setup>
 // import { ref } from 'vue';
 
-// const isMenuOpen = ref(false);
+const isMenuOpen = ref(false);
 
   const pages = [
     {
@@ -106,4 +111,20 @@
       to: '/contact',
     },
   ]
+
+  // Method to handle submenu visibility
+function toggleSubMenu(index) {
+  // Logic to show/hide submenu and ensure only one is open at a time
+  pages.forEach((page, i) => {
+    if (page.links) {
+      if (i === index) page.isOpen = !page.isOpen
+      else page.isOpen = false
+    }
+  })
+}
+
+// Add isOpen property to each page with links
+pages.forEach(page => {
+  if (page.links) page.isOpen = false
+})
 </script>
