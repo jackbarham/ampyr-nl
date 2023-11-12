@@ -14,16 +14,16 @@
         class="nav lg:flex fixed lg:relative top-0 right-0 lg:top-auto lg:right-auto pt-24 px-4 lg:px-0 lg:pt-0 w-full sm:w-96 lg:w-auto h-full lg:h-auto c-bg-navy lg:bg-transparent transform transition-transform"
         :class="`${menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`"
       >
-        <li class="group block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-xl lg:text-lg">
+        <li class="group block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg">
           <NuxtLink to="/" class="block px-4 xl:px-5 py-2">Home</NuxtLink>
         </li>
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
-          class="group relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-xl lg:text-lg"
+          class="group relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg"
         >
-          <NuxtLink v-if="page.to" :to="page.to" class="block px-4 xl:px-5 py-2">{{ page.parent }}</NuxtLink>
-          <span v-if="!page.to" @click="toggleSubmenu(page)" class="flex items-center px-4 py-2 cursor-pointer">
+          <NuxtLink v-if="page.to" :to="page.to" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
+          <span v-if="!page.to" @click="toggleSubmenu(page)" class="flex items-center px-4 py-3 cursor-pointer">
             <span class="mr-1">{{ page.parent }}</span>
             <span class="block w-4 h-4">
               <svgo-chevron-down filled />
@@ -31,8 +31,8 @@
           </span>
           <ul 
             v-if="!page.to"
-            class="nav-sub lg:shadow-xl lg:absolute z-10 left-0 min-w-[256px] c-bg-navy rounded-lg lg:group-hover:block list-disc marker:text-white/30 lg:list-none py-0 lg:py-3 pl-8 lg:pl-0 mb-2 lg:mb-0"
-            :class="`${page.isSubmenuOpen ? 'block' : 'hidden'}`"
+            class="nav-sub lg:shadow-xl lg:absolute z-10 left-0 min-w-[256px] c-bg-navy rounded-lg lg:group-hover:block list-disc marker:text-white/40 lg:list-none py-0 lg:py-3 pl-8 lg:pl-0 mb-2 lg:mb-0"
+            :class="`${page.submenuOpen ? 'block' : 'hidden'}`"
           >
             <li 
               v-for="(link, subIndex) in page.links" 
@@ -125,14 +125,13 @@ const pages = ref([
   },
 ].map(page => ({
   ...page,
-  isSubmenuOpen: false, // Add this property
+  submenuOpen: false
 })))
 
-// Function to toggle submenu visibility on mobile
 function toggleSubmenu(page) {
-  page.isSubmenuOpen = !page.isSubmenuOpen;
+  page.submenuOpen = !page.submenuOpen;
   pages.value.forEach(p => {
-    if (p !== page) p.isSubmenuOpen = false;
+    if (p !== page) p.submenuOpen = false;
   })
 }
 </script>
