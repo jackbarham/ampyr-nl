@@ -64,7 +64,8 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-  menuOpen.value = false;
+  menuOpen.value = false
+  useEvent('fixedPosition')
 }
 
 const pages = ref([
