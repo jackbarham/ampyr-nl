@@ -7,7 +7,8 @@
       </NuxtLink>
 
       <div @click="toggleMenu()" class="menuToggle relative z-10 visible lg:hidden w-10 h-10 cursor-pointer">
-        <svgo-burger filled />
+        <svgo-burger v-if="!menuOpen" filled />
+        <svgo-close v-else filled />
       </div>
 
       <ul 
@@ -60,12 +61,12 @@ const menuOpen = ref(false)
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
-  useEvent('fixedPosition')
+  useEvent('toggleFixed')
 }
 
 function closeMenu() {
   menuOpen.value = false
-  useEvent('fixedPosition')
+  useEvent('closeFixed')
 }
 
 const pages = ref([
@@ -143,13 +144,18 @@ function toggleSubmenu(page) {
   }
 }
 
-// Close sub menus when resized to desktop
-function handleResize() {
+function resetMenu() {
   if (window.innerWidth >= 1024) {
     pages.value.forEach(p => {
       p.submenuOpen = false
     })
+    closeMenu()
   }
+}
+
+// Close sub menus when resized to desktop
+function handleResize() {
+  resetMenu()
 }
 
 onMounted(() => {

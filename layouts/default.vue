@@ -13,7 +13,11 @@
 <script setup>
 const fixed = ref(false)
 
-useListen('fixedPosition', () => {
+useListen('toggleFixed', () => {
   fixed.value = !fixed.value
+})
+
+useListen('closeFixed', () => {
+  fixed.value = false
 })
 </script>
