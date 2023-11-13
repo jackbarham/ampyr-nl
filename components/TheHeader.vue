@@ -15,14 +15,14 @@
         :class="`${menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`"
       >
         <li class="group block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg">
-          <NuxtLink to="/" class="block px-4 xl:px-5 py-2">Home</NuxtLink>
+          <NuxtLink to="/" @click="closeMenu" class="block px-4 xl:px-5 py-2">Home</NuxtLink>
         </li>
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
           class="group relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg"
         >
-          <NuxtLink v-if="page.to" :to="page.to" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
+          <NuxtLink v-if="page.to" :to="page.to" @click="closeMenu" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
           <span v-if="!page.to" @click="toggleSubmenu(page)" class="flex items-center px-4 py-3 cursor-pointer">
             <span class="mr-1">{{ page.parent }}</span>
             <span class="block w-4 h-4">
@@ -39,7 +39,7 @@
               :key="subIndex"
               class="c-wheat hover:c-orange"
             >
-              <NuxtLink v-if="link.to" :to="link.to" class="block px-2 lg:px-6 py-2 rounded">{{ link.page }}</NuxtLink>
+              <NuxtLink v-if="link.to" :to="link.to" @click="closeMenu" class="block px-2 lg:px-6 py-2 rounded">{{ link.page }}</NuxtLink>
             </li>
           </ul>
         </li>
@@ -61,6 +61,10 @@ const menuOpen = ref(false)
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
   useEvent('fixedPosition')
+}
+
+function closeMenu() {
+  menuOpen.value = false;
 }
 
 const pages = ref([
