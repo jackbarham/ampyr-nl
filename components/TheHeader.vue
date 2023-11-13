@@ -6,7 +6,7 @@
       :class="{ 'from-transparent': menuClass === 'menu-dark' }"
     >
       
-      <NuxtLink to="/" class="logo relative z-10 w-32 h-8 shrink-0">
+      <NuxtLink to="/" class="logo relative z-10 w-40 h-auto shrink-0">
         <svgo-logo-white v-if="menuClass === 'menu-light'" filled />
         <svgo-logo-blue v-if="menuClass === 'menu-dark'" filled />
       </NuxtLink>
@@ -29,10 +29,10 @@
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
-          class="group relative text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg"
-          :class="{ 'text-white lg:c-navy': menuClass === 'menu-dark' }"
+          class="group relative text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-base xl:text-lg"
+          :class="{ 'text-white lg:c-navy lg:hover:bg-opacity-60': menuClass === 'menu-dark' }"
         >
-          <NuxtLink v-if="page.to" :to="page.to" @click="closeMenu()" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
+          <NuxtLink v-if="page.to" :to="page.to" @click="closeMenu()" class="block px-4 lg:px-2 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
           <span v-if="!page.to" @click="toggleSubmenu(page)" class="flex items-center px-4 py-3 cursor-pointer">
             <span class="mr-1">{{ page.parent }}</span>
             <span class="block w-4 h-4">
@@ -58,8 +58,8 @@
       <div class="regions hidden lg:flex">
         <div class="w-auto xl:w-32 text-right shrink-0">
           <span 
-            class="flex text-white uppercase text-sm tracking-widest"
-            :class="{ '!c-navy': menuClass === 'menu-dark' }"
+            class="inline-flex text-white uppercase text-sm tracking-widest lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg px-4 xl:px-3 py-3 cursor-pointer"
+            :class="{ '!c-navy lg:hover:bg-opacity-60': menuClass === 'menu-dark' }"
             >
               <span class="mr-1">Regions</span>
               <span class="block relative top-0.5 w-4 h-4">
