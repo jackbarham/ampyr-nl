@@ -133,10 +133,30 @@ const pages = ref([
   submenuOpen: false
 })))
 
+// Make parent clickable on mobile and hover on desktop
 function toggleSubmenu(page) {
-  page.submenuOpen = !page.submenuOpen;
-  pages.value.forEach(p => {
-    if (p !== page) p.submenuOpen = false;
-  })
+  if (window.innerWidth < 1024) {
+    page.submenuOpen = !page.submenuOpen
+    pages.value.forEach(p => {
+      if (p !== page) p.submenuOpen = false
+    })
+  }
 }
+
+// Close sub menus when resized to desktop
+function handleResize() {
+  if (window.innerWidth >= 1024) {
+    pages.value.forEach(p => {
+      p.submenuOpen = false
+    })
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
