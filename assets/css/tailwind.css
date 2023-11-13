@@ -31,10 +31,6 @@
   }
 
   .fill-navy {
-    path: #181F49;
-  }
-
-  .fill-navy {
     fill: #181F49;
   }
 
@@ -44,6 +40,10 @@
 
   .fill-f-navy path {
     fill: #181F49;
+  }
+
+  .fill-s-navy path {
+    stroke: #181F49;
   }
 
   .c-bg-navy-dark {

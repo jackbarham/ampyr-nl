@@ -1,6 +1,9 @@
 <template>
-  <header class="header absolute top-0 w-full z-50 f-new-order">
-    <div class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8">
+  <header class="header absolute top-0 w-full z-50 f-new-order" :class="menuClass">
+    <div 
+      class="flex justify-between w-full h-20 bg-gradient-to-b from-[#181F49] items-center px-4 lg:px-8"
+      :class="{ 'from-transparent': menuClass === 'menu-dark' }"
+    >
       
       <NuxtLink to="/" class="logo relative z-10 w-32 h-8 shrink-0">
         <svgo-logo-colour filled />
@@ -15,19 +18,23 @@
         class="nav lg:flex fixed overflow-x-scroll lg:overflow-x-visible lg:relative top-0 right-0 lg:top-auto lg:right-auto pt-24 lg:pt-0 pb-12 lg:pb-0 px-4 lg:px-0 w-full sm:w-96 lg:w-auto h-full lg:h-auto c-bg-navy lg:bg-transparent transform transition-transform"
         :class="`${menuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`"
       >
-        <li class="group block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg">
+        <li 
+          class="block lg:hidden relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg"
+          :class="{ 'c-navy': menuClass === 'menu-dark' }"
+        >
           <NuxtLink to="/" @click="closeMenu" class="block px-4 xl:px-5 py-2">Home</NuxtLink>
         </li>
         <li 
           v-for="(page, index) in pages" 
           :key="index" 
           class="group relative text-white hover:c-orange lg:hover:text-white tracking-wide lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg text-2xl lg:text-lg"
+          :class="{ '!c-navy': menuClass === 'menu-dark' }"
         >
-          <NuxtLink v-if="page.to" :to="page.to" @click="closeMenu" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
+          <NuxtLink v-if="page.to" :to="page.to" @click="closeMenu()" class="block px-4 xl:px-5 py-3">{{ page.parent }}</NuxtLink>
           <span v-if="!page.to" @click="toggleSubmenu(page)" class="flex items-center px-4 py-3 cursor-pointer">
             <span class="mr-1">{{ page.parent }}</span>
             <span class="block w-4 h-4">
-              <svgo-chevron-down filled />
+              <svgo-chevron-down filled :class="{ 'fill-s-navy': menuClass === 'menu-dark' }" />
             </span>
           </span>
           <ul 
@@ -40,7 +47,7 @@
               :key="subIndex"
               class="c-wheat hover:c-orange"
             >
-              <NuxtLink v-if="link.to" :to="link.to" @click="closeMenu" class="block px-2 lg:px-6 py-2 rounded">{{ link.page }}</NuxtLink>
+              <NuxtLink v-if="link.to" :to="link.to" @click="closeMenu()" class="block px-2 lg:px-6 py-2 rounded">{{ link.page }}</NuxtLink>
             </li>
           </ul>
         </li>
@@ -57,6 +64,8 @@
 </template>
 
 <script setup>
+const { menuClass } = useMenuClass()
+
 const menuOpen = ref(false)
 
 function toggleMenu() {
@@ -134,7 +143,6 @@ const pages = ref([
   submenuOpen: false
 })))
 
-// Make parent clickable on mobile and hover on desktop
 function toggleSubmenu(page) {
   if (window.innerWidth < 1024) {
     page.submenuOpen = !page.submenuOpen
@@ -153,13 +161,13 @@ function resetMenu() {
   }
 }
 
-// Close sub menus when resized to desktop
 function handleResize() {
   resetMenu()
 }
 
 onMounted(() => {
   window.addEventListener('resize', handleResize)
+  console.log(`Default ${menuClass.value}`)
 })
 
 onUnmounted(() => {

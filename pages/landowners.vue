@@ -3,6 +3,7 @@
 </template>
 
 <script setup>
+const { setMenuClass } = useMenuClass()
 import HeroShape1 from '~/assets/icons/hero-shape-1.svg'
 
 const hero = {
@@ -17,4 +18,8 @@ const hero = {
   },
   svg: HeroShape1,
 }
+
+onMounted(() => {
+  setMenuClass('menu-dark')
+})
 </script>

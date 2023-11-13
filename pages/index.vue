@@ -20,3 +20,11 @@
   <ImageTextLeft />
   <CardsArticle />
 </template>
+
+<script setup>
+const { setMenuClass } = useMenuClass()
+
+onMounted(() => {
+  setMenuClass('menu-light')
+})
+</script>
