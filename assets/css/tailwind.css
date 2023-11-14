@@ -73,6 +73,10 @@
     stroke: #FFBFA6;
   }
 
+  .fill-orange {
+    path: #FFBFA6;
+  }
+
   .c-blue {
     color: #71B7FE;
   }
@@ -87,6 +91,14 @@
 
   .fill-f-wheat path {
     fill: #F5EFEC;
+  }
+
+  .fill-fp-white path {
+    stroke: #F5EFEC;
+  }
+
+  .fill-fp-orange path {
+    stroke: #FFBFA6;
   }
 
   .c-bg-wheat {

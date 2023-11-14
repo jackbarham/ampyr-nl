@@ -55,8 +55,8 @@
         </li>
       </ul>
 
-      <div class="regions hidden lg:flex">
-        <div class="w-auto xl:w-32 text-right shrink-0">
+      <div class="regions relative hidden lg:flex">
+        <div class="w-auto xl:w-32 text-right shrink-0 group/show">
           <span 
             class="inline-flex text-white uppercase text-sm tracking-widest lg:hover:bg-opacity-10 lg:hover:bg-white rounded-lg px-4 xl:px-3 py-3 cursor-pointer"
             :class="{ '!c-navy lg:hover:bg-opacity-60': menuClass === 'menu-dark' }"
@@ -66,6 +66,25 @@
                 <svgo-chevron-down filled :class="{ 'lg:fill-s-navy': menuClass === 'menu-dark' }" />
               </span>
           </span>
+          <ul
+            class="nav-sub lg:shadow-xl lg:absolute z-10 right-0 min-w-[256px] c-bg-navy rounded-lg hidden group-hover/show:block py-0 lg:py-3 pl-8 lg:pl-0 mb-2 lg:mb-0"
+          >
+            <li 
+              v-for="(region, index) in regions" 
+              :key="index"
+              class="c-wheat hover:c-orange text-left"
+            >
+              <NuxtLink :to="region.link" @click="closeMenu()" class="flex items-center px-2 lg:px-6 py-2 rounded group">
+                <img class="w-6 h-6 mr-4" :src="region.flag" :alt="region.name">
+                <span class="flex w-full justify-between">
+                  <span>{{ region.name }}</span>
+                  <span class="flex w-6 h-6">
+                    <svgo-arrow-right filled class="fill-fp-white group-hover:fill-fp-orange" />
+                  </span>
+                </span>
+              </NuxtLink>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -88,6 +107,29 @@ function closeMenu() {
   menuOpen.value = false
   useEvent('closeFixed')
 }
+
+const regions = [
+  {
+    name: 'Global',
+    flag: 'https://static.jackbarham.com/ampyr/globe-white.png',
+    link: '#',
+  },
+  {
+    name: 'Nederland',
+    flag: 'https://static.jackbarham.com/ampyr/flag-nl.png',
+    link: '#',
+  },
+  {
+    name: 'Deutschland',
+    flag: 'https://static.jackbarham.com/ampyr/flag-de.png',
+    link: '#',
+  },
+  {
+    name: 'United Kingdom',
+    flag: 'https://static.jackbarham.com/ampyr/flag-gb.png',
+    link: '#',
+  },
+]
 
 const pages = ref([
   {
