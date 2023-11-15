@@ -36,7 +36,7 @@
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
-              <div class="absolute w-full h-full group-hover:backdrop-blur-sm transition"></div>
+              <div class="absolute w-full h-full group-hover:bg-indigo-950/70 transition"></div>
               <img :src="project.image" alt="Description" class="w-full h-96 object-cover">
             </a>
           </template>
