@@ -7,8 +7,8 @@
     >
       
       <NuxtLink to="/" class="logo block relative z-10 w-40 h-10 shrink-0">
-        <svgo-logo-white v-if="menuClass === 'menu-light'" filled />
-        <svgo-logo-blue v-if="menuClass === 'menu-dark'" filled />
+        <svgo-logo-white v-if="menuClass === 'menu-light' || (menuClass === 'menu-dark' && menuOpen)" filled />
+        <svgo-logo-blue v-if="menuClass === 'menu-dark' && !menuOpen" filled />
       </NuxtLink>
 
       <div @click="toggleMenu()" class="menuToggle relative z-10 visible lg:hidden w-10 h-10 cursor-pointer">

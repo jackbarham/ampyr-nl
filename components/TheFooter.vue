@@ -9,7 +9,7 @@
         <div class="lg:flex">
           <div v-for="(page, index) in mainPages" :key="index" class="mb-6 lg:px-8 max-w-[208px]">
             <h2 class="c-orange font-normal tracking-wide text-lg mb-4">{{ page.parent }}</h2>
-            <NuxtLink v-for="(link, index) in page.links" :key="index" :to="link.to" class="block text-sm font-no tracking-wide text-white hover:[#FFBFA6] transition mb-3">{{ link.name }}</NuxtLink>
+            <NuxtLink v-for="(link, index) in page.links" :key="index" :to="link.to" class="block text-sm font-no tracking-wide text-white hover:c-orange transition mb-3">{{ link.name }}</NuxtLink>
           </div>
         </div>
         <div>

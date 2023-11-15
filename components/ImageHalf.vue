@@ -12,6 +12,7 @@
           </svg>
         </div>
         <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left c-navy">
+          <span class="inline-block uppercase text-xs tracking-widest mb-6">{{ content.category }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ content.heading }}</h2>
           <p class=" lg:text-xl mb-8">{{ content.text }}</p>
           <Button theme="dark" link="#" text="Read case study" />
@@ -23,6 +24,7 @@
 
 <script setup>
   const content = {
+    category: 'Category name',
     heading: 'Case Study Name',
     text: 'Add a brief description of your chosen case study here. Recommended max characters: 200',
     buttonText: 'Read the case study',
