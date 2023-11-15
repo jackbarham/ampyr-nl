@@ -8,7 +8,7 @@
         <carousel ref="featuredSlider" :items-to-show="1.2" :wrap-around="true" :breakpoints="breakpoints">
           <slide v-for="(project, index) in projects" :key="index">
 
-            <a :href="project.link" class="block relative w-full h-[384px] md:h-[512px] rounded-lg md:rounded-2xl overflow-hidden group">
+            <NuxtLink :to="project.link" class="block relative w-full h-[384px] md:h-[512px] rounded-lg md:rounded-2xl overflow-hidden group">
               <div class="absolute w-full h-full z-30 p-6">
                 <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.heading }}</h2>
                 <div class="absolute left-6 bottom-6 bg-white c-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
@@ -18,8 +18,7 @@
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
               <img :src="project.image" alt="Description" class="w-full h-full object-cover">
-            </a>
-
+            </NuxtLink>
           </slide>
         </carousel>
 
@@ -45,25 +44,25 @@ const projects = [
   {
     heading: 'Edinburgh Airport',
     category: 'Category One',
-    link: '#',
+    link: '/portfolio/case-study-name',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
   {
     heading: 'Somewhere Else',
     category: 'Category Three',
-    link: '#',
+    link: '/portfolio/case-study-name',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
   {
     heading: 'Government Utility',
     category: 'Category Three',
-    link: '#',
+    link: '/portfolio/case-study-name',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
   {
     heading: 'Power Networks',
     category: 'Category two',
-    link: '#',
+    link: '/portfolio/case-study-name',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
 ]

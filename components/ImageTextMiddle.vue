@@ -7,7 +7,7 @@
           <div class="flex items-center h-full w-full max-w-4xl m-auto p-6">
             <div class="text-center c-navy">
               <h3 class="mb-12 text-2xl lg:text-4xl lg:leading-snug">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-              <Button theme="dark" link="#" text="Button text here" />
+              <Button theme="dark" link="#" text="Button not linked" />
             </div>
           </div>
         </div>

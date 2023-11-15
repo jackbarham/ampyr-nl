@@ -15,7 +15,7 @@
           <span class="inline-block uppercase text-xs tracking-widest mb-6">{{ content.category }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ content.heading }}</h2>
           <p class=" lg:text-xl mb-8">{{ content.text }}</p>
-          <Button theme="dark" link="#" text="Read case study" />
+          <Button theme="dark" :link="content.buttonLink" text="Read case study" />
         </div>
       </div>
     </div>
@@ -28,6 +28,7 @@
     heading: 'Case Study Name',
     text: 'Add a brief description of your chosen case study here. Recommended max characters: 200',
     buttonText: 'Read the case study',
+    buttonLink: 'portfolio/case-study-name',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   }
 </script>

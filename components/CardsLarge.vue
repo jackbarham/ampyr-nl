@@ -11,7 +11,7 @@
           <div class="max-w-lg m-auto pt-6 lg:pt-0 lg:px-12 text-center lg:text-left">
             <h2 class="text-white font-normal text-3xl mb-6">{{ card.heading }}</h2>
             <p class="text-white mb-8">{{ card.text }}</p>
-            <Button theme="light" link="#" text="Find out more" />
+            <Button theme="light" :link="card.link" text="Find out more" />
           </div>
         </div>
       </div>
@@ -25,11 +25,13 @@
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
       heading: 'For Landowners',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      link: '/landowners',
     },
     {
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
       heading: 'For Municipalities',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      link: '/municipalities',
     },
   ]
 </script>

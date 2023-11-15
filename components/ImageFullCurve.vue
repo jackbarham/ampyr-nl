@@ -19,7 +19,7 @@
             <p class="c-navy text-center lg:text-left text-lg lg:text-2xl lg:leading-normal font-no mb-8 lg:mb-0">Ampyr Solar Europe develops solar parks across Europe, from ideation to project realisation, handling all processes and environmental permits.</p>
           </div>
           <div class="flex lg:block justify-center">
-            <Button theme="dark" link="#" text="Find out more" />
+            <Button theme="dark" link="#" text="Button not linked" />
           </div>
         </div>
       </div>

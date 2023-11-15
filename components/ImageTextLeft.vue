@@ -8,7 +8,7 @@
             <div class="max-w-md c-navy">
               <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">Our Commitment To Sustainability</h2>
               <p class="mb-10">We develop land for ground-mounted PV installations in a holistic way, taking into account the needs of each particular region to ensure sustainable power generation. For local communities and regions, we strive to help accelerate their journey to zero-carbon.</p>
-              <Button theme="dark" link="#" text="Find out more" />
+              <Button theme="dark" link="#" text="Button not linked" />
             </div>
           </div>
         </div>

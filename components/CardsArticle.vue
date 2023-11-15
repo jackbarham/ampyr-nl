@@ -40,19 +40,19 @@
   const cards = [
     {
       heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-      link: 'press-release/demo-press-release-content',
+      link: 'press/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },
     {
       heading: 'Echt-Susteren & Venray — Construction Update',
-      link: 'press-release/demo-press-release-content',
+      link: 'press/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },
     {
       heading: 'AMPYR Solar Europe secures €200M Project Finance Facility from Rabobank',
-      link: 'press-release/demo-press-release-content',
+      link: 'press/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },

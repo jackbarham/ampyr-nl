@@ -6,7 +6,7 @@
           <div class="">
             <h2 class="text-6xl mb-6">Hero Text</h2>
             <p class="mb-6 text-lg max-w-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <Button theme="light" link="#" text="Find out more" />
+            <Button theme="light" link="#" text="Button not linked" />
           </div>
         </div>
       </div>

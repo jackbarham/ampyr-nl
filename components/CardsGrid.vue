@@ -33,34 +33,34 @@
 <script setup>
   const cards = [
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
     {
-      heading: 'Panel Engineer',
+      heading: 'Head of Finance',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
-      link: '#',
+      link: '/careers/head-of-finance',
     },
   ]
 </script>
