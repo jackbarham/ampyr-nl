@@ -7,10 +7,10 @@
       >
         <div 
           class="flex text-white uppercase text-base lg:text-sm tracking-widest px-4 xl:px-3 py-3"
-          :class="{'!c-navy lg:hover:bg-opacity-60': menuClass === 'menu-dark'}"
+          :class="{'lg:c-navy lg:hover:bg-opacity-60': menuClass === 'menu-dark'}"
         >
           <span class="block mr-1">Regions</span>
-          <span class="block relative top-0.5 w-4 h-4">
+          <span class="block relative top-1 lg:top-0.5 w-4 h-4">
             <svgo-chevron-down filled :class="{ 'lg:fill-s-navy': menuClass === 'menu-dark' }" />
           </span>
         </div>

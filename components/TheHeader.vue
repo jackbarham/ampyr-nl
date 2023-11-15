@@ -6,7 +6,7 @@
       :class="{ 'from-transparent': menuClass === 'menu-dark' }"
     >
       
-      <NuxtLink to="/" class="logo relative z-10 w-40 h-auto shrink-0">
+      <NuxtLink to="/" class="logo block relative z-10 w-40 h-auto shrink-0">
         <svgo-logo-white v-if="menuClass === 'menu-light'" filled />
         <svgo-logo-blue v-if="menuClass === 'menu-dark'" filled />
       </NuxtLink>
