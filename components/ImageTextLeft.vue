@@ -1,5 +1,5 @@
 <template>
-  <div class="expanding">
+  <div class="image-text-left">
     <div class="bg-white">
       <div class="relative h-[512px] lg:h-[768px] w-full">
 
@@ -13,7 +13,7 @@
           </div>
         </div>
         
-        <div class="absolute h-full w-full z-10 bg-gradient-to-r from-slate-50 to-transparent opacity-50"></div>
+        <div class="absolute h-full w-full z-10 bg-gradient-to-r from-[#F5EFEC] to-transparent opacity-90"></div>
         <img src="https://static.jackbarham.com/ampyr/hero.jpg" alt="Hero" class="absolute h-full w-full object-cover opacity-80">
       </div>
     </div>

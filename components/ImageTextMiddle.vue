@@ -1,6 +1,6 @@
 <template>
   <div class="ImageTextMiddle">
-    <div class="bg-white">
+    <div class="c-bg-wheat">
       <div class="relative h-[512px] lg:h-[640px] w-full">
 
         <div class="absolute z-20 w-full h-full">
@@ -12,7 +12,7 @@
           </div>
         </div>
 
-        <img src="https://static.jackbarham.com/ampyr/hero.jpg" alt="Hero" class="absolute h-full w-full object-cover opacity-40">
+        <img src="https://static.jackbarham.com/ampyr/hero.jpg" alt="Hero" class="absolute h-full w-full object-cover opacity-50">
       </div>
     </div>
   </div>

@@ -16,7 +16,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-[#F5EFEC] opacity-80"></div>
+              <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-[#F5EFEC] opacity-90"></div>
               <img :src="slide.image" alt="Hero" class="absolute h-full w-full object-cover opacity-50 md:opacity-100">
             </div>
             
