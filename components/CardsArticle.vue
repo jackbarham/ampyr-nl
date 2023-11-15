@@ -8,11 +8,11 @@
         <div class="max-w-xl lg:max-w-7xl m-auto px-4 md:px-8">
           <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Latest from us...</h1>
           <div class="lg:grid lg:grid-cols-3 lg:gap-6 mb-12 lg:mb-20">
-            <a 
+            <NuxtLink 
               v-for="(card, index) in cards" 
               :key="index" 
               class="block mb-6 last:mb-0 lg:mb-0 bg-white hover:c-bg-navy-dark scale-1 lg:hover:scale-[103%] rounded-2xl overflow-hidden group transition-all"
-              :href="card.link"
+              :to="card.link"
             >
               <div class="relative">
                 <span class="bg-white c-navy text-xs px-3 py-1 rounded-full absolute z-10 right-4 top-4 capitalize">{{ card.category }}</span>
@@ -24,7 +24,7 @@
                   <svgo-arrow-right filled class="fill-p-navy" />
                 </div>
               </div>
-            </a>
+            </NuxtLink>
           </div>
           <div class="flex justify-center">
             <Button theme="light" link="#" text="Read more articles" />
@@ -40,19 +40,19 @@
   const cards = [
     {
       heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-      link: '#',
+      link: 'press-release/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },
     {
       heading: 'Echt-Susteren & Venray — Construction Update',
-      link: '#',
+      link: 'press-release/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },
     {
       heading: 'AMPYR Solar Europe secures €200M Project Finance Facility from Rabobank',
-      link: '#',
+      link: 'press-release/demo-press-release-content',
       category: 'Press release',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
     },
