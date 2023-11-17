@@ -3,7 +3,7 @@
     <div class="c-bg-grey">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="relative overflow-hidden">
-          <img :src="content.image" alt="Description" class="w-full h-[384px] md:h-[640px] lg:h-[768px] object-cover">
+          <img :src="props.content.image" alt="Description" class="w-full h-[384px] md:h-[640px] lg:h-[768px] object-cover">
           <svg class="svg-curve-down-bottom block md:hidden fill-f-grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 24" preserveAspectRatio="none">
             <path fill="none" d="M0,0 Q50,48 100,0 V24 H0 Z" />
           </svg>
@@ -12,10 +12,10 @@
           </svg>
         </div>
         <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left c-navy">
-          <span class="inline-block uppercase text-xs tracking-widest mb-6">{{ content.category }}</span>
-          <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ content.heading }}</h2>
-          <p class=" lg:text-xl mb-8">{{ content.text }}</p>
-          <Button theme="dark" :link="content.buttonLink" text="Read case study" />
+          <span class="inline-block uppercase text-xs tracking-widest mb-6">{{ props.content.category }}</span>
+          <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ props.content.heading }}</h2>
+          <p class="lg:text-xl" :class="{ 'mb-8': props.content.button }">{{ props.content.text }}</p>
+          <Button v-if="props.content.button" theme="dark" :link="props.content.button.link" :text="props.content.button.text" />
         </div>
       </div>
     </div>
@@ -23,12 +23,10 @@
 </template>
 
 <script setup>
-  const content = {
-    category: 'Category name',
-    heading: 'Case Study Name',
-    text: 'Add a brief description of your chosen case study here. Recommended max characters: 200',
-    buttonText: 'Read the case study',
-    buttonLink: 'portfolio/case-study-name',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  }
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
 </script>

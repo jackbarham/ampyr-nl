@@ -2,7 +2,7 @@
   <HeroFull />
   <CardsLarge />
   <CardsNumber />
-  <ImageHalf />
+  <ImageHalf :content="caseStudy" />
   <ImageTextMiddle />
   <GridLong />
   <ImageLargeSlider />
@@ -27,4 +27,15 @@ const { setMenuClass } = useMenuClass()
 onMounted(() => {
   setMenuClass('menu-light')
 })
+
+const caseStudy = {
+  category: 'Category name',
+  heading: 'Case Study Name',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+  button: {
+    text: 'Read the case study',
+    link: '/portfolio/case-study-name',
+  }
+}
 </script>

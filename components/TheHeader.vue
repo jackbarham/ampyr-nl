@@ -170,7 +170,6 @@ function handleResize() {
 onMounted(() => {
   showHeader.value = true
   window.addEventListener('resize', handleResize)
-  console.log(`Default ${menuClass.value}`)
 })
 
 onUnmounted(() => {
