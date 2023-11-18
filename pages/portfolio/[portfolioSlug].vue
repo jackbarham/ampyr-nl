@@ -1,6 +1,6 @@
 <template>
   <ImageHalf :content="hero" />
-  <TempPressReleaseCopy />
+  <TempCaseStudyCopy />
 </template>
 
 <script setup>

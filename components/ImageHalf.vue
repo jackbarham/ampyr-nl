@@ -12,7 +12,7 @@
           </svg>
         </div>
         <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left c-navy">
-          <span class="inline-block uppercase text-xs tracking-widest mb-6">{{ props.content.category }}</span>
+          <span class="inline-block uppercase text-xs tracking-widest mb-4 lg:mb-6">{{ props.content.category }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ props.content.heading }}</h2>
           <p class="lg:text-xl" :class="{ 'mb-8': props.content.button }">{{ props.content.text }}</p>
           <Button v-if="props.content.button" theme="dark" :link="props.content.button.link" :text="props.content.button.text" />

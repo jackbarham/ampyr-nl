@@ -24,10 +24,6 @@
 <script setup>
 const { setMenuClass } = useMenuClass()
 
-onMounted(() => {
-  setMenuClass('menu-light')
-})
-
 const caseStudy = {
   category: 'Category name',
   heading: 'Case Study Name',
@@ -38,4 +34,8 @@ const caseStudy = {
     link: '/portfolio/case-study-name',
   }
 }
+
+onMounted(() => {
+  setMenuClass('menu-light')
+})
 </script>
