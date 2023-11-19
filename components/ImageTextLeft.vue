@@ -17,7 +17,7 @@
         <img 
           src="https://static.jackbarham.com/ampyr/hero.jpg" 
           alt="Hero" 
-          class="start-scale-in absolute h-full w-full object-cover opacity-80" 
+          class="start-scale-out absolute h-full w-full object-cover opacity-80" 
         />
       </div>
     </div>
@@ -28,9 +28,10 @@
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+      // console.log(`Left: ${entry.isIntersecting}`)
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains('start-scale-in')) {
-          entry.target.classList.add('animate-scale-in')
+        if (entry.target.classList.contains('start-scale-out')) {
+          entry.target.classList.add('animate-scale-out')
         }
         if (entry.target.classList.contains('start-fade-in')) {
           entry.target.classList.add('animate-fade-in')
@@ -41,7 +42,7 @@ onMounted(() => {
     threshold: 0.4
   })
 
-  const elementsToScale = document.querySelectorAll('.start-scale-in')
+  const elementsToScale = document.querySelectorAll('.start-scale-out')
   elementsToScale.forEach(el => observer.observe(el))
 
   const elementsToFade = document.querySelectorAll('.start-fade-in');
