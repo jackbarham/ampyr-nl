@@ -27,7 +27,7 @@ onMounted(() => {
       if (entry.isIntersecting) {
         entry.target.querySelector('.start-circle-out').classList.add('animate-circle-out')
       }
-    });
+    })
   }, {
     threshold: 0.6
   })

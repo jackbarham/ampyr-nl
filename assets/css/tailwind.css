@@ -267,6 +267,31 @@
   }
 }
 
+/* Scale and fade in */
+.start-fade-scale {
+  opacity: 0.1;
+  transform: scale(0.64);
+
+}
+
+.animate-fade-scale {
+  animation-duration: 1.6s;
+  animation-fill-mode: both;
+  animation-name: animate-fade-scale;
+}
+
+@keyframes animate-fade-scale {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.64);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Circle out */
 .start-circle-out {
   clip-path: circle(20% at 50% 50%);
@@ -288,5 +313,25 @@
   100% {
     clip-path: circle(100% at 50% 50%);
     opacity: 1;
+  }
+}
+
+/* Reveal to right */
+.start-show-right {
+  mask-image: linear-gradient(to right, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+}
+
+.amimate-show-right {
+  mask-image: linear-gradient(to right, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  animation: amimate-show-right 1.2s forwards;
+}
+
+@keyframes amimate-show-right {
+  to {
+    mask-position: 0 -100%;
   }
 }

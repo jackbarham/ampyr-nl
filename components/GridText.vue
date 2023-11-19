@@ -7,7 +7,7 @@
           <div 
             v-for="(item, index) in items" 
             :key="index" 
-            class="mb-12 last:mb-0 lg:mb-0 px-4 lg:px-0"
+            class="start-fade-scale mb-12 last:mb-0 lg:mb-0 px-4 lg:px-0"
           >
             <div class="h-10 w-10 mb-4 mx-auto">
               <component :is="item.icon" filled class="fill-p-orange" />
@@ -17,31 +17,51 @@
           </div>
         </div>
       </div>
-      <svgo-test2 filled class="hidden lg:block pt-20 opacity-80" />
+      <svgo-test2 filled class="start-show-right hidden lg:block pt-20 opacity-80" />
     </div>
   </div>
 </template>
 
 <script setup>
-  import IconWorld from '~/assets/icons/world.svg'
-  import IconLeaf from '~/assets/icons/leaf.svg'
-  import IconheartHandshake from '~/assets/icons/heart-handshake.svg'
+import IconWorld from '~/assets/icons/world.svg'
+import IconLeaf from '~/assets/icons/leaf.svg'
+import IconheartHandshake from '~/assets/icons/heart-handshake.svg'
 
-  const items = [
-    {
-      icon: IconWorld,
-      heading: 'Benefit One',
-      text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
-    },
-    {
-      icon: IconLeaf,
-      heading: 'Benefit Two',
-      text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
-    },
-    {
-      icon: IconheartHandshake,
-      heading: 'Benefit Three',
-      text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
-    },
-  ]
+const items = [
+  {
+    icon: IconWorld,
+    heading: 'Benefit One',
+    text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
+  },
+  {
+    icon: IconLeaf,
+    heading: 'Benefit Two',
+    text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
+  },
+  {
+    icon: IconheartHandshake,
+    heading: 'Benefit Three',
+    text: 'Ac odio tempor orci dapibus ultrices in iaculis. Eget egestas purus viverra accumsan in nisl nisi scelerisque.',
+  },
+]
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add class to all .start-show-right elements
+        entry.target.querySelector('.start-show-right').classList.add('amimate-show-right')
+
+        // Add class to the first matching .start-fade-scale element
+        const fadeScaleElement = entry.target.querySelectorAll('.start-fade-scale')
+        fadeScaleElement.forEach(el => el.classList.add('animate-fade-scale'))
+      }
+    });
+  }, {
+    threshold: 0.6
+  })
+
+  const elementsToAnimate = document.querySelectorAll('.grid-text')
+  elementsToAnimate.forEach(el => observer.observe(el))
+})
 </script>

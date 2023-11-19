@@ -34,12 +34,12 @@ onMounted(() => {
       if (entry.isIntersecting) {
         entry.target.querySelector('.start-fade-in').classList.add('animate-fade-in')
       }
-    });
+    })
   }, {
     threshold: 0.5
   })
 
-  const elementsToCircle = document.querySelectorAll('.image-full-curve')
-  elementsToCircle.forEach(el => observer.observe(el))
+  const elementsToFade = document.querySelectorAll('.image-full-curve')
+  elementsToFade.forEach(el => observer.observe(el))
 })
 </script>
