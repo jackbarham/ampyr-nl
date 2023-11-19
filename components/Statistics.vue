@@ -7,7 +7,7 @@
           <div 
             v-for="(stat, index) in stats" 
             :key="index" 
-            class="mb-12 last:mb-0 lg:mb-0"
+            class="start-fade-scale mb-12 last:mb-0 lg:mb-0"
           >
             <div class="mb-6">
               <img class="w-10 h-10 m-auto mb-4" :src="stat.flag" :alt="stat.country" />
@@ -32,42 +32,62 @@
           </div>
         </div>
       </div>
-      <svgo-test2 filled class="hidden lg:block pt-20 opacity-80" />
+      <svgo-test2 filled class="start-reveal-right hidden lg:block pt-20 opacity-80" />
     </div>
   </div>
 </template>
 
 <script setup>
-  const stats = [
-    {
-      country: 'United Kingdom',
-      flag: 'https://static.jackbarham.com/ampyr/flag-gb.png',
-      mw: '1,695',
-      projects: '34',
-      devopment: '1,685',
-      construction: '10',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-blue',
-    },
-    {
-      country: 'Netherlands',
-      flag: 'https://static.jackbarham.com/ampyr/flag-nl.png',
-      mw: '1,890',
-      projects: '68',
-      devopment: '1,782',
-      construction: '108',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-orange',
-    },
-    {
-      country: 'Germany',
-      flag: 'https://static.jackbarham.com/ampyr/flag-de.png',
-      mw: '3,871',
-      projects: '147',
-      devopment: '3,856',
-      construction: '15',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-purple',
-    },
-  ]
+const stats = [
+  {
+    country: 'United Kingdom',
+    flag: 'https://static.jackbarham.com/ampyr/flag-gb.png',
+    mw: '1,695',
+    projects: '34',
+    devopment: '1,685',
+    construction: '10',
+    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    color: 'c-blue',
+  },
+  {
+    country: 'Netherlands',
+    flag: 'https://static.jackbarham.com/ampyr/flag-nl.png',
+    mw: '1,890',
+    projects: '68',
+    devopment: '1,782',
+    construction: '108',
+    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    color: 'c-orange',
+  },
+  {
+    country: 'Germany',
+    flag: 'https://static.jackbarham.com/ampyr/flag-de.png',
+    mw: '3,871',
+    projects: '147',
+    devopment: '3,856',
+    construction: '15',
+    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    color: 'c-purple',
+  },
+]
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add class to all .start-show-right elements
+        entry.target.querySelector('.start-reveal-right').classList.add('amimate-reveal-right')
+
+        // Add class to the first matching .start-fade-scale element
+        const fadeScaleElement = entry.target.querySelectorAll('.start-fade-scale')
+        fadeScaleElement.forEach(el => el.classList.add('animate-fade-scale'))
+      }
+    });
+  }, {
+    threshold: 0.6
+  })
+
+  const elementsToAnimate = document.querySelectorAll('.statistics')
+  elementsToAnimate.forEach(el => observer.observe(el))
+})
 </script>

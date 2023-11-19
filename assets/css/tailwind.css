@@ -317,20 +317,20 @@
 }
 
 /* Reveal to right */
-.start-show-right {
+.start-reveal-right {
   mask-image: linear-gradient(to right, black 50%, transparent 50%);
   mask-size: 200% 100%;
   mask-position: 100% 0;
 }
 
-.amimate-show-right {
+.amimate-reveal-right {
   mask-image: linear-gradient(to right, black 50%, transparent 50%);
   mask-size: 200% 100%;
   mask-position: 100% 0;
-  animation: amimate-show-right 1.2s forwards;
+  animation: amimate-reveal-right 1.2s forwards;
 }
 
-@keyframes amimate-show-right {
+@keyframes amimate-reveal-right {
   to {
     mask-position: 0 -100%;
   }

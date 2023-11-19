@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <svgo-test2 filled class="start-show-right hidden lg:block pt-20 opacity-80" />
+      <svgo-test2 filled class="start-reveal-right hidden lg:block pt-20 opacity-80" />
     </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Add class to all .start-show-right elements
-        entry.target.querySelector('.start-show-right').classList.add('amimate-show-right')
+        entry.target.querySelector('.start-reveal-right').classList.add('amimate-reveal-right')
 
         // Add class to the first matching .start-fade-scale element
         const fadeScaleElement = entry.target.querySelectorAll('.start-fade-scale')
