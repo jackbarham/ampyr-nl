@@ -3,6 +3,7 @@
   <CardsLarge />
   <CardsNumber />
   <ImageHalf :content="caseStudy" />
+  <ContactForm />
   <ImageTextMiddle />
   <GridLong />
   <ImageLargeSlider />
