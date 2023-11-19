@@ -30,67 +30,22 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (entry.target.classList.contains('start-scale-in')) {
-          entry.target.classList.add('animate-scale-in');
+          entry.target.classList.add('animate-scale-in')
         }
         if (entry.target.classList.contains('start-fade-in')) {
-          entry.target.classList.add('animate-fade-in');
+          entry.target.classList.add('animate-fade-in')
         }
       }
-    });
+    })
   }, {
     threshold: 0.4
-  });
+  })
 
-  // Observe elements for scaling in
-  const elementsToScale = document.querySelectorAll('.start-scale-in');
-  elementsToScale.forEach(el => observer.observe(el));
+  const elementsToScale = document.querySelectorAll('.start-scale-in')
+  elementsToScale.forEach(el => observer.observe(el))
 
-  // Observe elements for fading in
   const elementsToFade = document.querySelectorAll('.start-fade-in');
-  elementsToFade.forEach(el => observer.observe(el));
-});
+  elementsToFade.forEach(el => observer.observe(el))
+})
 </script>
 
-<style scoped>
-.animate-scale-in {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: animate-scale-in;
-}
-
-@keyframes animate-scale-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.64);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.start-scale-in {
-  opacity: 0;
-}
-
-.animate-fade-in {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: animate-fade-in;
-}
-
-@keyframes animate-fade-in {
-  0% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.start-fade-in {
-  opacity: 0.1;
-}
-</style>

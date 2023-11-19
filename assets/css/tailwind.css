@@ -218,3 +218,48 @@
   top: 0;
   z-index: 10;
 }
+
+/* ANIMATIONS */
+.animate-scale-in {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-name: animate-scale-in;
+}
+
+@keyframes animate-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.64);
+    border-radius: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0;
+  }
+}
+
+.start-scale-in {
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-name: animate-fade-in;
+}
+
+@keyframes animate-fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.start-fade-in {
+  opacity: 0.1;
+}
