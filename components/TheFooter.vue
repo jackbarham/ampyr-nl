@@ -107,10 +107,6 @@
       to: '/privacy-policy',
     },
     {
-      name: 'Sitemap',
-      to: '/sitemap',
-    },
-    {
       name: 'Get In Touch',
       to: '/contact',
     },
