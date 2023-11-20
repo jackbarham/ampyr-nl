@@ -5,9 +5,10 @@
 
         <div class="start-fade-in absolute z-20 w-full h-full">
           <div class="flex items-center h-full w-full max-w-6xl m-auto p-6">
-            <div class="max-w-md c-navy">
+            <div :class="props.content.brow ? 'max-w-2xl' : 'max-w-md'" class="c-navy">
+              <p v-if="props.content.brow" class="uppercase font-light tracking-widest mb-4 lg:mb-6">{{ props.content.brow }}</p>
               <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ props.content.heading }}</h2>
-              <p class="mb-10">{{ props.content.text }}</p>
+              <p v-if="props.content.text" class="mb-10">{{ props.content.text }}</p>
               <Button 
                 v-if="props.content.buttonLink" 
                 :link="props.content.buttonLink" 

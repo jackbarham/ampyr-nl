@@ -2,7 +2,7 @@
   <div class="people-grid">
     <div class="bg-white py-14 lg:py-24">
       <div class="max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
-        <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Leadership team</h1>
+        <!-- <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Leadership team</h1> -->
         <div class="grid grid-cols-1 gap-10 md:gap-x-4 md:gap-y-12 md:grid-cols-2 lg:grid-cols-3">
           <div 
             v-for="(person, index) in people" 

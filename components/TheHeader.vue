@@ -127,6 +127,10 @@ const pages = ref([
         to: '/ampyr-solar-europe',
       },
       {
+        page: 'Vision & Strategy',
+        to: '/vision-strategy',
+      },
+      {
         page: 'Leadership Team',
         to: '/leadership-team',
       },

@@ -31,7 +31,7 @@ const props = defineProps({
 })
 
 const backgroundClass = computed(() => {
-  return props.content.theme === 'white' ? 'fill-f-white' : 'fill-f-grey'
+  return props.content.theme === 'white' ? 'bg-white' : 'c-bg-grey'
 })
 
 const svgFill = computed(() => {
