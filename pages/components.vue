@@ -3,7 +3,7 @@
   <CardsLarge :content="cardsLarge" />
   <CardsNumber :content="cardsNumber" />
   <ImageHalf :content="caseStudy" />
-  <ContactForm />
+  <ContactForm :content="contactForm" />
   <ImageTextMiddle :content="imageTextMiddle" />
   <GridLong :content="gridLong" />
   <ImageLargeSlider :content="imageLargeSlider" />
@@ -62,6 +62,11 @@ const cardsNumber = {
       number: '03',
     },
   ]
+}
+
+const contactForm = {
+  heading: 'If you wish to contact us, please fill in the form below.',
+  theme: 'white',
 }
 
 const caseStudy = {

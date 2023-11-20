@@ -1,8 +1,8 @@
 <template>
   <div class="contact-form">
-    <div class="bg-white py-14 lg:py-24">
+    <div :class="props.content.theme === 'grey' ? 'c-bg-grey' : 'bg-white'" class="py-14 lg:py-24">
       <div class="max-w-xl m-auto">
-        <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Contact us</h1>
+        <h1 class="c-navy text-center text-3xl md:text-4xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ props.content.heading }}</h1>
         <form class="">
           <FormInput type="text" name="fullname" label="Full name" />
           <FormInput type="email" name="email" label="Email address" />
@@ -15,3 +15,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
+</script>
