@@ -1,5 +1,5 @@
 <template>
-  <HeroFull />
+  <HeroFull :content="heroFull"  />
   <CardsLarge :content="cardsLarge" />
   <Statistics :content="statistics" />
   <ImageTextLeft :content="sustainability" />
@@ -10,6 +10,11 @@
 
 <script setup>
 const { setMenuClass } = useMenuClass()
+
+const heroFull = {
+  heading: 'Hero Text',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+}
 
 const cardsLarge = {
   cards: [

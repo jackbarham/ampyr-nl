@@ -94,6 +94,10 @@
   ]
 
   const legalPages = [
+  {
+      name: 'All Components',
+      to: '/components',
+    },
     {
       name: 'Cookie Policy',
       to: '/cookie-policy',

@@ -4,8 +4,8 @@
       <div class="absolute z-10 w-full">
         <div class="flex items-center h-screen w-full max-w-6xl m-auto p-6">
           <div class="">
-            <h2 class="text-6xl mb-6">Hero Text</h2>
-            <p class="mb-6 text-lg max-w-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 class="text-6xl mb-6">{{ props.content.heading }}</h2>
+            <p class="mb-6 text-xl font-light max-w-sm">{{ props.content.text }}</p>
             <Button theme="light" link="#" text="Button not linked" />
           </div>
         </div>
@@ -16,5 +16,10 @@
 </template>
 
 <script setup>
-  //
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
 </script>

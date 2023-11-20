@@ -1,5 +1,5 @@
 <template>
-  <HeroFull />
+  <HeroFull :content="heroFull" />
   <CardsLarge :content="cardsLarge" />
   <CardsNumber :content="cardsNumber" />
   <ImageHalf :content="caseStudy" />
@@ -25,6 +25,11 @@
 
 <script setup>
 const { setMenuClass } = useMenuClass()
+
+const heroFull = {
+  heading: 'All Components',
+  text: 'Temporary page! A list all components. Sone component updates, images and text are in development.',
+}
 
 const cardsLarge = {
   cards: [
