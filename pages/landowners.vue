@@ -4,19 +4,20 @@
 
 <script setup>
 const { setMenuClass } = useMenuClass()
-import HeroShape1 from '~/assets/icons/hero-shape-1.svg'
+import HeroSvg1 from '~/assets/icons/hero-svg-1.svg'
 
 const hero = {
-  heading: 'Audience focused messaging here',
+  heading: 'Landowners',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  buttonText: 'Button text',
+  buttonText: 'Button not linked',
   buttonLink: '#',
-  image: {
-    shape1: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    shape2: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    shape3: 'https://static.jackbarham.com/ampyr/hero.jpg',
+  shapes: {
+    type: 1,
+    img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
+    svg: HeroSvg1,
   },
-  svg: HeroShape1,
 }
 
 onMounted(() => {
