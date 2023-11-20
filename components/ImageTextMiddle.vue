@@ -21,18 +21,11 @@
 </template>
 
 <script setup>
-onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.querySelector('.start-circle-out').classList.add('animate-circle-out')
-      }
-    })
-  }, {
-    threshold: 0.6
-  })
-
-  const elementsToCircle = document.querySelectorAll('.image-text-middle')
-  elementsToCircle.forEach(el => observer.observe(el))
+useAnimation({
+  trigger: 'image-text-middle',
+  classes: [
+    { start: 'start-circle-out', animate: 'animate-circle-out' },
+  ],
+  threshold: 0.6
 })
 </script>

@@ -28,18 +28,11 @@
 </template>
 
 <script setup>
-onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.querySelector('.start-fade-in').classList.add('animate-fade-in')
-      }
-    })
-  }, {
-    threshold: 0.5
-  })
-
-  const elementsToFade = document.querySelectorAll('.image-full-curve')
-  elementsToFade.forEach(el => observer.observe(el))
+useAnimation({
+  trigger: 'image-full-curve',
+  classes: [
+    { start: 'start-fade-in', animate: 'animate-fade-in' },
+  ],
+  threshold: 0.6
 })
 </script>

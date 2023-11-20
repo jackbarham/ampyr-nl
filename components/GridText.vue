@@ -45,23 +45,12 @@ const items = [
   },
 ]
 
-onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Add class to all .start-show-right elements
-        entry.target.querySelector('.start-reveal-right').classList.add('amimate-reveal-right')
-
-        // Add class to the first matching .start-fade-scale element
-        const fadeScaleElement = entry.target.querySelectorAll('.start-fade-scale')
-        fadeScaleElement.forEach(el => el.classList.add('animate-fade-scale'))
-      }
-    });
-  }, {
-    threshold: 0.6
-  })
-
-  const elementsToAnimate = document.querySelectorAll('.grid-text')
-  elementsToAnimate.forEach(el => observer.observe(el))
+useAnimation({
+  trigger: 'grid-text',
+  classes: [
+    { start: 'start-reveal-right', animate: 'amimate-reveal-right' },
+    { start: 'start-fade-scale', animate: 'animate-fade-scale' },
+  ],
+  threshold: 0.6
 })
 </script>

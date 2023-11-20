@@ -25,28 +25,13 @@
 </template>
 
 <script setup>
-onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // console.log(`Left: ${entry.isIntersecting}`)
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('start-scale-out')) {
-          entry.target.classList.add('animate-scale-out')
-        }
-        if (entry.target.classList.contains('start-fade-in')) {
-          entry.target.classList.add('animate-fade-in')
-        }
-      }
-    })
-  }, {
-    threshold: 0.4
-  })
-
-  const elementsToScale = document.querySelectorAll('.start-scale-out')
-  elementsToScale.forEach(el => observer.observe(el))
-
-  const elementsToFade = document.querySelectorAll('.start-fade-in');
-  elementsToFade.forEach(el => observer.observe(el))
+useAnimation({
+  trigger: 'image-text-left',
+  classes: [
+    { start: 'start-scale-out', animate: 'animate-scale-out' },
+    { start: 'start-fade-in', animate: 'animate-fade-in' },
+  ],
+  threshold: 0.6
 })
 </script>
 
