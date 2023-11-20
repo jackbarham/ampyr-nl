@@ -1,5 +1,8 @@
 <template>
   <HeroPage :content="hero" />
+  <ImageFullCurve />
+  <GridText />
+  <GridLong />
 </template>
 
 <script setup>

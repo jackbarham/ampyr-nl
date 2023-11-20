@@ -8,7 +8,12 @@
             <div class="max-w-md c-navy">
               <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ props.content.heading }}</h2>
               <p class="mb-10">{{ props.content.text }}</p>
-              <Button theme="dark" :link="props.content.buttonLink" :text="props.content.buttonText" />
+              <Button 
+                v-if="props.content.buttonLink" 
+                :link="props.content.buttonLink" 
+                :text="props.content.buttonText" 
+                theme="dark" 
+              />
             </div>
           </div>
         </div>
