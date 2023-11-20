@@ -7,8 +7,13 @@
           <div class="absolute z-20 w-full h-full">
             <div class="flex items-center h-full w-full max-w-4xl m-auto p-6">
               <div class="text-center c-navy">
-                <h3 class="mb-12 text-2xl lg:text-4xl lg:leading-snug">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-                <Button theme="dark" link="#" text="Button not linked" />
+                <h3 class="mb-12 text-2xl lg:text-4xl lg:leading-snug">{{ props.content.text }}</h3>
+                <Button 
+                  v-if="props.content.button" 
+                  :link="props.content.button.link" 
+                  :text="props.content.button.text" 
+                  theme="dark" 
+                />
               </div>
             </div>
           </div>
@@ -21,6 +26,13 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
+
 useAnimation({
   trigger: 'image-text-middle',
   classes: [

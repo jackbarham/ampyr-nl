@@ -34,32 +34,32 @@ const imageLarge = {
 const values = {
   heading: 'Our values',
   items: [
-  {
-    heading: 'We are sustainable together',
-    text: 'Together, we achieve sustainable success by dedicating ourselves to clean energy, emissions reduction, power resilience, and community-centred solar solutions.',
-    image: 'https://static.jackbarham.com/ampyr/grid-shape-1.png',
-  },
-  {
-    heading: 'We are positively holistic',
-    text: 'We provide unique, end-to-end solar solutions integrating development, management, and optimisation, offering a seamless experience, understanding global responsibilities.',
-    image: 'https://static.jackbarham.com/ampyr/grid-shape-2.png',
-  },
-  {
-    heading: 'We put people first',
-    text: 'We prioritise strong ties with landowners, municipalities, and customers, putting their needs first, knowing community trust is vital for mission success.',
-    image: 'https://static.jackbarham.com/ampyr/grid-shape-3.png',
-  },
-  {
-    heading: 'We are ever reliable',
-    text: 'We consistently fulfil promises to colleagues, partners, and communities, building trust and enduring partnerships through open communication and unwavering honesty.',
-    image: 'https://static.jackbarham.com/ampyr/grid-shape-4.png',
-  },
-  {
-    heading: 'We bring expertise',
-    text: 'Our extensive history in renewables and supply network enables us to offer unmatched industry knowledge, tools, and experience, elevating ambition and value for all partners.',
-    image: 'https://static.jackbarham.com/ampyr/grid-shape-5.png',
-  },
-]
+    {
+      heading: 'We are sustainable together',
+      text: 'Together, we achieve sustainable success by dedicating ourselves to clean energy, emissions reduction, power resilience, and community-centred solar solutions.',
+      image: 'https://static.jackbarham.com/ampyr/grid-shape-1.png',
+    },
+    {
+      heading: 'We are positively holistic',
+      text: 'We provide unique, end-to-end solar solutions integrating development, management, and optimisation, offering a seamless experience, understanding global responsibilities.',
+      image: 'https://static.jackbarham.com/ampyr/grid-shape-2.png',
+    },
+    {
+      heading: 'We put people first',
+      text: 'We prioritise strong ties with landowners, municipalities, and customers, putting their needs first, knowing community trust is vital for mission success.',
+      image: 'https://static.jackbarham.com/ampyr/grid-shape-3.png',
+    },
+    {
+      heading: 'We are ever reliable',
+      text: 'We consistently fulfil promises to colleagues, partners, and communities, building trust and enduring partnerships through open communication and unwavering honesty.',
+      image: 'https://static.jackbarham.com/ampyr/grid-shape-4.png',
+    },
+    {
+      heading: 'We bring expertise',
+      text: 'Our extensive history in renewables and supply network enables us to offer unmatched industry knowledge, tools, and experience, elevating ambition and value for all partners.',
+      image: 'https://static.jackbarham.com/ampyr/grid-shape-5.png',
+    },
+  ]
 }
 
 onMounted(() => {

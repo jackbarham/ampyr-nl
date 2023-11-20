@@ -4,7 +4,7 @@
       <div class="relative">
         
         <carousel ref="imageLargeSlider" :items-to-show="1" :wrap-around="true">
-          <slide v-for="(slide, index) in slides" :key="index">
+          <slide v-for="(slide, index) in props.content.slides" :key="index">
             
             <div class="relative h-[512px] md:h-[640px] lg:h-[768px] w-full">
               <div class="absolute z-20 w-full h-full">
@@ -16,7 +16,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-[#F5EFEC] opacity-90"></div>
+              <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-[#F4ECDF] opacity-100"></div>
               <img :src="slide.image" alt="Hero" class="absolute h-full w-full object-cover opacity-50 md:opacity-100">
             </div>
             
@@ -40,26 +40,13 @@
 </template>
 
 <script setup>
-const slides = [
-  {
-    headline: 'Our environmental impact',
-    heading: 'Biodiversity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
   },
-  {
-    headline: 'Our environmental impact',
-    heading: 'Water',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    headline: 'Our environmental impact',
-    heading: 'Air',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-]
+})
+
 
 const imageLargeSlider = ref(null)
 

@@ -2,7 +2,7 @@
   <div class="grid-text">
     <div class="bg-white py-14 lg:py-24">
       <div class="max-w-md lg:max-w-5xl m-auto px-8">
-        <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-8 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ props.content.heading }}</h1>
+        <h1 v-if="props.content.heading" class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-8 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ props.content.heading }}</h1>
         <div class="">
           <div 
             v-for="(item, index) in props.content.items" 
