@@ -18,6 +18,7 @@
   <GridText />
   <PeopleGrid />
   <CardsLocation />
+  <Numbers />
   <PeopleSlider />
   <ImageTextLeft :content="imageTextLeft" />
   <CardsArticle />

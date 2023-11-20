@@ -1,5 +1,9 @@
 <template>
   <HeroPage :content="hero" />
+  <GridFeed />
+  <Testimonial />
+  <Numbers />
+  <CardsArticle />
 </template>
 
 <script setup>

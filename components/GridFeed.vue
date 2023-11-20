@@ -2,7 +2,7 @@
   <div class="grid-feed">
     <div class="bg-white py-14 lg:py-24">
       <div class="max-w-7xl m-auto px-4 md:px-8">
-        <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-12 lg:mb-16 max-w-md lg:max-w-full m-auto">Featured projects</h1>
+        <!-- <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-12 lg:mb-16 max-w-md lg:max-w-full m-auto">Featured projects</h1> -->
         <div class="md:flex justify-center items-center text-center mb-4 lg:mb-8">
           <p class="c-navy mx-1 mb-4 md:mb-2 text-sm tracking-wider uppercase">Filter by:</p>
           <div class="flex flex-wrap justify-center items-center">
