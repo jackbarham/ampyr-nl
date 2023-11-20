@@ -5,6 +5,9 @@
   <GridLong :content="gridLong" />
   <ImageHalf :content="caseStudy" />
   <VideoFull />
+  <ImageTextMiddle :content="imageTextMiddle" />
+  <Testimonial />
+  <CardsArticle />
 </template>
 
 <script setup>
@@ -48,6 +51,16 @@ const caseStudy = {
   button: {
     text: 'Read the case study',
     link: '/portfolio/case-study-name',
+  }
+}
+
+const imageTextMiddle = {
+  text: 'Capturing solar energy is tapping into nature\'s limitless source, empowering a sustainable future while preserving our planet.',
+  image: 'https://static.jackbarham.com/ampyr/hero.jpg',
+  alt: 'Image description',
+  button: {
+    text: 'Button not linked',
+    link: '#',
   }
 }
 
