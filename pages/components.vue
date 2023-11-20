@@ -29,7 +29,7 @@ const { setMenuClass } = useMenuClass()
 
 const heroFull = {
   heading: 'All Components',
-  text: 'Temporary page! A list all components. Sone component updates, images and text are in development.',
+  text: 'Temporary page! A list all components. Some component updates, images and text are in development.',
 }
 
 const cardsLarge = {

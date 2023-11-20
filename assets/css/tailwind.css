@@ -116,6 +116,10 @@
   .fill-f-grey path {
     fill: #EDF2F4;
   }
+
+  .fill-f-white path {
+    fill: #ffffff;
+  }
 }
 
 @layer utilities {
