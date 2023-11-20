@@ -3,7 +3,7 @@
     <div class="bg-white">
       <div class="max-w-7xl m-auto px-4 md:px-8 py-14 lg:py-24">
         <div 
-          v-for="(card, index) in cards" 
+          v-for="(card, index) in props.content.cards"
           :key="index" 
           class="p-4 lg:p-6 c-bg-navy items-center lg:grid lg:grid-cols-2 lg:gap-4 rounded-2xl mb-4 lg:mb-12 last:mb-0"
         >
@@ -20,18 +20,10 @@
 </template>
 
 <script setup>
-  const cards = [
-    {
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      heading: 'For Landowners',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      link: '/landowners',
-    },
-    {
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      heading: 'For Municipalities',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      link: '/municipalities',
-    },
-  ]
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
 </script>

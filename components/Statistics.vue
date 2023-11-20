@@ -2,10 +2,10 @@
   <div class="statistics">
     <div class="c-bg-navy py-14 lg:py-24">
       <div class="max-w-6xl m-auto px-4 md:px-8">
-        <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Pan-European Pipeline of Solar Energy Solutions</h1>
+        <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ props.content.heading }}</h1>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-center">
           <div 
-            v-for="(stat, index) in stats" 
+            v-for="(stat, index) in props.content.stats" 
             :key="index" 
             class="start-fade-scale mb-12 last:mb-0 lg:mb-0"
           >
@@ -38,39 +38,12 @@
 </template>
 
 <script setup>
-const stats = [
-  {
-    country: 'United Kingdom',
-    flag: 'https://static.jackbarham.com/ampyr/flag-gb.png',
-    mw: '1,695',
-    projects: '34',
-    devopment: '1,685',
-    construction: '10',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    color: 'c-blue',
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
   },
-  {
-    country: 'Netherlands',
-    flag: 'https://static.jackbarham.com/ampyr/flag-nl.png',
-    mw: '1,890',
-    projects: '68',
-    devopment: '1,782',
-    construction: '108',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    color: 'c-orange',
-  },
-  {
-    country: 'Germany',
-    flag: 'https://static.jackbarham.com/ampyr/flag-de.png',
-    mw: '3,871',
-    projects: '147',
-    devopment: '3,856',
-    construction: '15',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    color: 'c-purple',
-  },
-]
-
+})
 useAnimation({
   trigger: 'statistics',
   classes: [

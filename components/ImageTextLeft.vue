@@ -6,17 +6,17 @@
         <div class="start-fade-in absolute z-20 w-full h-full">
           <div class="flex items-center h-full w-full max-w-6xl m-auto p-6">
             <div class="max-w-md c-navy">
-              <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">Our Commitment To Sustainability</h2>
-              <p class="mb-10">We develop land for ground-mounted PV installations in a holistic way, taking into account the needs of each particular region to ensure sustainable power generation. For local communities and regions, we strive to help accelerate their journey to zero-carbon.</p>
-              <Button theme="dark" link="#" text="Button not linked" />
+              <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ props.content.heading }}</h2>
+              <p class="mb-10">{{ props.content.text }}</p>
+              <Button theme="dark" :link="props.content.buttonLink" :text="props.content.buttonText" />
             </div>
           </div>
         </div>
         
-        <div class="absolute h-full w-full z-10 bg-gradient-to-r from-[#F5EFEC] to-transparent opacity-90"></div>
+        <div class="absolute h-full w-full z-10 bg-gradient-to-r from-[#F4ECDF] to-transparent opacity-100"></div>
         <img 
-          src="https://static.jackbarham.com/ampyr/hero.jpg" 
-          alt="Hero" 
+          :src="props.content.image" 
+          :alt="props.content.alt" 
           class="start-scale-out absolute h-full w-full object-cover opacity-80" 
         />
       </div>
@@ -25,6 +25,13 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
+
 useAnimation({
   trigger: 'image-text-left',
   classes: [
