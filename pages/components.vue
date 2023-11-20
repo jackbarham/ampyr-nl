@@ -14,7 +14,7 @@
   <ImageFullCurve />
   <GridFeed />
   <Statistics :content="statistics" />
-  <CardsIcon />
+  <CardsIcon :content="cardsIcon" />
   <GridText />
   <PeopleGrid />
   <CardsLocation />
@@ -182,6 +182,31 @@ const statistics = {
       construction: '15',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
       color: 'c-purple',
+    },
+  ]
+}
+
+import IconWorld from '~/assets/icons/world.svg'
+import IconSun from '~/assets/icons/sun.svg'
+import IconPlant from '~/assets/icons/plant.svg'
+
+const cardsIcon = {
+  heading: 'Our Commitment to Achieving Net Zero',
+  cards: [
+    {
+      heading: 'Lorem Ipsum',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      icon: IconWorld,
+    },
+    {
+      heading: 'Ac odio tempor orci',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      icon: IconSun,
+    },
+    {
+      heading: 'Bibendum neque',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      icon: IconPlant,
     },
   ]
 }

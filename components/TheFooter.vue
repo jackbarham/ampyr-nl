@@ -77,6 +77,10 @@
           to: '/ampyr-solar-europe',
         },
         {
+          name: 'Sustainability',
+          to: '/sustainability',
+        },
+        {
           name: 'Vision & Strategy',
           to: '/vision-strategy',
         },

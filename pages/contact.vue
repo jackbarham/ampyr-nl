@@ -1,5 +1,7 @@
 <template>
   <HeroPage :content="hero" />
+  <ContactForm :content="contactForm" />
+  <CardsLocation />
 </template>
 
 <script setup>
@@ -18,6 +20,11 @@ const hero = {
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
     svg: HeroSvg1,
   },
+}
+
+const contactForm = {
+  heading: 'If you wish to contact us, please fill in the form below.',
+  theme: 'white',
 }
 
 onMounted(() => {
