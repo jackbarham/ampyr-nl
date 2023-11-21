@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     //   mode: 'out-in'
     // },
     head: {
-      title: 'AMPYR',
+      title: 'AMPYR NL',
       meta: [
         { name: 'description', content: 'General website description' }
       ],
