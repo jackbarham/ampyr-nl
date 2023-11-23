@@ -9,10 +9,6 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt',
   ],
   app: {
-    // pageTransition: { 
-    //   name: 'page', 
-    //   mode: 'out-in'
-    // },
     head: {
       title: 'AMPYR NL',
       meta: [

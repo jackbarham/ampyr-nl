@@ -44,6 +44,7 @@ const props = defineProps({
     required: true,
   },
 })
+
 useAnimation({
   trigger: 'statistics',
   classes: [
