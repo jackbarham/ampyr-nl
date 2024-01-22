@@ -11,7 +11,7 @@
             <img :src="item.image" alt="Description" class="w-full" :class="{ 'lg:order-last': index % 2 === 0 }" />
             <div class="text-center lg:text-left text-brand-navy" :class="{ 'lg:order-first': index % 2 === 0 }">
               <h2 class="text-2xl lg:text-3xl mb-4">{{ item.heading }}</h2>
-              <p class="font-light">{{ item.text }}</p>
+              <p class="">{{ item.text }}</p>
             </div>
           </div>
       </div>

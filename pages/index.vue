@@ -47,7 +47,7 @@ const statistics = {
       devopment: '1,685',
       construction: '10',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-blue',
+      color: 'text-brand-uk',
     },
     {
       country: 'Netherlands',
@@ -57,7 +57,7 @@ const statistics = {
       devopment: '1,782',
       construction: '108',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-orange',
+      color: 'text-brand-nl',
     },
     {
       country: 'Germany',
@@ -67,7 +67,7 @@ const statistics = {
       devopment: '3,856',
       construction: '15',
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-      color: 'c-purple',
+      color: 'text-brand-de',
     },
   ]
 }

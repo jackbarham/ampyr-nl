@@ -26,10 +26,10 @@
         <div class="absolute w-full text-brand-navy z-40 bottom-2 md:bottom-12">
           <div class="flex items-center justify-center md:justify-start h-full w-full max-w-6xl m-auto p-8">
             <div @click="prevSlide()" class="w-10 h-10 rounded-full p-0.5 bg-brand-nl hover:bg-white transition-colors cursor-pointer rotate-180 mr-4">
-              <svgo-arrow-right filled class="fill-p-navy" />
+              <svgo-arrow-right filled class="fill-ps-navy" />
             </div>
             <div @click="nextSlide()" class="w-10 h-10 rounded-full p-0.5 bg-brand-nl hover:bg-white transition-colors cursor-pointer">
-              <svgo-arrow-right filled class="fill-p-navy" />
+              <svgo-arrow-right filled class="fill-ps-navy" />
             </div>
           </div>
         </div>

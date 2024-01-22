@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="statistics-svg">
+      <div class="grid-text-svg">
         <svgo-shape-long filled class="start-reveal-right hidden lg:block pt-20 opacity-80" />
       </div>
     </div>

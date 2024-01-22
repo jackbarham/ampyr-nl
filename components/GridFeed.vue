@@ -19,8 +19,8 @@
                 <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.heading }}</h2>
                 <p class="opacity-0 group-hover:opacity-100 transition-opacity">{{ project.text }}</p>
                 <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
-                <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 c-bg-orange">
-                  <svgo-arrow-right filled class="fill-p-navy" />
+                <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 bg-brand-nl">
+                  <svgo-arrow-right filled class="fill-ps-navy" />
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>

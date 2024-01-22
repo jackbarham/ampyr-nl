@@ -45,7 +45,7 @@ const cardsLarge = {
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
       heading: 'Vision & Strategy',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      link: '#',
+      link: 'vision-strategy',
     },
     {
       image: 'https://static.jackbarham.com/ampyr/hero.jpg',
