@@ -33,25 +33,27 @@
 </template>
 
 <script setup>
-import IconWorld from '~/assets/icons/world.svg'
+import IconCalendar from '~/assets/icons/calendar.svg'
+import IconLandmark from '~/assets/icons/landmark.svg'
+import IconPlug from '~/assets/icons/plug.svg'
 
 const stats = [
   {
-    icon: IconWorld,
+    icon: IconCalendar,
     heading: '20+',
     sub: 'Years',
     text: 'Our project development team boasts over two decades of valuable experience.',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
   {
-    icon: IconWorld,
+    icon: IconLandmark,
     heading: '€600M',
     sub: 'Investment',
     text: '600M injection fortifies our company and projects, ensuring stability.',
     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   },
   {
-    icon: IconWorld,
+    icon: IconPlug,
     heading: '5',
     sub: 'Gigawatts',
     text: 'Our EPC team boasts extensive expertise, recently completing a 5GW project.',
