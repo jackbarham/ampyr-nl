@@ -1,17 +1,21 @@
 <template>
   <div class="temp-legal-copy">
     <div class="max-w-3xl mx-auto py-12 md:py-28 px-4">
-      <div class="prose-sm md:prose-base c-navy">
-        <h1>Demo press release content</h1>
-        <p><i>London - November 15th 2023</i></p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Id interdum velit laoreet id donec ultrices tincidunt arcu non. Mauris commodo quis imperdiet massa. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Integer eget aliquet nibh praesent tristique. Est velit egestas dui id ornare. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Blandit aliquam etiam erat velit scelerisque in.</p>
-        <h3>Nulla facilisi etiam dignissim diam quis enim.</h3>
-        <p>Velit dignissim sodales ut eu sem integer. Nibh tellus molestie nunc non blandit. Ac tincidunt vitae semper quis lectus nulla at volutpat. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis.</p>
-        <h3>Nulla facilisi etiam dignissim diam quis enim.</h3>
-        <p>Pharetra pharetra massa massa ultricies mi quis. Etiam dignissim diam quis enim lobortis. Vitae turpis massa sed elementum tempus egestas sed. Sed viverra tellus in hac habitasse. Amet consectetur adipiscing elit duis tristique sollicitudin nibh.</p>
-        <p>Cras ornare arcu dui vivamus arcu felis. Praesent tristique magna sit amet purus. Convallis a cras semper auctor. Sed euismod nisi porta lorem mollis aliquam ut.</p>
-        <p>Press releations: <a href="mailto:press@ampyr.com">press@ampyr.com</a></p>
+      <div class="prose prose-base text-brand-navy">
+        <p>[London - November 9th 2023] AMPYR Solar Europe is pleased to announce it has partnered with Multiplex via a Power Purchase Agreement (PPA) for the Northwold Solar PV Generating Station in Norfolk, a deal which will help Multiplex take a step closer to achieving its net zero onsite emissions target by 2025.</p>
+        <p>Built and operated by AMPYR Solar Europe (ASE), the solar power station will cover a total area of c.a. 40 acres and is expected to produce more than 9,000 MWh of green energy annually - enough to power the equivalent of over 2,100 homes. It will displace 2,850 tons of CO2 each year compared to traditional energy production.</p>
+        <p>This agreement plays a pivotal role in Multiplex's sustainability journey, in line with its 'One Decade to Act' commitment launched in 2021. The initiative outlines the actions Multiplex will undertake to drastically cut its carbon emissions and reach its climate target of net zero carbon by 2025.</p>
+        <p>Steve Mason, Chief Commercial Officer at AMPYR Solar Europe commented: “AMPYR Solar Europe continues its journey towards becoming a leading European IPP with world class assets in the UK, as well as in Germany and the Netherlands. I am pleased that this transaction builds on the capabilities of the commercial team at AMPYR Solar Europe. We are proud to be able to offer innovative PPA products, providing offtakers with the price and supply certainty they require to meet their sustainability goals. ASE is also delighted to support Multiplex with its ongoing 'One Decade to Act' commitment.”</p>
+        <p>Following Multiplex's commitment to a Renewable Energy Power Purchase Agreement in 2021, the first of its kind for construction in the UK, this deal will allow Multiplex to procure renewable electricity from this new-build solar PV project, meaning it will be considered additional. This ensures that Multiplex's procurement of renewable energy directly leads to verifiable emission reduction and more renewable energy production, supporting the UK's national decarbonisation goals</p>
+        <p>“At Multiplex, we are committed to making a lasting difference in the environment, for individuals, and for communities,” said Tom Marke, Business Performance Director at Multiplex. “This agreement marks significant progress in our efforts to reduce our carbon emissions and contribute to the industry's journey towards decarbonisation.”</p>
+        <p>The solar power station is expected to be fully operational by Q4 2024 and will provide renewable energy to Multiplex's construction sites and offices across the UK.</p>
+        <h2>About AMPYR Solar Europe</h2>
+        <p>Headquartered in London, with offices in Maastricht, Utrecht, Frankfurt and Berlin, AMPYR Solar Europe is an Independent Solar Developer and IPP with in-house end-to-end capability across Asset Development, Financing, Construction, Operations and Power Sales. AMPYR Solar Europe's unique platform benefits from a highly experienced sponsor group: AGP Sustainable Real Assets brings extensive experience in establishing and operating GW scale renewable platforms; Hartree Partners' cutting-edge power trading analytics and zero-carbon solutions; as well as NaGa Solar's in-depth local knowledge and land development capability.For more information, visit: <a href="www.ampyrsolareurope.com">www.ampyrsolareurope.com</a></p>
+        <h2>About Multiplex</h2>
+        <p>Multiplex is a leading international contractor with a focus on sustainable growth and a presence in Europe, Canada and Australia. They have been bringing large-scale, complex structures to life for over 60 years. Established in the United Kingdom in 1999, Multiplex has a proven track record of delivering high quality, iconic projects. They have built a reputation in the marketplace for their collaborative, flexible approach - starting with the end in mind, working in partnership with their clients, and maintaining a shared focus on the final goal. Their current workbook across a diverse range of sectors reflects their strong reputation, which has resulted in a high proportion of repeat business. Multiplex is backed by the financial stability and global relationships of their parent company, Brookfield, which supports their continued growth.</p>
+        <p>For more information, visit: <a href="www.multiplex.global/uk">www.multiplex.global/uk</a></p>
+        <p>Steve Mason<br />+44 (0)7775 597257<br /><a href="mailto:smason@ampyrsolareurope.com">smason@ampyrsolareurope.com</a></p>
+        <p>Cyrus Dadachanji<br />+44 (0)7544 871017<br /><a href="mailto:cdadachanji@ampyrsolareurope.com">cdadachanji@ampyrsolareurope.com</a></p>
       </div>
     </div>
   </div>

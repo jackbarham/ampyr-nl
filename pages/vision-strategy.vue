@@ -1,5 +1,5 @@
 <template>
-  <HeroPage :content="hero" />
+  <HeroPage :content="heroPage" />
   <VideoFull />
   <CardsNumber :content="cardsNumber" />
   <ImageTextLeft :content="imageTextLeft" />
@@ -9,20 +9,22 @@
 </template>
 
 <script setup>
-const { setMenuClass } = useMenuClass()
-import HeroSvg1 from '~/assets/icons/hero-svg-1.svg'
+definePageMeta({
+  middleware: ['header-theme'],
+  headerTheme: 'header-light'
+})
 
-const hero = {
+import ShapeHero1 from '~/assets/icons/shape-hero-1.svg'
+
+const heroPage = {
   heading: 'Vision & Strategy',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  buttonText: 'Button not linked',
-  buttonLink: '#',
-  shapes: {
+  variation: {
     type: 1,
     img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    svg: HeroSvg1,
+    svg: ShapeHero1,
   },
 }
 
@@ -133,9 +135,4 @@ const imageTextMiddle = {
     link: 'ampyr-solar-europe',
   }
 }
-
-
-onMounted(() => {
-  setMenuClass('menu-dark')
-})
 </script>

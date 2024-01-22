@@ -1,9 +1,9 @@
 <template>
-  <div class="featured-slider">
-    <div class="relative bg-white py-14 lg:py-24">
-      <div class="relative z-10 max-w-sm md:max-w-7xl m-auto px-4 md:px-8">
+  <section class="featured-slider">
+    <div class="relative bg-white layout-p-normal">
+      <div class="relative z-10 max-w-sm md:max-w-7xl layout-w-normal">
 
-        <h1 class="c-navy text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">Featured Projects</h1>
+        <Heading text="dark" copy="Featured Projects" />
           
         <carousel ref="featuredSlider" :items-to-show="1.2" :wrap-around="true" :breakpoints="breakpoints">
           <slide v-for="(project, index) in projects" :key="index">
@@ -11,9 +11,9 @@
             <NuxtLink :to="project.link" class="block relative w-full h-[384px] md:h-[512px] rounded-lg md:rounded-2xl overflow-hidden group">
               <div class="absolute w-full h-full z-30 p-6">
                 <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.heading }}</h2>
-                <div class="absolute left-6 bottom-6 bg-white c-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
-                <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 c-bg-orange">
-                  <svgo-arrow-right filled class="fill-p-navy" />
+                <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
+                <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 bg-brand-nl">
+                  <svgo-arrow-right filled class="fill-ps-navy" />
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
@@ -23,11 +23,11 @@
         </carousel>
 
         <div class="flex items-center justify-center h-full w-full max-w-6xl m-auto pt-12">
-          <div @click="prevSlide()" class="w-10 h-10 border border-orange rounded-full p-0.5  bg-transparent hover:c-bg-orange transition-colors cursor-pointer rotate-180 mr-4">
-            <svgo-arrow-right filled class="fill-p-navy" />
+          <div @click="prevSlide()" class="w-10 h-10 border border-brand-nl rounded-full p-0.5 bg-transparent hover:bg-brand-nl transition-colors cursor-pointer rotate-180 mr-4">
+            <svgo-arrow-right filled class="fill-ps-navy" />
           </div>
-          <div @click="nextSlide()" class="w-10 h-10 border border-orange rounded-full p-0.5  bg-transparent hover:c-bg-orange transition-colors cursor-pointer">
-            <svgo-arrow-right filled class="fill-p-navy" />
+          <div @click="nextSlide()" class="w-10 h-10 border border-brand-nl rounded-full p-0.5 bg-transparent hover:bg-brand-nl transition-colors cursor-pointer">
+            <svgo-arrow-right filled class="fill-ps-navy" />
           </div>
         </div>
 
@@ -36,7 +36,7 @@
         <svgo-blades-full filled />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

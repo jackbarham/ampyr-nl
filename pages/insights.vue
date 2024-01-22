@@ -3,9 +3,8 @@
 </template>
 
 <script setup>
-const { setMenuClass } = useMenuClass()
-
-onMounted(() => {
-  setMenuClass('menu-dark')
+definePageMeta({
+  middleware: ['header-theme'],
+  headerTheme: 'header-light'
 })
 </script>

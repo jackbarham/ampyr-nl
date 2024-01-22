@@ -1,7 +1,7 @@
 <template>
   <div class="temp-legal-copy">
     <div class="max-w-3xl mx-auto py-12 md:py-28 px-4">
-      <div class="prose-sm md:prose-base c-navy">
+      <div class="prose prose-sm md:prose-base text-brand-navy">
         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
         <h2>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
         <h3>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>

@@ -2,135 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --navy: hsl(231, 51%, 19%);
+  --navy-dark: #15193c;
+  --grey: #edf2f4;
+  --wheat: #f5efec;
+  --eu: #07f3b7;
+  --uk: #71b7fe;
+  --nl: #ffbfa6;
+  --de: #a89bf9;
+}
+
 @layer base {
   body {
-    /* @apply text-white; */
+    @apply font-inter text-brand-wheat;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "new-order";
-    @apply font-medium leading-relaxed;
+    @apply font-neworder font-medium leading-relaxed;
   }
 
   button {
     @apply w-full;
   }
 
-  /* COLOURS */
+  /* SVG Fill colours */
 
-  .c-navy {
-    color: #181F49;
+  .fill-ps-navy path {
+    stroke: var(--navy);
   }
 
-  .c-bg-navy {
-    background-color: #181F49;
-  }
-
-  .border-navy {
-    border-color: #181F49;
-  }
-
-  .fill-navy {
-    fill: #181F49;
-  }
-
-  .fill-p-navy path {
-    path: #181F49;
-  }
-
-  .fill-f-navy path {
-    fill: #181F49;
-  }
-
-  .fill-s-navy path {
-    stroke: #181F49;
-  }
-
-  .c-bg-navy-dark {
-    background-color: #15193C;
-  }
-
-  .c-nederland,
-  .c-orange {
-    color: #FFBFA6;
-  }
-
-  .border-nederland,
-  .border-orange {
-    border-color: #FFBFA6;
-  }
-
-  .c-bg-nederland,
-  .c-bg-orange {
-    background-color: #FFBFA6;
-  }
-
-  .fill-orange {
-    path: #FFBFA6;
-  }
-
-  .fill-p-orange path {
-    stroke: #FFBFA6;
-  }
-
-  .fill-orange {
-    path: #FFBFA6;
-  }
-
-  .c-blue {
-    color: #71B7FE;
-  }
-
-  .c-purple {
-    color: #A89BF9;
-  }
-
-  .c-wheat {
-    color: #F5EFEC;
-  }
-
-  .fill-f-wheat path {
-    fill: #F5EFEC;
-  }
-
-  .fill-wheat {
-    fill: #F5EFEC;
-  }
-
-  .fill-fp-white path {
-    stroke: #F5EFEC;
-  }
-
-  .fill-fp-orange path {
-    stroke: #FFBFA6;
-  }
-
-  .c-bg-wheat {
-    background-color: #F5EFEC;
-  }
-
-  .c-bg-grey {
-    background-color: #EDF2F4;
-  }
-
-  .fill-f-grey path {
-    fill: #EDF2F4;
+  .fill-ps-eu path {
+    stroke: var(--eu);
   }
 
   .fill-f-white path {
     fill: #ffffff;
   }
-}
 
-@layer utilities {
-  .transition-default {
-    @apply transition duration-200 ease-linear;
+  .fill-f-grey path {
+    fill: var(--grey);
   }
 
   /* WYSIWYG */
 
   .prose {
-    @apply max-w-full;
+    @apply !max-w-full;
   }
 
   .prose h1,
@@ -145,8 +62,12 @@
     @apply w-full rounded-lg;
   }
 
+  .prose ul {
+    @apply list-outside list-disc marker:text-brand-navy/30;
+  }
+
   .prose blockquote {
-    @apply c-bg-wheat p-8 lg:p-12 border-none not-italic font-normal rounded-lg mx-0 lg:-mx-12 font-no;
+    @apply bg-brand-wheat p-8 lg:p-12 border-none not-italic rounded-lg mx-0 lg:-mx-12 font-neworder;
   }
 
   .prose blockquote p {
@@ -154,7 +75,7 @@
   }
 
   .prose blockquote p:first-of-type {
-    @apply mt-0 mb-4 text-xl lg:text-3xl leading-normal lg:leading-snug;
+    @apply mt-0 mb-4 text-xl lg:text-2xl leading-normal lg:leading-normal;
   }
 
   .prose blockquote p:last-of-type {
@@ -163,8 +84,18 @@
 }
 
 @layer components {
-  .btn-sm-solid {
-    @apply rounded py-2 px-5 font-medium text-white bg-purple-600 hover:bg-purple-700 justify-center;
+  .layout-p-normal {
+    @apply py-14 lg:py-24;
+  }
+
+  .layout-w-normal {
+    @apply m-auto px-4 md:px-8;
+  }
+}
+
+@layer utilities {
+  .transition-default {
+    @apply transition duration-200 ease-linear;
   }
 }
 
@@ -173,55 +104,6 @@
 .nuxt-icon {
   height: 100% !important;
   width: 100% !important;
-}
-
-/* FONTS */
-
-.f-new-order,
-.font-no {
-  font-family: "new-order"
-}
-
-/* SVG SHAPES */
-
-.svg-curve-up-bottom {
-  position: absolute;
-  width: 100%;
-  height: 48px;
-  top: -47px;
-  z-index: 50;
-} 
-
-@media only screen and (min-width: 768px) {
-  .svg-curve-up-bottom {
-    top: -48px;
-  }
-}
-
-.svg-curve-up-bottom-sit-bottom {
-  position: absolute;
-  width: 100%;
-  height: 48px;
-  bottom: 0;
-  z-index: 50;
-} 
-
-.svg-curve-down-bottom {
-  position: absolute;
-  width: 100%;
-  height: 32px;
-  bottom: 0;
-  z-index: 10;
-  left: 0;
-}
-
-.svg-curve-down-right {
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 0;
-  top: 0;
-  z-index: 10;
 }
 
 /* ANIMATIONS */
@@ -304,7 +186,7 @@
 }
 
 .animate-circle-out {
-  animation-duration: 1.6s;
+  animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: animate-circle-out;
 }
@@ -339,4 +221,46 @@
   to {
     mask-position: 0 -100%;
   }
+}
+
+/* SVG SHAPES */
+
+.svg-curve-up-bottom {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: -47px;
+  z-index: 50;
+} 
+
+@media only screen and (min-width: 768px) {
+  .svg-curve-up-bottom {
+    top: -48px;
+  }
+}
+
+.svg-curve-up-bottom-sit-bottom {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  bottom: 0;
+  z-index: 50;
+} 
+
+.svg-curve-down-bottom {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  bottom: 0;
+  z-index: 10;
+  left: 0;
+}
+
+.svg-curve-down-right {
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }

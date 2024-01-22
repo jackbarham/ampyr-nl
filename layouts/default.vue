@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col h-screen justify-between" :class="{ 'fixed w-full': fixed }">
-    <TheHeader />
+    <MainHeader />
     <main role="main" class="mb-auto">
       <div class="overflow-hidden">
         <slot />
       </div>
     </main>
-    <TheFooter />
+    <MainFooter />
   </div>
 </template>
 

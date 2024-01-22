@@ -9,7 +9,10 @@
 </template>
 
 <script setup>
-const { setMenuClass } = useMenuClass()
+definePageMeta({
+  middleware: ['header-theme'],
+  headerTheme: 'header-dark'
+})
 
 const heroFull = {
   heading: 'Hero Text',
@@ -97,8 +100,4 @@ const leadership = {
   image: 'https://static.jackbarham.com/ampyr/hero.jpg',
   alt: 'Description of image',
 }
-
-onMounted(() => {
-  setMenuClass('menu-light')
-})
 </script>

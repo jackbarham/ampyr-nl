@@ -1,5 +1,5 @@
 <template>
-  <HeroPage :content="hero" />
+  <HeroPage :content="heroPage" />
   <ImageTextMiddle :content="imageTextMiddle" />
   <Testimonial />
   <Numbers />
@@ -9,22 +9,25 @@
 </template>
 
 <script setup>
-const { setMenuClass } = useMenuClass()
-import HeroSvg1 from '~/assets/icons/hero-svg-1.svg'
+definePageMeta({
+  middleware: ['header-theme'],
+  headerTheme: 'header-light'
+})
 
-const hero = {
+import ShapeHero1 from '~/assets/icons/shape-hero-1.svg'
+
+const heroPage = {
   heading: 'Energy Cooperatives',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  buttonText: 'Button not linked',
-  buttonLink: '#',
-  shapes: {
+  variation: {
     type: 1,
     img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    svg: HeroSvg1,
+    svg: ShapeHero1,
   },
 }
+
 
 const imageTextMiddle = {
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.',
@@ -36,8 +39,4 @@ const contactForm = {
   heading: 'If you wish to contact us, please fill in the form below.',
   theme: 'grey',
 }
-
-onMounted(() => {
-  setMenuClass('menu-dark')
-})
 </script>

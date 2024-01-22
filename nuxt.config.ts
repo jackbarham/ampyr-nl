@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { 
     enabled: true 
@@ -12,7 +11,10 @@ export default defineNuxtConfig({
     head: {
       title: 'AMPYR NL',
       meta: [
-        { name: 'description', content: 'General website description' }
+        { 
+          name: 'description', 
+          content: 'AMPYR Europe corporate website' 
+        }
       ],
       link: [
         { 
@@ -23,11 +25,11 @@ export default defineNuxtConfig({
           rel: 'stylesheet', 
           href: 'https://use.typekit.net/iiw3pli.css'
         },
-        // { 
-        //   rel: 'shortcut icon', 
-        //   type: 'image/png', 
-        //   href: 'https://static.jackbarham.com/themeship/favicon.png'
-        // }
+        { 
+          rel: 'shortcut icon', 
+          type: 'image/png', 
+          href: 'https://static.jackbarham.com/ampyr/favicon.png'
+        }
       ]
     }
   }

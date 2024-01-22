@@ -1,8 +1,8 @@
 <template>
   <div class="grid-text">
-    <div class="c-bg-navy py-14 lg:py-24">
-      <div class="max-w-md lg:max-w-5xl m-auto px-4">
-        <h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">The Benefits</h1>
+    <div class="bg-brand-navy layout-p-normal">
+      <div class="max-w-md lg:max-w-5xl layout-w-normal">
+        <Heading text="light" copy="The Benefits" />
         <div class="lg:grid lg:grid-cols-3 lg:gap-28 text-center">
           <div 
             v-for="(item, index) in items" 
@@ -12,12 +12,14 @@
             <div class="h-10 w-10 mb-4 mx-auto">
               <component :is="item.icon" filled class="fill-p-orange" />
             </div>
-            <h2 class="c-orange text-2xl lg:text-4xl font-normal tracking-wide mb-6">{{ item.heading }}</h2>
-            <p class="c-wheat font-light">{{ item.text }}</p>
+            <h2 class="text-brand-nl text-2xl lg:text-4xl font-normal tracking-wide mb-6">{{ item.heading }}</h2>
+            <p class="">{{ item.text }}</p>
           </div>
         </div>
       </div>
-      <svgo-test2 filled class="start-reveal-right hidden lg:block pt-20 opacity-80" />
+      <div class="statistics-svg">
+        <svgo-shape-long filled class="start-reveal-right hidden lg:block pt-20 opacity-80" />
+      </div>
     </div>
   </div>
 </template>
@@ -48,9 +50,16 @@ const items = [
 useAnimation({
   trigger: 'grid-text',
   classes: [
-    { start: 'start-reveal-right', animate: 'amimate-reveal-right' },
     { start: 'start-fade-scale', animate: 'animate-fade-scale' },
   ],
-  threshold: 0.6
+  threshold: 0.2
+})
+
+useAnimation({
+  trigger: 'grid-text-svg',
+  classes: [
+    { start: 'start-reveal-right', animate: 'amimate-reveal-right' },
+  ],
+  threshold: 0.7
 })
 </script>

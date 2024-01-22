@@ -11,10 +11,10 @@
             <path fill="none" d="M0,0 Q48,50 0,100 V100 H24 V0 Z" />
           </svg>
         </div>
-        <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left c-navy">
+        <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left text-brand-navy">
           <span class="inline-block uppercase text-xs tracking-widest mb-4 lg:mb-6">{{ props.content.category }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ props.content.heading }}</h2>
-          <p class="lg:text-xl font-light" :class="{ 'mb-8': props.content.button }">{{ props.content.text }}</p>
+          <p class="lg:text-xl" :class="{ 'mb-8': props.content.button }">{{ props.content.text }}</p>
           <Button v-if="props.content.button" theme="dark" :link="props.content.button.link" :text="props.content.button.text" />
         </div>
       </div>
@@ -31,7 +31,7 @@ const props = defineProps({
 })
 
 const backgroundClass = computed(() => {
-  return props.content.theme === 'white' ? 'bg-white' : 'c-bg-grey'
+  return props.content.theme === 'white' ? 'bg-white' : 'bg-brand-grey'
 })
 
 const svgFill = computed(() => {

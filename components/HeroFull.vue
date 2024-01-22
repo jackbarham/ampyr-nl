@@ -1,11 +1,11 @@
 <template>
-  <div class="hero">
-    <div class="c-bg-navy">
+  <div class="hero-full">
+    <div class="bg-brand-navy">
       <div class="absolute z-10 w-full">
         <div class="flex items-center h-screen w-full max-w-6xl m-auto p-6">
           <div class="">
             <h2 class="text-6xl mb-6">{{ props.content.heading }}</h2>
-            <p class="mb-6 text-xl font-light max-w-sm">{{ props.content.text }}</p>
+            <p class="mb-6 text-xl max-w-sm">{{ props.content.text }}</p>
             <Button theme="light" link="#" text="Button not linked" />
           </div>
         </div>
