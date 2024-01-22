@@ -9,12 +9,12 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-16 mb-4">
             <div v-for="(page, index) in mainPages" :key="index" class="">
-              <h2 class="text-brand-eu font-normal tracking-wide text-xl md:text-lg mb-4">{{ page.heading }}</h2>
+              <h2 class="text-brand-nl font-normal tracking-wide text-xl md:text-lg mb-4">{{ page.heading }}</h2>
               <NuxtLink 
                 v-for="(link, index) in page.links" 
                 :key="index" 
                 :to="link.to" 
-                class="block text-base md:text-sm font-neworder tracking-wide text-white hover:text-brand-eu transition mb-3"
+                class="block text-base md:text-sm font-neworder tracking-wide text-white hover:text-brand-nl transition mb-3"
               >{{ link.name }}</NuxtLink>
             </div>
           </div>
