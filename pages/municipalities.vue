@@ -22,7 +22,7 @@ const heroPage = {
   heading: 'Municipalities',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   variation: {
-    type: 1,
+    type: 2,
     img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
