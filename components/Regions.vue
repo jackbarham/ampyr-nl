@@ -22,14 +22,14 @@
           <li 
             v-for="(region, index) in regions" 
             :key="index"
-            class="text-brand-wheat hover:text-brand-eu text-left"
+            class="text-brand-wheat hover:text-brand-nl text-left"
           >
             <NuxtLink :to="region.link" @click="closeMenu()" class="flex items-center px-2 lg:px-6 py-2 rounded group">
               <img class="w-6 h-6 mr-4" :src="region.flag" :alt="region.name">
               <span class="flex w-full justify-between">
                 <span>{{ region.name }}</span>
                 <span class="flex w-6 h-6">
-                  <svgo-arrow-right filled class="group-hover:fill-ps-eu" />
+                  <svgo-arrow-right filled class="group-hover:fill-ps-nl" />
                 </span>
               </span>
             </NuxtLink>

@@ -36,6 +36,18 @@
     stroke: var(--eu);
   }
 
+  .fill-ps-nl path {
+    stroke: var(--nl);
+  }
+
+  .fill-ps-uk path {
+    stroke: var(--uk);
+  }
+
+  .fill-ps-de path {
+    stroke: var(--de);
+  }
+
   .fill-f-white path {
     fill: #ffffff;
   }
