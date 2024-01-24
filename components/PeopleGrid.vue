@@ -34,7 +34,7 @@
             </div>
             <div class="px-4 text-brand-navy">
               <h2 class="text-2xl mb-2 pb-3 border-b border-gray-200">{{ person.name }}</h2>
-              <p class="tracking-wide font-light">{{ person.position }}</p>
+              <p class="tracking-wide">{{ person.position }}</p>
             </div>
           </div>
         </div>

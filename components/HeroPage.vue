@@ -11,6 +11,7 @@
 
           <HeroVariation1 v-if="props.content.variation.type === 1" :shapes="props.content.variation" />
           <HeroVariation2 v-if="props.content.variation.type === 2" :shapes="props.content.variation" />
+          <HeroVariation3 v-if="props.content.variation.type === 3" :shapes="props.content.variation" />
         </div>
       </div>
     </div>

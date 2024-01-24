@@ -20,7 +20,7 @@ const heroPage = {
   heading: 'Energy Cooperatives',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   variation: {
-    type: 1,
+    type: 3,
     img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',

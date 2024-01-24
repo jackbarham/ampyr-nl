@@ -19,7 +19,7 @@ const heroPage = {
   heading: 'At a Glance',
   intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   variation: {
-    type: 1,
+    type: 4,
     img1: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img2: 'https://static.jackbarham.com/ampyr/hero.jpg',
     img3: 'https://static.jackbarham.com/ampyr/hero.jpg',
