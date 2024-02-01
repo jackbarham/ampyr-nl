@@ -1,12 +1,12 @@
 <template>
-  <section class="statistics">
+  <section v-editable="blok" class="statistics">
     <div class="bg-brand-navy layout-p-normal">
       <div class="max-w-6xl layout-w-normal">
-        <Heading text="light" :copy="props.content.heading" />
+        <Heading text="light" :copy="blok.heading" />
         <div class="statistics-grid grid grid-cols-1 lg:grid-cols-3 gap-4 text-center">
-          <div 
-            v-for="(stat, index) in props.content.stats" 
-            :key="index" 
+          <div
+            v-for="(stat, index) in blok.stats"
+            :key="index"
             class="start-fade-scale mb-12 last:mb-0 lg:mb-0"
           >
             <div class="mb-6">
@@ -40,12 +40,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  content: {
-    type: Object,
-    required: true,
-  },
-})
+defineProps({ blok: Object})
 
 useAnimation({
   trigger: 'statistics-grid',

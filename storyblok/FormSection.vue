@@ -1,0 +1,10 @@
+<template>
+  <div v-editable="blok" class="py-24 text-6xl text-[#50b0ae] font-bold text-center">
+    {{ blok.headline }}
+    {{ blok.lead }}
+  </div>
+</template>
+
+<script setup>
+defineProps({ blok: Object })
+</script>

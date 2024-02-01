@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-page">
+  <section v-editable="blok" class="hero-page">
     <div class="bg-brand-grey text-brand-navy">
       <div class="max-w-lg md:max-w-7xl pt-24 md:pt-20 layout-w-normal">
         <div class="md:grid md:grid-cols-2 md:items-center pb-12 lg:pb-20">
@@ -17,9 +17,10 @@
   </section>
 </template>
 
+
 <script setup>
 const props = defineProps({
-  content: {
+  blok: {
     type: Object,
     required: true,
   },
