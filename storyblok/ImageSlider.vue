@@ -1,17 +1,17 @@
 <template>
-  <div class="image-large-slider">
+  <div class="image-slider">
     <div class="bg-white">
       <div class="relative">
         
         <carousel ref="imageLargeSlider" :items-to-show="1" :wrap-around="true">
-          <slide v-for="(slide, index) in props.content.slides" :key="index">
+          <slide v-for="(slide, index) in blok.image_slider_items" :key="index">
             
             <div class="relative h-[512px] md:h-[640px] lg:h-[768px] w-full">
               <div class="absolute z-20 w-full h-full">
                 <div class="flex items-center h-full w-full max-w-6xl m-auto p-8">
                   <div class="max-w-md text-brand-navy text-center md:text-left mx-auto md:mx-0">
-                    <span v-if="slide.headline" class="block uppercase text-sm tracking-widest mb-6">{{ slide.headline }}</span>
-                    <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ slide.heading }}</h2>
+                    <span v-if="slide.brow" class="block uppercase text-sm tracking-widest mb-6">{{ slide.brow }}</span>
+                    <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ slide.title }}</h2>
                     <p class="mb-10">{{ slide.text }}</p>
                   </div>
                 </div>
@@ -40,11 +40,11 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  content: {
+defineProps({
+  blok: {
     type: Object,
     required: true,
-  },
+  }
 })
 
 

@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="cards-number">
+  <section v-editable="blok" class="cards-number">
     <div class="bg-brand-navy layout-p-normal">
       <div class="max-w-xl lg:max-w-7xl layout-w-normal">
         <Heading text="light" :copy="blok.heading" />
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -24,6 +24,6 @@ defineProps({
   blok: {
     type: Object,
     required: true,
-  },
+  }
 })
 </script>
