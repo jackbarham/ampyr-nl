@@ -1,5 +1,5 @@
 <template>
-  <section class="newsfeed-main">
+  <section v-editable="blok" class="newsfeed-main">
     <div class="bg-brand-grey py-14 lg:pb-24 lg:pt-20">
       <div class="max-w-xl md:max-w-4xl lg:max-w-7xl layout-w-normal">
         <NewsfeedFeatured :cards="filteredItems" class="mb-8 md:mb-12" />
@@ -9,14 +9,24 @@
           @update-category="currentCategory = $event" 
         />
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <NewsfeedCard v-for="(item, index) in filteredItems" :key="index" :card="item" />
+          <!-- <NewsfeedCard v-for="(item, index) in filteredItems" :key="index" :card="item" /> -->
         </div>
+
+        <p class="text-brand-navy text-center mt-10">Dynamic content required - Error with NewsfeedCard </p>
+
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
+
 const items = {
   cards: [
     {
