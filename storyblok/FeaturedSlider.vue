@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <p class="text-brand-navy text-center">Dynamic content required</p>
+        <p class="text-brand-navy text-center mt-10">Dynamic content required</p>
 
       </div>
       <div class="absolute w-full h-full top-0 opacity-20">

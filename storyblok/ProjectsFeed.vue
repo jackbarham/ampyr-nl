@@ -30,6 +30,9 @@
           </template>
         </div>
       </div>
+
+      <p class="text-brand-navy text-center mt-10">Dynamic content required</p>
+      
     </div>
   </section>
 </template>
