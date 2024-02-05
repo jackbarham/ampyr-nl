@@ -1,5 +1,5 @@
 <template>
-  <div class="image-slider">
+  <section class="image-slider">
     <div class="bg-white">
       <div class="relative">
         
@@ -36,7 +36,7 @@
 
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

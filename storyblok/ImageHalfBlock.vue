@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="image-half relative">
+  <section v-editable="blok" class="image-half relative">
     <div :class="backgroundClass">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="relative overflow-hidden">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

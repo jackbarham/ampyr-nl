@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="cards-large">
+  <section v-editable="blok" class="cards-large">
     <div class="bg-white">
       <div class="max-w-7xl layout-w-normal py-14 lg:py-24">
         <div
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

@@ -1,9 +1,9 @@
 <template>
-  <section class="featured-slider">
+  <section v-editable="blok" class="featured-slider">
     <div class="relative bg-white layout-p-normal">
       <div class="relative z-10 max-w-sm md:max-w-7xl layout-w-normal">
 
-        <Heading text="dark" copy="Featured Projects" />
+        <Heading text="dark" :copy="blok.heading" />
           
         <carousel ref="featuredSlider" :items-to-show="1.2" :wrap-around="true" :breakpoints="breakpoints">
           <slide v-for="(project, index) in projects" :key="index">
@@ -31,6 +31,8 @@
           </div>
         </div>
 
+        <p class="text-brand-navy text-center">Dynamic content required</p>
+
       </div>
       <div class="absolute w-full h-full top-0 opacity-20">
         <svgo-blades-full filled />
@@ -40,6 +42,13 @@
 </template>
 
 <script setup>
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
+
 const projects = [
   {
     heading: 'Edinburgh Airport',

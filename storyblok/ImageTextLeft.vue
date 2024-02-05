@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="image-text-left">
+  <section v-editable="blok" class="image-text-left">
     <div class="bg-white image-text-left">
       <div class="relative h-[512px] lg:h-[768px] w-full">
 
@@ -18,7 +18,7 @@
         <NuxtImg :src="blok.image.filename" :alt="blok.image.title ? blok.image.title : ``" class="start-scale-out absolute h-full w-full object-cover opacity-80" />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
