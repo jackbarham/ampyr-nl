@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="testimonial">
+  <section v-editable="blok" class="testimonial">
     <div class="relative overflow-hidden bg-brand-wheat py-14 md:py-32">
       <div class="absolute w-[460px] h-[460px] -bottom-[160px] rotate-[130deg] md:rotate-0 right-20 md:top-0 md:right-0">
         <svgo-fan-quarter filled />
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

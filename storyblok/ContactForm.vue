@@ -1,8 +1,8 @@
 <template>
-  <div class="contact-form">
-    <div :class="props.content.theme === 'grey' ? 'bg-brand-grey' : 'bg-white'" class="py-14 lg:py-24">
+  <section v-editable="blok" class="contact-form">
+    <div :class="blok.theme === 'grey' ? 'bg-brand-grey' : 'bg-white'" class="py-14 lg:py-24">
       <div class="max-w-xl m-auto px-4 md:px-8">
-        <h1 class="text-brand-navy text-center text-3xl md:text-4xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ props.content.heading }}</h1>
+        <h1 class="text-brand-navy text-center text-3xl md:text-4xl mb-12 lg:mb-20 max-w-md lg:max-w-full m-auto">{{ blok.heading }}</h1>
         <form class="">
           <FormInput type="text" name="fullname" label="Full name" />
           <FormInput type="email" name="email" label="Email address" />
@@ -13,12 +13,12 @@
         </form>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-const props = defineProps({
-  content: {
+defineProps({
+  blok: {
     type: Object,
     required: true,
   },
