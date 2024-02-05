@@ -11,7 +11,7 @@
             <NewsfeedCard v-for="(card, index) in blok.articles" :key="index" :card="card" />
           </div>
           <div class="flex justify-center">
-            <Button theme="light" :data="blok.button[0].link" />
+            <Button theme="light" :link="blok.button[0].link" :text="blok.button[0].label" />
           </div>
         </div>
       </div>
@@ -26,28 +26,4 @@ defineProps({
     required: true,
   },
 })
-
-// const cards = [
-// {
-//     date: '14th June 2023',
-//     heading: 'AMPYR Solar Europe and Multiplex Sign PPA for Solar Power Station in Norfolk',
-//     link: 'press/demo-press-release-content',
-//     category: 'Press release',
-//     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-//   },
-//   {
-//     date: '14th June 2023',
-//     heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-//     link: 'press/demo-press-release-content',
-//     category: 'Article',
-//     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-//   },
-//   {
-//     date: '14th June 2023',
-//     heading: 'AMPYR Solar Europe Acquires 390 MW UK Solar PV Portfolio From Tyler Hill',
-//     link: 'press/demo-press-release-content',
-//     category: 'Blog',
-//     image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-//   },
-// ]
 </script>

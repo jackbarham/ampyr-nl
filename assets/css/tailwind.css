@@ -40,6 +40,10 @@
     fill: #ffffff;
   }
 
+  .fill-f-wheat path {
+    fill: var(--wheat)
+  }
+
   .fill-f-grey path {
     fill: var(--grey);
   }
@@ -242,8 +246,8 @@
 .svg-curve-up-bottom-sit-bottom {
   position: absolute;
   width: 100%;
-  height: 48px;
-  bottom: 0;
+  height: 52px;
+  bottom: -1px;
   z-index: 50;
 }
 
