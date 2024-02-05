@@ -16,7 +16,7 @@
           </svg>
         </div>
         <div class="max-w-xl mx-auto md:mx-0 py-14 px-8 lg:px-20 text-center md:text-left text-brand-navy">
-          <span class="inline-block uppercase text-xs tracking-widest mb-4 lg:mb-6">{{ blok.category }}</span>
+          <span v-if="blok.brow" class="inline-block uppercase text-xs tracking-widest mb-4 lg:mb-6">{{ blok.brow }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ blok.heading }}</h2>
           <p class="lg:text-xl" :class="{ 'mb-8': blok.button }">{{ blok.text }}</p>
           <Button v-if="blok.button" theme="dark" :link="blok.button[0].link" :text="blok.button[0].label" />
@@ -27,7 +27,12 @@
 </template>
 
 <script setup>
-defineProps({ blok: Object })
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  },
+})
 
 let backgroundClass = ref('bg-brand-grey')
 let svgFill = ref('fill-f-grey')

@@ -19,10 +19,10 @@
                 <span class="uppercase text-2xl block font-neworder mb-2">mw</span>
                 <span class="block uppercase text-sm font-light tracking-widest">{{ stat.projects }} projects</span>
               </div>
-              <img :src="stat.image" alt="Description" class="absolute w-48 h-48 object-cover rounded-full opacity-50">
+              <img :src="stat.image.filename" alt="Description" class="absolute w-48 h-48 object-cover rounded-full opacity-50">
             </div>
             <div class="mb-4">
-              <p class="font-neworder text-2xl mb-1" :class="stat.color">{{ stat.devopment }}<span class="text-lg uppercase font-light">mw</span></p>
+              <p class="font-neworder text-2xl mb-1" :class="stat.color">{{ stat.development }}<span class="text-lg uppercase font-light">mw</span></p>
               <p class="font-light uppercase text-xs tracking-widest">Under development</p>
             </div>
             <div class="mb-0">
@@ -37,10 +37,16 @@
       </div>
     </div>
   </section>
+
 </template>
 
 <script setup>
-defineProps({ blok: Object})
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  },
+})
 
 useAnimation({
   trigger: 'statistics-grid',

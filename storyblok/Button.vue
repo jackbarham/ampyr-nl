@@ -1,6 +1,6 @@
 <template>
   <NuxtLink 
-    :to="props.link" 
+    :to="props.link.url" 
     :class="[isLight ? 'border-white hover:border-brand-nl' : 'border-brand-navy hover:border-brand-nl font-medium' ]"
     class="button inline-block border rounded-full overflow-hidden transition group"
   >
@@ -15,6 +15,8 @@
       </span>
     </span>
   </NuxtLink>
+
+  <!-- <p class="text-brand-navy">{{ props.link }}</p> -->
 </template>
 
 <script setup>
@@ -24,7 +26,7 @@ const props = defineProps({
     required: true,
   },
   link: {
-    type: String,
+    type: Object,
     required: true,
   },
   text: {
@@ -32,6 +34,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+console.log(props.link)
 
 const isLight = computed(() => props.theme === 'light')
 </script>

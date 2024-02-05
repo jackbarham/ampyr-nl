@@ -1,4 +1,9 @@
 module.exports = {
+  content: [
+    './pages/**/*.{html,js,ts}',
+    './components/**/*.{html,js,ts}',
+    './storyblok/**/*.{vue,js,ts}',
+  ],
   theme: {
     extend: {
       colors: {

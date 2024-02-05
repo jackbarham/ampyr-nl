@@ -9,12 +9,7 @@
               <p v-if="blok.brow" class="uppercase font-light tracking-widest mb-4 lg:mb-6">{{ blok.brow }}</p>
               <h2 class="text-4xl lg:text-5xl lg:leading-tight mb-10">{{ blok.heading }}</h2>
               <p v-if="blok.text" class="mb-10">{{ blok.text }}</p>
-              <Button
-                v-if="blok.button[0]"
-                :link="blok.button[0].link.cached_url"
-                :text="blok.button[0].label"
-                theme="dark"
-              />
+              <Button v-if="blok.button" theme="dark" :link="blok.button[0].link" :text="blok.button[0].label" />
             </div>
           </div>
         </div>

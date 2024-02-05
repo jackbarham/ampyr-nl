@@ -35,6 +35,7 @@
 
 <script setup>
 defineProps({ blok: Object})
+
 import IconCalendar from '~/assets/icons/calendar.svg'
 import IconLandmark from '~/assets/icons/landmark.svg'
 import IconPlug from '~/assets/icons/plug.svg'
@@ -44,7 +45,6 @@ const componentMapping = {
   'IconLandmark': IconLandmark,
   'IconPlug': IconPlug
 }
-
 
 useAnimation({
   trigger: 'numbers-grid',
