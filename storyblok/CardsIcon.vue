@@ -10,7 +10,7 @@
             class="block mb-6 last:mb-0 lg:mb-0 p-6 lg:p-8 bg-brand-wheat rounded-lg lg:min-h-[360px]"
           >
             <div class="h-8 w-8 mb-4">
-              <component :is="componentMapping[card.icon]" filled class="fill-p-navy" />
+              <component :is="componentMapping[card.icon]" filled class="fill-ps-navy" />
             </div>
             <h2 class="text-brand-navy text-2xl lg:text-3xl tracking-wide mb-4">{{ card.title }}</h2>
             <p class="text-brand-navy">{{ card.text }}</p>
