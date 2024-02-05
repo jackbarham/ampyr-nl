@@ -54,10 +54,10 @@
           </li>
         </ul>
         
-        <Regions class="block lg:hidden" />
+        <ElementRegions class="block lg:hidden" />
       </div>
 
-      <Regions class="hidden lg:block" />
+      <ElementRegions class="hidden lg:block" />
 
     </div>
   </header>
