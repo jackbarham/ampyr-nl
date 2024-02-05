@@ -17,7 +17,7 @@
   body {
     @apply font-inter text-brand-wheat;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-neworder font-medium leading-relaxed;
   }
@@ -231,7 +231,7 @@
   height: 48px;
   top: -47px;
   z-index: 50;
-} 
+}
 
 @media only screen and (min-width: 768px) {
   .svg-curve-up-bottom {
@@ -245,7 +245,7 @@
   height: 48px;
   bottom: 0;
   z-index: 50;
-} 
+}
 
 .svg-curve-down-bottom {
   position: absolute;
