@@ -1,11 +1,11 @@
 <template>
-  <div class="people-slider">
+  <div v-editable="blok" class="people-slider">
     <div class="bg-white layout-p-normal">
       <div class="max-w-sm md:max-w-5xl layout-w-normal">
         <Heading text="dark" copy="Points of Contact" />
           
         <carousel ref="imageLargeSlider" v-bind="settings" :breakpoints="breakpoints">
-          <slide v-for="(person, index) in people" :key="index">
+          <slide v-for="(person, index) in blok.people_slider_items" :key="index">
 
             <div class="relative block group md:mr-6">
               <div class="relative h-96 md:h-[512px] w-full rounded-2xl overflow-hidden mb-4">
@@ -56,50 +56,57 @@
 </template>
 
 <script setup>
-const people = [
-  {
-    name: 'Tom van Dorp',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'CEO',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-  {
-    name: 'Enzo Overtoom',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'Business Developer',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-  {
-    name: 'Johan Overtoom',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'Marketing Professional',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-  {
-    name: 'Marco Blok',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'Project - en Procesmanagement',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-  {
-    name: 'Paulien Benschop',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'Investment Analyst',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-  {
-    name: 'Rebecca Kolfschoten',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
-    position: 'Office Manager',
-    linkedin: '#',
-    image: 'https://static.jackbarham.com/ampyr/profile.jpg',
-  },
-]
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
+
+// const people = [
+//   {
+//     name: 'Tom van Dorp',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'CEO',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+//   {
+//     name: 'Enzo Overtoom',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'Business Developer',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+//   {
+//     name: 'Johan Overtoom',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'Marketing Professional',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+//   {
+//     name: 'Marco Blok',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'Project - en Procesmanagement',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+//   {
+//     name: 'Paulien Benschop',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'Investment Analyst',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+//   {
+//     name: 'Rebecca Kolfschoten',
+//     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.',
+//     position: 'Office Manager',
+//     linkedin: '#',
+//     image: 'https://static.jackbarham.com/ampyr/profile.jpg',
+//   },
+// ]
 
 const showBio = ref(null)
 

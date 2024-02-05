@@ -24,6 +24,6 @@ defineProps({
   blok: {
     type: Object,
     required: true,
-  },
+  }
 })
 </script>
