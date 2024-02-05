@@ -34,7 +34,12 @@
 </template>
 
 <script setup>
-defineProps({ blok: Object})
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
 
 import IconCalendar from '~/assets/icons/calendar.svg'
 import IconLandmark from '~/assets/icons/landmark.svg'
