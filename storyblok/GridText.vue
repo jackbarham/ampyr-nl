@@ -12,7 +12,7 @@
             <div class="h-10 w-10 mb-4 mx-auto">
               <component :is="componentMapping[item.icon]" filled class="fill-ps-nl" />
             </div>
-            <h2 class="text-brand-nl text-2xl lg:text-4xl font-normal tracking-wide mb-6">{{ item.heading }}</h2>
+            <h2 class="text-brand-nl text-2xl lg:text-4xl font-normal tracking-wide mb-6">{{ item.title }}</h2>
             <p class="">{{ item.text }}</p>
           </div>
         </div>

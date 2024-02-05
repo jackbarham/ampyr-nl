@@ -1,11 +1,11 @@
 <template>
-  <section class="locations">
+  <section v-editable="blok" class="locations">
     <div class="bg-brand-wheat layout-p-normal">
       <div class="max-w-md lg:max-w-7xl layout-w-normal">
-        <Heading text="dark" copy="Our locations" />
+        <Heading text="dark" :copy="blok.heading" />
         <div class="lg:grid lg:grid-cols-3 lg:gap-6">
           <div 
-            v-for="(location, index) in locations" 
+            v-for="(location, index) in blok.location_items" 
             :key="index" 
             class="mb-6 last:mb-0 lg:mb-0 bg-white rounded-2xl overflow-hidden shadow-lg"
           >
@@ -30,33 +30,10 @@
 </template>
 
 <script setup>
-const locations = [
-  {
-    country: 'Netherlands',
-    address1: 'Address Line 1',
-    address2: 'Address Line 2',
-    address3: 'Address Line 3',
-    phone: '+12 345 67890',
-    email: 'netherlands@ampyr.com',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    country: 'Germany',
-    address1: 'Address Line 1',
-    address2: 'Address Line 2',
-    address3: 'Address Line 3',
-    phone: '+12 345 67890',
-    email: 'germany@ampyr.com',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    country: 'United Kingdom',
-    address1: 'Address Line 1',
-    address2: 'Address Line 2',
-    address3: 'Address Line 3',
-    phone: '+12 345 67890',
-    email: 'unitedkingdom@ampyr.com',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-]
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
 </script>
