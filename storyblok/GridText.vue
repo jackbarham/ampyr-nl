@@ -1,5 +1,5 @@
 <template>
-  <section class="grid-text">
+  <section v-editable="blok" class="grid-text">
     <div class="bg-brand-navy layout-p-normal">
       <div class="max-w-md lg:max-w-5xl layout-w-normal">
         <Heading text="light" copy="The Benefits" />

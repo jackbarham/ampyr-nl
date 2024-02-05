@@ -1,10 +1,10 @@
 <template>
-  <div class="people-grid">
+  <section v-editable="blok" class="people-grid">
     <div class="bg-white layout-p-normal">
       <div class="max-w-sm md:max-w-7xl layout-w-normal">
         <div class="grid grid-cols-1 gap-10 md:gap-x-4 md:gap-y-12 md:grid-cols-2 lg:grid-cols-3">
           <div 
-            v-for="(person, index) in people" 
+            v-for="(person, index) in blok.people_grid_items" 
             :key="index" 
             class="relative block overflow-hidden group"
           >
@@ -40,10 +40,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+defineProps({
+  blok: {
+    type: Object,
+    required: true,
+  }
+})
+
 const people = [
   {
     name: 'Tom van Dorp',
