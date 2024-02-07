@@ -1,6 +1,6 @@
 <template>
   <NuxtLink 
-    :to="props.link.url" 
+    :to="props.url" 
     :class="[isLight ? 'border-white hover:border-brand-nl' : 'border-brand-navy hover:border-brand-nl font-medium' ]"
     class="button inline-block border rounded-full overflow-hidden transition group"
   >

@@ -12,10 +12,12 @@
             <h2 class="text-brand-wheat font-normal text-3xl mb-6">{{ card.heading }}</h2>
             <p class="text-brand-whe mb-8">{{ card.text }}</p>
             <Button theme="light" :link="card.button[0].link" :text="card.button[0].label" />
+            <!-- <p>{{ card.button[0].link }}</p> -->
           </div>
         </div>
       </div>
     </div>
+    
   </section>
 </template>
 
