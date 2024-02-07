@@ -7,8 +7,8 @@
             <h2 class="text-4xl md:text-5xl lg:text-6xl mb-6">{{ blok.heading }}</h2>
             <p class="text-lg lg:text-xl lg:leading-relaxed">{{ blok.intro }}</p>
           </div>
-          <Variation1 v-if="blok.variations[0].type == 1" :shapes="blok.variations[0]" />
-          <Variation2 v-if="blok.variations[0].type == 2" :shapes="blok.variations[0]" />
+          <HeroVariation1 v-if="blok.variations[0].type == 1" :shapes="blok.variations[0]" />
+          <HeroVariation2 v-if="blok.variations[0].type == 2" :shapes="blok.variations[0]" />
         </div>
       </div>
     </div>

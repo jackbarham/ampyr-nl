@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="people-slider">
+  <section v-editable="blok" class="people-slider">
     <div class="bg-white layout-p-normal">
       <div class="max-w-sm md:max-w-5xl layout-w-normal">
         <Heading text="dark" copy="Points of Contact" />
@@ -52,7 +52,7 @@
 
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
