@@ -3,6 +3,7 @@ module.exports = {
     './pages/**/*.{html,js,ts}',
     './components/**/*.{html,js,ts}',
     './storyblok/**/*.{vue,js,ts}',
+    './storyblok/*.{vue,js,ts}',
   ],
   theme: {
     extend: {

@@ -81,8 +81,8 @@
       heading: 'About Us',
       links: [
         {
-          name: 'AMPYR Solar Europe',
-          to: '/ampyr-solar-europe',
+          name: 'About AMPYR Solar Europe',
+          to: '/about-ampyr-solar-europe',
         },
         {
           name: 'Sustainability',
@@ -93,8 +93,8 @@
           to: '/vision-strategy',
         },
         {
-          name: 'Leadership Team',
-          to: '/leadership-team',
+          name: 'Leadership',
+          to: '/leadership',
         },
       ]
     },

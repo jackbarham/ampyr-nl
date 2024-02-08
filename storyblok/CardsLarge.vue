@@ -9,6 +9,7 @@
         >
           <NuxtImg 
             width="420"
+            loading="lazy"
             :src="card.image.filename" 
             :alt="card.heading" 
             class="w-full h-48 md:h-72 lg:h-96 object-cover rounded-lg" 

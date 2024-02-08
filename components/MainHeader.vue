@@ -127,8 +127,8 @@ const pages = ref([
     parent: 'About Us',
     links: [
       {
-        page: 'AMPYR Solar Europe',
-        to: '/ampyr-solar-europe',
+        page: 'About AMPYR Solar Europe',
+        to: '/about-ampyr-solar-europe',
       },
       {
         page: 'Sustainability',
@@ -139,8 +139,8 @@ const pages = ref([
         to: '/vision-strategy',
       },
       {
-        page: 'Leadership Team',
-        to: '/leadership-team',
+        page: 'Leadership',
+        to: '/leadership',
       },
     ]
   },
