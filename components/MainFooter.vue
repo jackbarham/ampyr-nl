@@ -103,7 +103,7 @@
       links: [
         {
           name: 'Individual News & Resources',
-          to: '/insights',
+          to: '/news',
         },
       ]
     },

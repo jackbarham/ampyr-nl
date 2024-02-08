@@ -12,7 +12,6 @@
 
 <script setup>
 defineProps({ 
-  blok: Object, 
-  siteConfig: Object
+  blok: Object
 })
 </script>

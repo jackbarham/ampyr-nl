@@ -8,7 +8,7 @@
             v-for="(card, index) in blok.vacancies_item" 
             :key="index" 
             class="relative block bg-brand-navy-dark p-6 rounded-lg min-h-[192px] scale-1 hover:scale-[103%] transition-all shadow-lg"
-            :to="card.link"
+            to="/careers/head-of-finance"
           >
             <h2 class="text-brand-nl text-xl font-normal tracking-wide mb-2">{{ card.title }}</h2>
             <p class="c-wheat text-sm font-light">{{ card.text }}</p>

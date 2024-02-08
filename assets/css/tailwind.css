@@ -70,6 +70,11 @@
     @apply list-outside list-disc marker:text-brand-navy/30;
   }
 
+  .prose ul li p,
+  .prose ol li p {
+    @apply m-0
+  }
+
   .prose blockquote {
     @apply bg-brand-wheat p-8 lg:p-12 border-none not-italic rounded-lg mx-0 lg:-mx-12 font-neworder;
   }
