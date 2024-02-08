@@ -8,7 +8,14 @@
             :key="index"
             class="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-24 items-center mb-12 last:mb-0"
           >
-            <img :src="item.image" alt="Description" class="w-full" :class="{ 'lg:order-last': index % 2 === 0 }" />
+            <NuxtImg 
+              width="300"
+              loading="lazy"
+              :src="item.image" 
+              alt="#" 
+              class="w-full" 
+              :class="{ 'lg:order-last': index % 2 === 0 }"
+            />
             <div class="text-center lg:text-left text-brand-navy" :class="{ 'lg:order-first': index % 2 === 0 }">
               <h2 class="text-2xl lg:text-3xl mb-4">{{ item.title }}</h2>
               <p>{{ item.text }}</p>

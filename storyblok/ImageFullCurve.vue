@@ -11,7 +11,13 @@
         <div class="absolute z-10 right-0 bottom-0 hidden md:block">
           <svgo-fan-bottom-right filled class="" />
         </div>
-        <img :src="blok.image" alt="Hero" class="start-fade-in absolute h-full w-full object-cover">
+        <NuxtImg 
+          width="700"
+          loading="lazy"
+          :src="blok.image" 
+          alt="#" 
+          class="start-fade-in absolute h-full w-full object-cover" 
+        />
       </div>
       <div class="bg-brand-wheat">
         <div class="lg:flex lg:justify-between lg:items-center max-w-xl lg:max-w-7xl m-auto pt-10 pb-14 lg:pt-20 lg:pb-24 px-6 md:px-12">

@@ -10,7 +10,14 @@
             class="mb-6 last:mb-0 lg:mb-0 bg-white rounded-2xl overflow-hidden shadow-lg"
           >
             <div class="relative">
-              <img :src="location.image" alt="Description" class="w-full h-52 lg:h-60 object-cover">
+              <!-- <img :src="location.image" alt="Description" class="w-full h-52 lg:h-60 object-cover"> -->
+              <NuxtImg 
+                width="300"
+                loading="lazy"
+                :src="location.image" 
+                :alt="location.country" 
+                class="w-full h-52 lg:h-60 object-cover" 
+              />
             </div>
             <div class="relative p-6 pb-7 min-h-52 lg:min-h-60">
               <h2 class="text-brand-navy text-2xl tracking-wide mb-3">{{ location.country }}</h2>

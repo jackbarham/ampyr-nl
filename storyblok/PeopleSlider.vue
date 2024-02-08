@@ -28,9 +28,15 @@
                         <svgo-chevron-right filled />
                       </span>
                     </a>
+                  </div>
                 </div>
-                </div>
-                <img :src="person.image" alt="Description" class="w-full h-full object-cover" />
+                <NuxtImg 
+                  width="300"
+                  loading="lazy"
+                  :src="person.image" 
+                  :alt="person.name" 
+                  class="w-full h-full object-cover" 
+                />
               </div>
               <div class="px-4 text-brand-navy">
                 <h2 class="text-2xl mb-2 pb-3 border-b border-gray-200">{{ person.name }}</h2>

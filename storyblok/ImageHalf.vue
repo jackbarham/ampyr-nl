@@ -4,7 +4,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
         <div class="relative overflow-hidden">
           <NuxtImg
-            provider="storyblok"
+            width="600"
+            loading="lazy"
             class="w-full h-[384px] md:h-[640px] lg:h-[768px] object-cover"
             :src="blok.image.filename"
           />

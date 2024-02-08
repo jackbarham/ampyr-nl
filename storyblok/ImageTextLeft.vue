@@ -15,7 +15,13 @@
         </div>
 
         <div class="absolute h-full w-full z-10 bg-gradient-to-r from-brand-wheat to-transparent opacity-100"></div>
-        <NuxtImg :src="blok.image.filename" :alt="blok.image.title ? blok.image.title : ``" class="start-scale-out absolute h-full w-full object-cover opacity-80" />
+        <NuxtImg 
+          width="700"
+          loading="lazy"
+          :src="blok.image.filename" 
+          :alt="blok.image.title ? blok.image.title : ``" 
+          class="start-scale-out absolute h-full w-full object-cover opacity-80" 
+        />
       </div>
     </div>
   </section>

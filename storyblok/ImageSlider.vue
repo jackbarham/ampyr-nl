@@ -17,7 +17,13 @@
                 </div>
               </div>
               <div class="hidden md:block absolute z-10 h-full w-full bg-gradient-to-r from-brand-wheat opacity-100"></div>
-              <img :src="slide.image" alt="Hero" class="absolute h-full w-full object-cover opacity-50 md:opacity-100">
+              <NuxtImg 
+                width="600"
+                loading="lazy"
+                :src="slide.image" 
+                alt="#" 
+                class="absolute h-full w-full object-cover opacity-50 md:opacity-100" 
+              />
             </div>
             
           </slide>

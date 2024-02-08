@@ -17,7 +17,13 @@
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
-              <img :src="project.image" alt="Description" class="w-full h-full object-cover">
+              <img :src="project.image" loading="lazy" alt="Description" class="w-full h-full object-cover">
+              <!-- <NuxtImg 
+                width="450"
+                :src="project.image" 
+                alt="#" 
+                class="w-full h-full object-cover" 
+              /> -->
             </NuxtLink>
           </slide>
         </carousel>

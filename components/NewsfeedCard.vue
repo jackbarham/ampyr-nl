@@ -5,7 +5,13 @@
   >
     <div class="relative">
       <span class="bg-white text-brand-navy text-xs px-3 py-1 rounded-full absolute z-10 right-4 top-4 capitalize">{{ props.card.content.categories[0].name }}</span>
-      <NuxtImg :src="props.card.content.image.filename" :alt="props.card.content.headline" class="w-full h-52 lg:h-60 object-cover" />
+      <NuxtImg 
+        width="300"
+        loading="lazy"
+        :src="props.card.content.image.filename" 
+        :alt="props.card.content.headline" 
+        class="w-full h-52 lg:h-60 object-cover" 
+      />
     </div>
     <div class="relative p-6 md:h-60 text-brand-navy bg-white group-hover:bg-brand-navy-dark">
       <p class="text-xs mb-4 group-hover:text-white opacity-80">{{ props.card.created_at }}</p>

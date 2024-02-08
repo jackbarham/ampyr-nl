@@ -20,7 +20,13 @@
                 <span class="block text-5xl font-medium font-neworder mb-1">{{ stat.heading }}</span>
                 <span class="uppercase text-xl block font-neworder">{{ stat.sub }}</span>
               </div>
-              <NuxtImg provider="storyblok" :src="stat.image.filename" :alt="stat.heading" class="absolute w-48 h-48 object-cover rounded-full opacity-50" />
+              <NuxtImg 
+                width="200"
+                loading="lazy"
+                :src="stat.image.filename" 
+                :alt="stat.heading" 
+                class="absolute w-48 h-48 object-cover rounded-full opacity-50" 
+              />
             </div>
             <p class="text-sm w-60 mx-auto">{{ stat.text }}</p>
           </div>

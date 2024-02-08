@@ -18,6 +18,8 @@
             </div>
           </div>
           <NuxtImg 
+            width="600"
+            loading="lazy"
             :src="blok.image.filename" 
             :alt="blok.image.title" 
             class="absolute h-full w-full top-0 object-cover opacity-30" 
