@@ -19,7 +19,7 @@
           <span v-if="blok.brow" class="inline-block uppercase text-xs tracking-widest mb-4 lg:mb-6">{{ blok.brow }}</span>
           <h2 class="text-3xl lg:text-5xl mb-6 lg:mb-8">{{ blok.heading }}</h2>
           <p class="lg:text-xl" :class="{ 'mb-8': blok.button }">{{ blok.text }}</p>
-          <Button v-if="blok.button" theme="dark" :link="blok.button[0].link" :text="blok.button[0].label" />
+          <Button v-if="blok.button[0]" theme="dark" :link="blok.button[0].link" :text="blok.button[0].label" />
         </div>
       </div>
     </div>

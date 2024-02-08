@@ -11,7 +11,7 @@
             <img :src="item.image" alt="Description" class="w-full" :class="{ 'lg:order-last': index % 2 === 0 }" />
             <div class="text-center lg:text-left text-brand-navy" :class="{ 'lg:order-first': index % 2 === 0 }">
               <h2 class="text-2xl lg:text-3xl mb-4">{{ item.title }}</h2>
-              <p class="">{{ item.text }}</p>
+              <p>{{ item.text }}</p>
             </div>
           </div>
       </div>
@@ -20,10 +20,10 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   blok: {
     type: Object,
     required: true,
-  },
+  }
 })
 </script>

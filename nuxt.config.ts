@@ -19,6 +19,9 @@ export default defineNuxtConfig({
       }]
   ],
   image: {
+    quality: 80,
+    format: ['webp'],
+    provider: 'storyblok',
     storyblok: {
       baseURL: 'https://a.storyblok.com'
     }

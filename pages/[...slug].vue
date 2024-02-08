@@ -1,3 +1,7 @@
+<template>
+  <StoryblokComponent v-if="pending === false && story.story" :blok="story.story.content" :siteConfig="story?.siteConfig" />
+</template>
+
 <script setup>
 const { $preview } = useNuxtApp() // Preview & Production approach: "const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production'"
 const { slug } = useRoute().params
@@ -47,7 +51,3 @@ onMounted(() => {
   }
 });
 </script>
-
-<template>
-  <StoryblokComponent v-if="pending === false && story.story" :blok="story.story.content" :siteConfig="story?.siteConfig" />
-</template>
