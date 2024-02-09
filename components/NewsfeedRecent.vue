@@ -13,6 +13,7 @@
           <div class="flex justify-center">
             <Button theme="light" link="/news" text="Read more updates" />
           </div>
+          <NotDynamic />
         </div>
       </div>
     </div>

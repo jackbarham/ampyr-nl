@@ -23,7 +23,7 @@
           </NuxtLink>
         </div>
 
-        <p class="text-brand-wheat text-center mt-10">Dynamic content required</p>
+        <NotDynamic />
 
       </div>
     </div>

@@ -7,6 +7,7 @@
           <FormInput type="text" name="fullname" label="Full name" />
           <FormInput type="email" name="email" label="Email address" />
           <FormInput type="text" name="comments" label="Addional comments" />
+          
           <div class="flex justify-center pt-4">
             <Button theme="dark" link="#" text="Submit form" />
           </div>
