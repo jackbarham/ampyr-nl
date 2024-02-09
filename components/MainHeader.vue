@@ -67,9 +67,7 @@
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
-const theme = computed(() => {
-  return route.meta.headerTheme
-})
+const theme = computed(() => route.meta.headerTheme)
 
 const showHeader = ref(false)
 const menuOpen = ref(false)

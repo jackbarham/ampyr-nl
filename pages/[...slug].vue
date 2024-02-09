@@ -7,6 +7,10 @@ const { $preview } = useNuxtApp() // Preview & Production approach: "const isPre
 const { slug } = useRoute().params
 const url = slug && slug.length > 0 ? slug.join('/') : 'home'
 
+definePageMeta({
+  middleware: ['header-theme']
+})
+
 // API options
 const version = $preview ? 'draft' : 'published' // Preview & Production approach: "isPreview ? 'draft' : 'published'"
 const { locale } = useI18n()
