@@ -12,6 +12,11 @@
             <Button theme="dark" link="#" text="Submit form" />
           </div>
         </form>
+        <div class="flex justify-center">
+          <div class="bg-brand-grey inline-block py-2 px-4 rounded mx-auto mt-12">
+            <p class="text-brand-navy">NOTE: Contact form not yet working</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
