@@ -31,7 +31,7 @@ const featured = {
   date: '14th June 2023',
   heading: 'AMPYR Solar Europe and Multiplex Sign PPA for Solar Power Station in Norfolk',
   intro: 'Lorem ipsum dolor sit amet consectetur. Faucibus mauris volutpat nam mauris sit lorem vulputate. Faucibus lorem leo vel sagittis euismod varius aliquam duis sagittis.',
-  link: 'press/demo-press-release-content',
+  link: 'news/demo-press-release-content',
   category: 'Press release',
   image: 'https://static.jackbarham.com/ampyr/hero.jpg',
 }

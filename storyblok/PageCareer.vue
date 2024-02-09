@@ -1,7 +1,8 @@
 <template>
-  <HeroSimple title="Careers" />
+  <!-- <HeroSimple title="Careers" /> -->
+  <HeroShort :content="hero" />
   <article class="max-w-3xl mx-auto py-12 md:py-28 px-4">
-    <h1 class="text-3xl lg:text-5xl font-medium text-brand-navy-dark mb-8 lg:mb-10">{{ blok.title }}</h1>
+    <HeadingArtcile :title="blok.title" />
     <div class="prose prose-sm md:prose-base text-brand-navy" v-html="renderRichText(blok.description)"></div>
   </article>
 </template>
@@ -13,4 +14,11 @@ defineProps({
     required: true,
   }
 })
+
+const hero = {
+  category: 'Careers',
+  image: {
+    filename: 'https://a.storyblok.com/f/273348/3992x2992/96180a1989/careers-default-hero-image.jpg'
+  }
+}
 </script>

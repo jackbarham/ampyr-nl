@@ -9,11 +9,11 @@
           @update-category="currentCategory = $event" 
         />
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- <NewsfeedCard v-for="(item, index) in filteredItems" :key="index" :card="item" /> -->
+          <NewsfeedCard v-for="(item, index) in filteredItems" :key="index" :card="item" />
           <!-- Issue with categories -->
         </div>
 
-        <p class="text-brand-navy text-center mt-10">Dynamic content required - Error with NewsfeedCard </p>
+        <p class="text-brand-navy text-center mt-10">Dynamic content required</p>
 
       </div>
     </div>
