@@ -37,7 +37,7 @@
       </div>
     </div>
   </section>
-
+  <!-- <p class="text-brand-navy">{{ blok }}</p> -->
 </template>
 
 <script setup>

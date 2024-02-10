@@ -1,5 +1,5 @@
 <template>
-  <setion v-editable="blok" class="cards-icon">
+  <section v-editable="blok" class="cards-icon">
     <div class="bg-white layout-p-normal">
       <div class="max-w-xl lg:max-w-7xl layout-w-normal">
         <Heading v-if="blok.heading" text="dark" :copy="blok.heading" />
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </setion>
+  </section>
 </template>
 
 <script setup>
@@ -32,11 +32,17 @@ defineProps({
 import IconWorld from '~/assets/icons/world.svg'
 import IconSun from '~/assets/icons/sun.svg'
 import IconPlant from '~/assets/icons/plant.svg'
+import IconUserCheck from '~/assets/icons/user-check.svg'
+import IconUsers from '~/assets/icons/users.svg'
+import IconSmile from '~/assets/icons/smile.svg'
 
 const componentMapping = {
   'IconWorld': IconWorld,
   'IconSun': IconSun,
-  'IconPlant': IconPlant
+  'IconPlant': IconPlant,
+  'IconUserCheck': IconUserCheck,
+  'IconUsers': IconUsers,
+  'IconSmile': IconSmile,
 }
 
 </script>
