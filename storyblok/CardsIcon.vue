@@ -22,12 +22,7 @@
 </template>
 
 <script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-  }
-})
+defineProps({ blok: Object })
 
 import IconWorld from '~/assets/icons/world.svg'
 import IconSun from '~/assets/icons/sun.svg'

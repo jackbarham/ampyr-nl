@@ -20,10 +20,5 @@
 </template>
 
 <script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-  }
-})
+defineProps({ blok: Object })
 </script>

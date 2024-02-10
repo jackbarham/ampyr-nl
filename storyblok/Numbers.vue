@@ -40,12 +40,7 @@
 </template>
 
 <script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-  }
-})
+defineProps({ blok: Object })
 
 import IconCalendar from '~/assets/icons/calendar.svg'
 import IconLandmark from '~/assets/icons/landmark.svg'

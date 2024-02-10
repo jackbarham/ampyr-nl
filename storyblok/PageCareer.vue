@@ -1,5 +1,4 @@
 <template>
-  <!-- <HeroSimple title="Careers" /> -->
   <HeroShort :content="hero" />
   <article class="max-w-3xl mx-auto py-12 md:py-28 px-4">
     <HeadingArtcile :title="blok.title" />
@@ -8,12 +7,7 @@
 </template>
 
 <script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-  }
-})
+defineProps({ blok: Object })
 
 const hero = {
   category: 'Careers',

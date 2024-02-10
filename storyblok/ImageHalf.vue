@@ -28,12 +28,7 @@
 </template>
 
 <script setup>
-defineProps({
-  blok: {
-    type: Object,
-    required: true,
-  },
-})
+defineProps({ blok: Object })
 
 let backgroundClass = ref('bg-brand-grey')
 let svgFill = ref('fill-f-grey')

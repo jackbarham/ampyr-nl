@@ -8,8 +8,5 @@
 </template>
 
 <script setup>
-defineProps({ 
-  blok: Object, 
-  siteConfig: Object
-})
+defineProps({ blok: Object })
 </script>
