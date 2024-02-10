@@ -1,6 +1,6 @@
 <template>
   <NuxtLink 
-    :to="props.link" 
+    :to="props.link.cached_url" 
     :class="[isLight ? 'border-white hover:border-brand-nl' : 'border-brand-navy hover:border-brand-nl font-medium' ]"
     class="button inline-block border rounded-full overflow-hidden transition group"
   >
@@ -24,7 +24,6 @@ const props = defineProps({
     required: true,
   },
   link: {
-    type: String,
     required: true,
   },
   text: {
