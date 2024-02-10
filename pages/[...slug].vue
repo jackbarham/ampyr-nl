@@ -3,16 +3,14 @@
 </template>
 
 <script setup>
-const { $preview } = useNuxtApp() // Preview & Production approach: "const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production'"
+// Preview & Production approach: "const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production'"
+const { $preview } = useNuxtApp()
 const { slug } = useRoute().params
 const url = slug && slug.length > 0 ? slug.join('/') : 'home'
 
-definePageMeta({
-  middleware: ['header-theme']
-})
-
 // API options
-const version = $preview ? 'draft' : 'published' // Preview & Production approach: "isPreview ? 'draft' : 'published'"
+// Preview & Production approach: "isPreview ? 'draft' : 'published'"
+const version = $preview ? 'draft' : 'published' 
 const { locale } = useI18n()
 const resolveRelations = ['popular-articles.articles', 'latest.articles', 'article-page.categories', 'site-config.latest_articles.articles']
 
@@ -36,15 +34,21 @@ const { data: story, pending } = await useAsyncData(
   },
 );
 
-if (!$preview) { // Preview & Production approach: "!isPreview"
+if (!$preview) { 
+  // Preview & Production approach: "!isPreview"
   if (!story.value) {
     showError({ statusCode: 404, statusMessage: "Page Not Found" })
   }
 }
 
-// Load the brigde in preview mode
 onMounted(() => {
-  if ($preview && story.value && story.value.id) { // Preview & Production approach: "isPreview && story.value && story.value.id"
+  definePageMeta({
+    middleware: ['header-theme']
+  })
+
+  // Load the brigde in preview mode
+  if ($preview && story.value && story.value.id) { 
+    // Preview & Production approach: "isPreview && story.value && story.value.id"
     useStoryblokBridge(
       story.value.id,
       (evStory) => story.value = evStory,
