@@ -1,8 +1,8 @@
 <template>
-  <section class="projects-feed">
+  <section v-editable="blok" class="projects-feed">
     <div class="bg-white layout-p-normal">
       <div class="max-w-7xl layout-w-normal">
-        <Heading text="dark" copy="Our Projects" />
+        <Heading text="dark" :copy="blok.heading" />
         <ElementCategoryFilter 
           :uniqueCategories="uniqueCategories" 
           :currentCategory="currentCategory" 
@@ -13,19 +13,19 @@
             <NuxtLink 
               :class="[ (index + Math.floor(index / 2)) % 2 === 0 ? 'md:col-span-1 lg:col-span-7' : 'md:col-span-1 lg:col-span-5' ]" 
               class="relative rounded-lg overflow-hidden group"
-              :to="project.link"
+              :to="project.full_slug"
             >
               <div class="absolute w-full h-full z-30 p-6">
-                <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.heading }}</h2>
-                <p class="opacity-0 group-hover:opacity-100 transition-opacity">{{ project.text }}</p>
-                <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
+                <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.content.heading }}</h2>
+                <p class="opacity-0 group-hover:opacity-100 transition-opacity">{{ project.content.intro }}</p>
+                <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.content.category }}</div>
                 <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 bg-brand-nl">
                   <svgo-arrow-right filled class="fill-ps-navy" />
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
               <div class="absolute w-full h-full group-hover:bg-brand-navy/70 transition"></div>
-              <img :src="project.image" loading="lazy" alt="Description" class="w-full h-96 object-cover">
+              <img :src="project.content.image.filename" loading="lazy" alt="Description" class="w-full h-96 object-cover">
               <!-- <NuxtImg 
                 width="400"
                 loading="lazy"
@@ -37,71 +37,37 @@
           </template>
         </div>
       </div>
-
-      <NotDynamic />
-      
     </div>
   </section>
 </template>
 
 <script setup>
-const projects = [
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category One',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category Three',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category Three',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category two',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category Four',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Project name spanning over multiple lines',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    category: 'Category two',
-    link: '/portfolio/case-study-demo',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-]
+defineProps({ blok: Object })
 
+const projects = ref(null)
+
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories', {
+  starts_with: 'portfolio',
+  is_startpage: false,
+})
+projects.value = data.stories
+
+// Projects category filter
 const currentCategory = ref('')
 
 const uniqueCategories = computed(() => {
   const categories = new Set()
-  projects.forEach(project => categories.add(project.category))
+  projects.value.forEach(project => {
+    categories.add(project.content.category)
+  })
   return Array.from(categories)
 })
 
 const filteredProjects = computed(() => {
   if (!currentCategory.value) {
-    return projects
+    return projects.value
   }
-  return projects.filter(project => project.category === currentCategory.value)
+  return projects.value.filter(project => project.content.category === currentCategory.value)
 })
 </script>
