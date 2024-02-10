@@ -11,7 +11,7 @@
             <NewsfeedCard v-for="(card, index) in cards" :key="index" :card="card" />
           </div>
           <div class="flex justify-center">
-            <Button theme="light" link="/news" text="Read more updates" />
+            <Button theme="light" link="news" text="Read more updates" />
           </div>
           <NotDynamic />
         </div>

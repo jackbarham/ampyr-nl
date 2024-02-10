@@ -8,7 +8,7 @@
             :key="index" 
             class="relative block overflow-hidden group"
           >
-            <div class="relative h-96 md:h-[512px] w-full rounded-2xl overflow-hidden mb-4">
+            <div class="relative bg-brand-grey h-96 md:h-[512px] w-full rounded-2xl overflow-hidden mb-4">
               <div 
                 class="toggle-bio absolute z-30 top-4 md:top-6 right-4 md:right-6 w-10 h-10 rounded-full p-2 bg-brand-nl cursor-pointer hover:bg-white transition"
                 :class="{ '!bg-white': showBio === index }"
@@ -28,11 +28,11 @@
                       <svgo-chevron-right filled />
                     </span>
                   </a>
+                </div>
               </div>
-              </div>
-              <!-- <img :src="person.image" alt="Description" class="w-full h-full object-cover" /> -->
               <NuxtImg 
-                width="300"
+                width="350"
+                height="400"
                 loading="lazy"
                 :src="person.image" 
                 :alt="person.name" 
@@ -41,7 +41,7 @@
             </div>
             <div class="px-4 text-brand-navy">
               <h2 class="text-2xl mb-2 pb-3 border-b border-gray-200">{{ person.name }}</h2>
-              <p class="tracking-wide font-light">{{ person.position }}</p>
+              <p class="opacity-80">{{ person.position }}</p>
             </div>
           </div>
         </div>
