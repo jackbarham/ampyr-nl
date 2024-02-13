@@ -8,7 +8,7 @@
         <div class="max-w-xl lg:max-w-7xl layout-w-normal">
           <Heading text="light" copy="Latest from us..." />
           <div class="grid lg:grid-cols-3 gap-8 mb-12 lg:mb-20">
-            <NewsfeedCard v-for="(card, index) in cards" :key="index" :card="card" />
+            <NewsfeedCardOld v-for="(card, index) in cards" :key="index" :card="card" />
           </div>
           <div class="flex justify-center">
             <Button theme="light" link="news" text="Read more updates" />

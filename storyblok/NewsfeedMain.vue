@@ -2,7 +2,7 @@
   <section v-editable="blok" class="newsfeed-main">
     <div class="bg-brand-grey py-14 lg:pb-24 lg:pt-20">
       <div class="max-w-xl md:max-w-4xl lg:max-w-7xl layout-w-normal">
-        <NewsfeedFeatured :cards="filteredItems" class="mb-8 md:mb-12" />
+        <!-- <NewsfeedFeatured :cards="filteredItems" class="mb-8 md:mb-12" /> -->
         <ElementCategoryFilter 
           :uniqueCategories="uniqueCategories" 
           :currentCategory="currentCategory" 
@@ -10,11 +10,7 @@
         />
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <NewsfeedCard v-for="(item, index) in filteredItems" :key="index" :card="item" />
-          <!-- Issue with categories -->
         </div>
-
-        <NotDynamic />
-
       </div>
     </div>
   </section>
@@ -23,86 +19,30 @@
 <script setup>
 defineProps({ blok: Object })
 
-const items = {
-  cards: [
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe and Multiplex Sign PPA for Solar Power Station in Norfolk',
-      link: 'news/demo-press-release-content',
-      category: 'Press release',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-      link: 'news/demo-press-release-content',
-      category: 'Article',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe Acquires 390 MW UK Solar PV Portfolio From Tyler Hill',
-      link: 'news/demo-press-release-content',
-      category: 'Blog',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe and Multiplex Sign PPA for Solar Power Station in Norfolk',
-      link: 'news/demo-press-release-content',
-      category: 'Press release',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-      link: 'news/demo-press-release-content',
-      category: 'Article',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe Acquires 390 MW UK Solar PV Portfolio From Tyler Hill',
-      link: 'news/demo-press-release-content',
-      category: 'Blog',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe and Multiplex Sign PPA for Solar Power Station in Norfolk',
-      link: 'news/demo-press-release-content',
-      category: 'Press release',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe And Asahi Europe & International Sign PPA For Dutch Drinks Production',
-      link: 'news/demo-press-release-content',
-      category: 'Article',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-    {
-      date: '14th June 2023',
-      heading: 'AMPYR Solar Europe Acquires 390 MW UK Solar PV Portfolio From Tyler Hill',
-      link: 'news/demo-press-release-content',
-      category: 'Blog',
-      image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-    },
-  ]
-}
+const projects = ref(null)
 
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories', {
+  starts_with: 'news',
+  is_startpage: false,
+})
+projects.value = data.stories
+
+// Projects category filter
 const currentCategory = ref('')
 
 const uniqueCategories = computed(() => {
   const categories = new Set()
-  items.cards.forEach(item => categories.add(item.category))
+  projects.value.forEach(project => {
+    categories.add(project.content.category)
+  })
   return Array.from(categories)
 })
 
 const filteredItems = computed(() => {
   if (!currentCategory.value) {
-    return items.cards
+    return projects.value
   }
-  return items.cards.filter(item => item.category === currentCategory.value)
+  return projects.value.filter(project => project.content.category === currentCategory.value)
 })
 </script>

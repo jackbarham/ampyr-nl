@@ -25,7 +25,6 @@
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
               <div class="absolute w-full h-full group-hover:bg-brand-navy/70 transition"></div>
-              <!-- <img :src="project.content.image.filename" loading="lazy" alt="Description" class="w-full h-96 object-cover"> -->
               <NuxtImg 
                 width="400"
                 loading="lazy"

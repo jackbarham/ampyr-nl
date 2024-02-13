@@ -20,6 +20,7 @@
               <img :src="project.image" loading="lazy" alt="Description" class="w-full h-full object-cover">
               <!-- <NuxtImg 
                 width="450"
+                loading="lazy"
                 :src="project.image" 
                 alt="#" 
                 class="w-full h-full object-cover" 
