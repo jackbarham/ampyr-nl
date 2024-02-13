@@ -12,7 +12,7 @@
           <template v-for="(project, index) in filteredProjects" :key="index">
             <NuxtLink 
               :class="[ (index + Math.floor(index / 2)) % 2 === 0 ? 'md:col-span-1 lg:col-span-7' : 'md:col-span-1 lg:col-span-5' ]" 
-              class="relative rounded-lg overflow-hidden group"
+              class="relative rounded-lg overflow-hidden group bg-brand-grey"
               :to="project.full_slug"
             >
               <div class="absolute w-full h-full z-30 p-6">
@@ -25,14 +25,14 @@
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
               <div class="absolute w-full h-full group-hover:bg-brand-navy/70 transition"></div>
-              <img :src="project.content.image.filename" loading="lazy" alt="Description" class="w-full h-96 object-cover">
-              <!-- <NuxtImg 
+              <!-- <img :src="project.content.image.filename" loading="lazy" alt="Description" class="w-full h-96 object-cover"> -->
+              <NuxtImg 
                 width="400"
                 loading="lazy"
-                :src="project.image" 
+                :src="project.content.image.filename" 
                 alt="#" 
                 class="w-full h-96 object-cover" 
-              /> -->
+              />
             </NuxtLink>
           </template>
         </div>
