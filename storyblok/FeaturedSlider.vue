@@ -8,23 +8,22 @@
         <carousel ref="featuredSlider" :items-to-show="1.2" :wrap-around="true" :breakpoints="breakpoints">
           <slide v-for="(project, index) in projects" :key="index">
 
-            <NuxtLink :to="project.link" class="block relative w-full h-[384px] md:h-[512px] rounded-lg md:rounded-2xl overflow-hidden group">
+            <NuxtLink :to="project.full_slug" class="block relative w-full h-[384px] md:h-[512px] bg-brand-grey rounded-lg md:rounded-2xl overflow-hidden group">
               <div class="absolute w-full h-full z-30 p-6">
-                <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.heading }}</h2>
-                <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.category }}</div>
+                <h2 class="text-white text-2xl lg:text-3xl font-normal mb-4">{{ project.content.heading }}</h2>
+                <div class="absolute left-6 bottom-6 bg-white text-brand-navy text-xs px-3 py-1 rounded-full capitalize">{{ project.content.category }}</div>
                 <div class="absolute bottom-6 right-6 w-10 h-10 rounded-full p-0.5 bg-brand-nl">
                   <svgo-arrow-right filled class="fill-ps-navy" />
                 </div>
               </div>
               <div class="absolute w-full h-44 bg-gradient-to-b from-black to-transparent"></div>
-              <img :src="project.image" loading="lazy" alt="Description" class="w-full h-full object-cover">
-              <!-- <NuxtImg 
-                width="450"
+              <NuxtImg 
+                width="400"
                 loading="lazy"
-                :src="project.image" 
+                :src="project.content.image.filename" 
                 alt="#" 
                 class="w-full h-full object-cover" 
-              /> -->
+              />
             </NuxtLink>
           </slide>
         </carousel>
@@ -37,9 +36,6 @@
             <svgo-arrow-right filled class="fill-ps-navy" />
           </div>
         </div>
-
-        <NotDynamic />
-
       </div>
       <div class="absolute w-full h-full top-0 opacity-20">
         <svgo-blades-full filled />
@@ -51,32 +47,18 @@
 <script setup>
 defineProps({ blok: Object })
 
-const projects = [
-  {
-    heading: 'Edinburgh Airport',
-    category: 'Category One',
-    link: '/portfolio/case-study-name',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Somewhere Else',
-    category: 'Category Three',
-    link: '/portfolio/case-study-name',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Government Utility',
-    category: 'Category Three',
-    link: '/portfolio/case-study-name',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-  {
-    heading: 'Power Networks',
-    category: 'Category two',
-    link: '/portfolio/case-study-name',
-    image: 'https://static.jackbarham.com/ampyr/hero.jpg',
-  },
-]
+const projects = ref(null)
+
+const storyblokApi = useStoryblokApi()
+const route = useRoute()
+
+const { data } = await storyblokApi.get(`cdn/stories${route.fullPath}`, {
+  version: 'draft',
+  resolve_relations: ['featured-slider.featured'],
+  // sort_by: 'default',
+})
+
+projects.value = data.rels
 
 const featuredSlider = ref(null)
 
