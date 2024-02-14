@@ -47,20 +47,18 @@
 <script setup>
 defineProps({ blok: Object })
 
-const projects = ref(null)
-
 const storyblokApi = useStoryblokApi()
 const route = useRoute()
+
+const projects = ref(null)
+const featuredSlider = ref(null)
 
 const { data } = await storyblokApi.get(`cdn/stories${route.path}`, {
   version: 'published',
   resolve_relations: ['featured-slider.featured'],
   // sort_by: 'default',
 })
-
 projects.value = data.rels
-
-const featuredSlider = ref(null)
 
 function nextSlide() {
   featuredSlider.value.next()

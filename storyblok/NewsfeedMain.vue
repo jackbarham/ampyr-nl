@@ -18,8 +18,10 @@
 
 <script setup>
 defineProps({ blok: Object })
+
 const route = useRoute()
 const storyblokApi = useStoryblokApi()
+
 const allNewsPosts = ref(null)
 const featuredNews = ref(null)
 
