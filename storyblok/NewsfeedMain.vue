@@ -29,6 +29,7 @@ const featuredNews = ref(null)
 const { data } = await storyblokApi.get('cdn/stories', {
   starts_with: 'news',
   is_startpage: false,
+  sort_by: 'published_at:desc'
 })
 allNewsPosts.value = data.stories
 

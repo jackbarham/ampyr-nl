@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-// Preview & Production approach: "const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production'"
 const { $preview } = useNuxtApp()
 const { slug } = useRoute().params
 const url = slug && slug.length > 0 ? slug.join('/') : 'home'

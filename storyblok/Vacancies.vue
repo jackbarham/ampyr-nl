@@ -39,6 +39,7 @@ const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories', {
   starts_with: 'careers',
   is_startpage: false,
+  sort_by: 'published_at:desc'
 })
 vacancies.value = data.stories
 </script>

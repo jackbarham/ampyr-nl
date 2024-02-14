@@ -6,12 +6,12 @@
       </svg>
       <div class="bg-brand-navy py-14 lg:pb-24 lg:pt-20">
         <div class="max-w-xl lg:max-w-7xl layout-w-normal">
-          <Heading text="light" :copy="blok.copy" />
+          <Heading text="light" copy="Latest from us..." />
           <div class="grid lg:grid-cols-3 gap-8 mb-12 lg:mb-20">
-            <NewsfeedCard v-for="(card, index) in blok.articles" :key="index" :card="card" />
+            <NewsfeedCard v-for="(card, index) in cards" :key="index" :card="card" />
           </div>
           <div class="flex justify-center">
-            <Button theme="light" :link="blok.button[0].link" :text="blok.button[0].label" />
+            <Button theme="light" :link="button.link" :text="button.label" />
           </div>
         </div>
       </div>
@@ -21,4 +21,22 @@
 
 <script setup>
 defineProps({ blok: Object })
+
+const cards = ref(null)
+
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories', {
+  starts_with: 'news',
+  is_startpage: false,
+  sort_by: 'published_at:desc'
+})
+
+cards.value = data.stories
+
+const button = {
+  label: 'Read more updates',
+  link: {
+    cached_url: '/news'
+  }
+}
 </script>
