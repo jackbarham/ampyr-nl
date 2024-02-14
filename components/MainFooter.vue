@@ -20,7 +20,7 @@
           </div>
 
           <div class="w-36 text-left lg:text-right lg:ml-12">
-            <a href="#" target="_blank" class="uppercase text-white text-opacity-70 md:text-opacity-50 hover:text-opacity-100 tracking-wider font-neworder">Regions</a>
+            <a href="/contact" class="uppercase text-white text-opacity-70 md:text-opacity-50 hover:text-opacity-100 tracking-wider font-neworder">Regions</a>
           </div>
         </div>
 
