@@ -56,6 +56,7 @@ const featuredSlider = ref(null)
 const { data } = await storyblokApi.get(`cdn/stories${route.path}`, {
   version: 'published',
   resolve_relations: ['featured-slider.featured'],
+  // sort_by: 'published_at:desc'
   // sort_by: 'default',
 })
 projects.value = data.rels

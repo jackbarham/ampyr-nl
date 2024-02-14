@@ -11,7 +11,7 @@ const url = slug && slug.length > 0 ? slug.join('/') : 'home'
 // Preview & Production approach: "isPreview ? 'draft' : 'published'"
 const version = $preview ? 'draft' : 'published' 
 const { locale } = useI18n()
-const resolveRelations = ['popular-articles.articles', 'latest.articles', 'article-page.categories', 'site-config.latest_articles.articles']
+const resolveRelations = []
 
 // Full Static with refresh approach
 const { data: story, pending } = await useAsyncData(
