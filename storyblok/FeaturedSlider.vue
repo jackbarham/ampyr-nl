@@ -52,7 +52,7 @@ const projects = ref(null)
 const storyblokApi = useStoryblokApi()
 const route = useRoute()
 
-const { data } = await storyblokApi.get(`cdn/stories${route.fullPath}`, {
+const { data } = await storyblokApi.get(`cdn/stories${route.path}`, {
   version: 'published',
   resolve_relations: ['featured-slider.featured'],
   // sort_by: 'default',
