@@ -7,7 +7,7 @@
             <svgo-logo-white filled />
           </NuxtLink>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-16 mb-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mb-4">
             <div v-for="(page, index) in mainPages" :key="index" class="">
               <h2 class="text-brand-nl font-normal tracking-wide text-xl md:text-lg mb-4">{{ page.heading }}</h2>
               <NuxtLink 
@@ -44,53 +44,53 @@
 
   const mainPages = [
     {
-      heading: 'Partner With Us',
+      heading: 'Ampyr voor U',
       links: [
         {
-          name: 'Landowners',
-          to: '/landowners',
+          name: 'Grondeigenaren',
+          to: '/grondeigenaren',
         },
         {
-          name: 'Municipalities',
-          to: '/municipalities',
+          name: 'Gemeenten',
+          to: '/gemeenten',
         },
         {
-          name: 'Energy Cooperatives',
-          to: '/energy-cooperatives',
+          name: 'Energie Cooperaties',
+          to: '/energie-cooperaties',
         },
       ]
     },
     {
-      heading: 'Energy Solutions',
+      heading: 'Energie Oplossingen',
       links: [
       {
-          name: 'At a Glance',
-          to: '/at-a-glance',
+          name: 'Kennismaking',
+          to: '/kennismaking',
         },
         {
-          name: 'Ground-based Solar Generation',
-          to: '/ground-based-solar-generation',
+          name: 'Grondgebonden Zonneparken',
+          to: '/grondgebonden-zonneparkenn',
         },
         {
-          name: 'Power Distribution',
-          to: '/power-distribution',
+          name: 'Energie Verkoop',
+          to: '/energie-verkoop',
         },
       ]
     },
     {
-      heading: 'About Us',
+      heading: 'Over Ons',
       links: [
         {
-          name: 'About AMPYR Solar Europe',
-          to: '/about-ampyr-solar-europe',
+          name: 'Ampyr Solar Nederland',
+          to: '/ampyr-solar-nederland',
         },
         {
-          name: 'Sustainability',
-          to: '/sustainability',
+          name: 'Duurzaam',
+          to: '/duurzaam',
         },
         {
-          name: 'Vision & Strategy',
-          to: '/vision-strategy',
+          name: 'Strategy',
+          to: '/strategy',
         },
         {
           name: 'Leadership',

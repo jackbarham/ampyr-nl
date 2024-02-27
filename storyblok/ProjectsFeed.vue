@@ -47,7 +47,7 @@ const projects = ref(null)
 
 const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories', {
-  starts_with: 'portfolio',
+  starts_with: 'projecten',
   is_startpage: false,
   sort_by: 'published_at:desc'
 })

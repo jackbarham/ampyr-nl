@@ -84,57 +84,57 @@ function closeMenu() {
 
 const pages = ref([
   {
-    parent: 'Partner With Us',
+    parent: 'Ampyr voor U',
     links: [
       {
-        page: 'Landowners',
-        to: '/landowners',
+        page: 'Grondeigenaren',
+        to: '/grondeigenaren',
       },
       {
-        page: 'Municipalities',
-        to: '/municipalities',
+        page: 'Gemeenten',
+        to: '/gemeenten',
       },
       {
-        page: 'Energy Cooperatives',
-        to: '/energy-cooperatives',
+        page: 'Energie Cooperaties',
+        to: '/energie-cooperaties',
       },
     ]
   },
   {
-    parent: 'Energy Solutions',
+    parent: 'Energie Oplossingen',
     links: [
       {
-        page: 'At a Glance',
-        to: '/at-a-glance',
+        page: 'Kennismaking',
+        to: '/kennismaking',
       },
       {
-        page: 'Ground-based Solar Generation',
-        to: '/ground-based-solar-generation',
+        page: 'Grondgebonden Zonneparken',
+        to: '/grondgebonden-zonneparken',
       },
       {
-        page: 'Power Distribution',
-        to: '/power-distribution',
+        page: 'Energie Verkoop',
+        to: '/energie-verkoop',
       },
     ]
   },
   {
-    parent: 'Portfolio',
-    to: '/portfolio',
+    parent: 'Projecten',  
+    to: '/projecten',
   },
   {
-    parent: 'About Us',
+    parent: 'Over Ons',
     links: [
       {
-        page: 'About AMPYR Solar Europe',
-        to: '/about-ampyr-solar-europe',
+        page: 'Ampyr Solar Nederland',
+        to: '/ampyr-solar-nederland',
       },
       {
-        page: 'Sustainability',
-        to: '/sustainability',
+        page: 'Duurzaam',
+        to: '/duurzaam',
       },
       {
-        page: 'Vision & Strategy',
-        to: '/vision-strategy',
+        page: 'Strategy',
+        to: '/strategy',
       },
       {
         page: 'Leadership',
@@ -143,8 +143,8 @@ const pages = ref([
     ]
   },
   {
-    parent: 'Join Us',
-    to: '/careers',
+    parent: 'Vacatures',
+    to: '/vacatures',
   },
   {
     parent: 'Contact',

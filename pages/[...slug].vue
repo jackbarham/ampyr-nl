@@ -31,7 +31,7 @@ const { data: story, pending } = await useAsyncData(
     // return data?.story and siteConfig
     return { story: data?.story, siteConfig: siteConfig?.story?.content }
   },
-);
+)
 
 if (!$preview) { 
   // Preview & Production approach: "!isPreview"
@@ -54,7 +54,7 @@ onMounted(() => {
       {
         resolveRelations,
       }
-    );
+    )
   }
 })
 </script>
